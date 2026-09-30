@@ -1,0 +1,22 @@
+{
+  "name": "jpilot",
+  "version": "0.1.0",
+  "description": "JPilot — Your AI Job Application & Resume Tailoring Agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test --loader ts-node/esm || node --test",
+    "demo": "tsx src/cli/runPhase1Demo.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.3",
+    "dotenv": "^16.4.7",
+    "pdfkit": "^0.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "@types/pdfkit": "^0.13.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

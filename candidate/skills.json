@@ -1,0 +1,65 @@
+{
+  "skills_catalog": {
+    "product_management": [
+      "Product Strategy & Vision",
+      "Roadmap Planning & Prioritization",
+      "PRD & User Story Specification",
+      "Backlog Grooming & Sprint Planning",
+      "Go-To-Market (GTM) Strategy",
+      "User Research & Customer Interviews",
+      "A/B Testing & Experimentation",
+      "Conversion Rate Optimization (CRO)",
+      "Stakeholder Management",
+      "Product Operations"
+    ],
+    "fintech_and_payments": [
+      "Payment Gateway Integration",
+      "Multi-Currency Checkout",
+      "Split Payments & Escrow",
+      "Buy Now Pay Later (BNPL)",
+      "Digital Wallet Orchestration",
+      "PCI-DSS Compliance",
+      "3D Secure 2.0 (3DS)",
+      "Subscription Billing & Invoicing",
+      "Financial Reconciliation"
+    ],
+    "technical_and_apis": [
+      "RESTful API Design & Integration",
+      "Webhooks & Event Architecture",
+      "System Architecture & Data Flows",
+      "Technical Discovery",
+      "API Testing & Postman Collections",
+      "Microservices Concepts",
+      "SQL Querying & Data Modeling"
+    ],
+    "analytics_and_tools": [
+      "Mixpanel",
+      "CleverTap",
+      "New Relic",
+      "Mezmo",
+      "Metabase",
+      "Postman",
+      "Jira",
+      "Confluence",
+      "Figma",
+      "Miro",
+      "Google Analytics"
+    ],
+    "methodologies": [
+      "Agile",
+      "Scrum",
+      "Kanban",
+      "Continuous Integration & Continuous Deployment (CI/CD)",
+      "User Story Mapping",
+      "Design Thinking"
+    ],
+    "industries": [
+      "FinTech",
+      "PropTech",
+      "B2B SaaS",
+      "B2C Marketplaces",
+      "eCommerce",
+      "Classifieds"
+    ]
+  }
+}

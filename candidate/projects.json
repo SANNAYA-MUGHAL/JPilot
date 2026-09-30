@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "project_id": "PRJ_MANGOPAY_SPLIT",
+      "project_name": "Multi-Vendor Marketplace Split Payments & Escrow Orchestration",
+      "candidate_role": "Lead Product Manager",
+      "company": "Bayut & dubizzle",
+      "problem": "Manual agency payouts and refund processing caused heavy operational overhead, delayed seller disbursements, and checkout drop-offs during high-value real estate transaction reservations.",
+      "discovery": "Interviewed 35 brokerage partners and analyzed 12,000 checkout attempts; found 18% cart drop-offs stemmed from lack of flexible escrow splits and localized payment choices.",
+      "technical_context": "Integrated MangoPay and Adyen APIs to enable multi-party escrow, automated split payments, real-time KYC verification, and automated wallet balance orchestration.",
+      "stakeholders": ["Finance Directors", "Brokerage Partners", "Legal & Compliance", "Engineering Squad", "Customer Support"],
+      "tools": ["Mixpanel", "Postman", "Jira", "Figma", "Confluence", "Metabase"],
+      "actions": [
+        "Authored end-to-end PRDs and API sequence diagrams for automated escrow funding and disbursement.",
+        "Negotiated custom fee structures and SLA guarantees with payment gateway account teams.",
+        "Designed fallback retry mechanics between Adyen and MangoPay to guarantee high transaction success."
+      ],
+      "results": [
+        "Reduced transaction drop-offs by 18% across high-value rental reservations.",
+        "Automated 92% of monthly merchant payouts, reducing finance manual reconciliation hours by 60 hours/month.",
+        "Achieved 99.8% payment processing reliability across peak marketing campaign periods."
+      ],
+      "verified_metrics": [
+        "18% transaction drop-off reduction",
+        "24% increase in completed checkouts",
+        "92% automated payout rate",
+        "60 hours/month saved in manual reconciliation"
+      ],
+      "keywords": ["FinTech", "Payments", "Adyen", "MangoPay", "Split Payments", "Escrow", "Wallet Orchestration", "Checkout Optimization", "APIs", "PCI-DSS"]
+    },
+    {
+      "project_id": "PRJ_CHURN_CANCELLATION",
+      "project_name": "Subscription Cancellation Redesign & Retention Funnel Optimization",
+      "candidate_role": "Product Manager",
+      "company": "Bayut & dubizzle",
+      "problem": "Small and medium property agencies were experiencing high monthly subscription churn, with 30% citing inflexible billing cycles and lack of visibility into listing ROI.",
+      "discovery": "Audited exit surveys and segmented Mixpanel event streams to uncover that 45% of churners cancelled during months with seasonal inventory slowdowns.",
+      "technical_context": "Created conditional retention flows, automated pause/resume subscription mechanics, discount offers, and targeted in-app value reinforcement using CleverTap and Mixpanel.",
+      "stakeholders": ["Sales Leadership", "Customer Success", "Data Analytics Squad", "Frontend/Backend Engineering"],
+      "tools": ["Mixpanel", "CleverTap", "Metabase", "Jira", "Figma"],
+      "actions": [
+        "Designed personalized cancellation intervention flows with pause options and tailored listing boost credits.",
+        "Implemented real-time churn risk indicators triggering automated Customer Success outreach via Webhooks."
+      ],
+      "results": [
+        "Reduced gross subscription cancellations by 23% within the first two quarters.",
+        "Saved an estimated $340K in annualized recurring revenue through automated pause mechanics.",
+        "Boosted customer satisfaction score (CSAT) around subscription transparency from 62% to 84%."
+      ],
+      "verified_metrics": [
+        "23% reduction in subscription cancellations",
+        "$340K ARR retained",
+        "CSAT increased from 62% to 84%"
+      ],
+      "keywords": ["SaaS", "Churn Reduction", "Subscription Billing", "Product Analytics", "Mixpanel", "CleverTap", "Retention Funnel", "Customer Lifecycle"]
+    },
+    {
+      "project_id": "PRJ_DELIVERY_SLOTS",
+      "project_name": "Delivery Slot Optimization & Automated Field Operations Routing",
+      "candidate_role": "Associate Product Manager",
+      "company": "EMPG",
+      "problem": "Field verification agents faced severe travel inefficiencies, leading to delayed listing inspections, missed SLAs, and frustrated property sellers.",
+      "discovery": "Conducted ride-alongs with field inspectors and reviewed 6 months of dispatch logs; identified clusters of overlapping geographic appointments scheduled hours apart.",
+      "technical_context": "Formulated appointment clustering rules, geofencing validations, and dynamic slot reservation APIs within the internal operations engine.",
+      "stakeholders": ["Regional Operations Directors", "Field Inspection Leads", "Backend Platform Engineers"],
+      "tools": ["Metabase", "Jira", "Postman", "Google Maps API", "SQL"],
+      "actions": [
+        "Defined algorithmic assignment rules to group inspection slots by geographic density and traffic corridors.",
+        "Built responsive agent mobile dashboard with turn-by-turn routing and real-time status updates."
+      ],
+      "results": [
+        "Elevated on-time inspection completion rate from 78% to 94%.",
+        "Decreased average agent travel time between appointments by 28%.",
+        "Expanded daily inspection capacity by 22% with no additional headcount."
+      ],
+      "verified_metrics": [
+        "94% on-time inspection SLA (up from 78%)",
+        "28% reduction in field travel time",
+        "22% increase in inspection capacity"
+      ],
+      "keywords": ["Product Operations", "Logistics", "Delivery Optimization", "Workflow Automation", "API", "Field Operations", "SLA"]
+    }
+  ]
+}

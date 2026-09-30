@@ -1,0 +1,95 @@
+{
+  "candidate_profile": {
+    "personal_information": {
+      "full_name": "Sana Liaqat",
+      "email": "sana.liaqat.pm@gmail.com",
+      "phone": "+971 50 000 0000",
+      "location": "Dubai, United Arab Emirates",
+      "linkedin": "https://linkedin.com/in/sana-liaqat-pm",
+      "github": "https://github.com/sanapm",
+      "portfolio": "https://sanapm.me"
+    },
+    "professional_summary": "Impact-driven Product Manager with 7+ years of cross-functional technology experience across Product Management, Technical Support, Quality Assurance, and Product Operations. Proven track record leading high-scale B2B/B2C SaaS, FinTech, PropTech, marketplaces, and eCommerce platforms across Europe and the Middle East. Deep technical expertise in multi-provider payment integrations (Adyen, MangoPay, Tabby, Split Payments), complex API ecosystems, product analytics (Mixpanel, CleverTap, New Relic, Mezmo), and conversion optimization. Adept at translating ambiguous business objectives into scalable roadmaps, data-driven backlogs, and measurable customer value.",
+    "positioning": {
+      "years_of_experience": 7,
+      "primary_discipline": "Product Management",
+      "industries": ["FinTech", "PropTech", "SaaS", "Marketplaces", "eCommerce"],
+      "core_focus": ["Payments & Checkout", "API & Platform Integrations", "Product Analytics & Growth", "Operations & Delivery Optimization"]
+    },
+    "target_roles": {
+      "primary": [
+        "Product Manager",
+        "Technical Product Manager",
+        "Product Owner",
+        "Platform Product Manager",
+        "FinTech Product Manager",
+        "SaaS Product Manager",
+        "Product Operations Manager",
+        "Associate Product Manager",
+        "AI Product Manager",
+        "Project Manager"
+      ],
+      "secondary": [
+        "Technical Project Manager",
+        "QA Lead",
+        "Senior QA Engineer"
+      ]
+    },
+    "location_preferences": {
+      "preferred_geographies": [
+        "Remote Worldwide",
+        "Europe",
+        "United Kingdom",
+        "United Arab Emirates",
+        "France",
+        "Luxembourg",
+        "Germany",
+        "Netherlands"
+      ],
+      "remote_preference": "Remote Preferred or Hybrid",
+      "relocation_supported": true,
+      "work_authorization_status": {
+        "current_residence": "UAE (Valid Residency & Work Authorization)",
+        "eu_relocation": "Open to Visa Sponsorship & Relocation",
+        "uk_relocation": "Open to Visa Sponsorship & Relocation",
+        "b2b_contract_open": true,
+        "eor_payroll_open": true
+      }
+    },
+    "work_preferences": {
+      "contract_types": ["Full-Time Permanent", "Contract (B2B)", "Remote (EOR)"],
+      "notice_period_days": 30,
+      "preferred_team_structure": "Cross-functional Agile (Product, Engineering, Design, Data)"
+    },
+    "education": [
+      {
+        "degree": "Bachelor of Science in Computer Science",
+        "institution": "FAST National University of Computer and Emerging Sciences",
+        "graduation_year": "2017",
+        "location": "Pakistan"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Scrum Product Owner (CSPO)",
+        "issuer": "Scrum Alliance",
+        "year": "2021"
+      },
+      {
+        "name": "Pragmatic Institute Certified (Foundations & Build)",
+        "issuer": "Pragmatic Institute",
+        "year": "2022"
+      }
+    ],
+    "languages": [
+      { "language": "English", "proficiency": "Full Professional / Fluent" },
+      { "language": "Urdu", "proficiency": "Native" }
+    ],
+    "resume_rules": {
+      "strict_truth_only": true,
+      "disallow_unverified_metrics": true,
+      "max_pages": 2,
+      "preserve_employment_history": true
+    }
+  }
+}
