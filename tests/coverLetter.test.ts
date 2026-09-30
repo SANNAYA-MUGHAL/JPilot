@@ -52,7 +52,7 @@ test('CoverLetterAgent generates structured markdown and PDF', async () => {
     recommendation: 'Apply',
   };
 
-  const outputDir = path.resolve(process.cwd(), 'tests/output/cover_letter_test');
+  const outputDir = path.resolve(process.cwd(), 'tests/tmp_cover_letter');
   const result = await agent.generateCoverLetter(mockJd, mockMatch, outputDir);
 
   assert.ok(result.word_count >= 200 && result.word_count <= 450, `Word count: ${result.word_count}`);

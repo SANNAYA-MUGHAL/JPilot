@@ -78,7 +78,7 @@ test('LatexGenerator and PDFCompiler generate valid PDF', async () => {
   assert.ok(latex.includes('Sana Liaqat'));
   assert.ok(latex.includes('split payments'));
 
-  const testPdfPath = path.resolve(process.cwd(), 'tests/output/test_resume.pdf');
+  const testPdfPath = path.resolve(process.cwd(), 'tests/tmp_pdf/test_resume.pdf');
   const result = await compiler.compileResume(latex, testPdfPath, mockAST);
 
   assert.equal(result.success, true);
