@@ -5,3 +5,4 @@ dist/
 tests/tmp_*
 tests/*.pdf
 .env*
+.vercel

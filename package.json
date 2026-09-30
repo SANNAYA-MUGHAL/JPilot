@@ -5,6 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
     "demo": "tsx src/cli/runPhase1Demo.ts",
     "dashboard": "tsx src/cli/runDashboardDemo.ts",

@@ -6,17 +6,17 @@
   "tier": "HIGH_ALIGNMENT",
   "visa_status": "REMOTE_CONTRACT_OPEN",
   "remote_policy": "REMOTE_WORLDWIDE",
-  "created_at": "2026-09-30T19:59:34.738Z",
-  "timing_ms": 120,
+  "created_at": "2026-09-30T20:46:52.654Z",
+  "timing_ms": 112,
   "truth_validation": {
     "verified_claims": 10,
     "supported_rewrites": 2,
     "unverified_claims": 0
   },
   "trello": {
-    "card_id": "card_467mtp11",
+    "card_id": "card_e4yvyyxu",
     "card_title": "[100%] N26 | Senior Product Manager - Payments & Wallets | Berlin, Germany / Remote Europe",
-    "card_url": "https://trello.com/c/card_467mtp11/%5B100%25%5D%20N26%20%7C%20Senior%20",
+    "card_url": "https://trello.com/c/card_e4yvyyxu/%5B100%25%5D%20N26%20%7C%20Senior%20",
     "list_name": "🔥 High Match",
     "attachments_count": 4
   },

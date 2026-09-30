@@ -6,6 +6,7 @@ export interface PersonalInformation {
   linkedin: string;
   github: string;
   portfolio: string;
+  website?: string;
 }
 
 export interface CandidatePositioning {
@@ -46,12 +47,20 @@ export interface EducationRecord {
   institution: string;
   graduation_year: string;
   location: string;
+  gpa?: string;
 }
 
 export interface CertificationRecord {
   name: string;
   issuer: string;
   year: string;
+}
+
+export interface AwardRecord {
+  title: string;
+  organization: string;
+  year: string;
+  description?: string;
 }
 
 export interface LanguageRecord {
@@ -69,6 +78,7 @@ export interface CandidateProfile {
   education: EducationRecord[];
   certifications: CertificationRecord[];
   languages: LanguageRecord[];
+  awards?: AwardRecord[];
   resume_rules: {
     strict_truth_only: boolean;
     disallow_unverified_metrics: boolean;

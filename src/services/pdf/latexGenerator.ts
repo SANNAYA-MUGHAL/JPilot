@@ -55,8 +55,8 @@ export class LatexGenerator {
       const cleanLinkedIn = contact.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
       linksRow.push(`\\href{${contact.linkedin}}{\\underline{${esc(cleanLinkedIn)}}}`);
     }
-    if (contact.portfolio || contact.website) {
-      const pUrl = contact.portfolio || contact.website;
+    const pUrl = contact.portfolio || contact.website;
+    if (pUrl) {
       const cleanPortfolio = pUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
       linksRow.push(`\\href{${pUrl}}{\\underline{${esc(cleanPortfolio)}}}`);
     }

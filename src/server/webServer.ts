@@ -1200,8 +1200,9 @@ function getHTML(): string {
 </html>`;
 }
 
-const server = http.createServer(async (req, res) => {
-  const parsedUrl = new URL(req.url || '/', `http://localhost:${PORT}`);
+export async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse): Promise<void> {
+  const host = req.headers.host || `localhost:${PORT}`;
+  const parsedUrl = new URL(req.url || '/', `http://${host}`);
   const pathname = parsedUrl.pathname;
 
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -1321,11 +1322,13 @@ const server = http.createServer(async (req, res) => {
     const roleDir = decodeURIComponent(resumePdfMatch[2]);
     const filePath = path.resolve(process.cwd(), 'applications', companyDir, roleDir, 'tailored_resume.pdf');
     if (fs.existsSync(filePath)) {
+      const fileBuffer = fs.readFileSync(filePath);
       res.writeHead(200, {
         'Content-Type': 'application/pdf',
+        'Content-Length': fileBuffer.length,
         'Content-Disposition': 'inline; filename="tailored_resume.pdf"',
       });
-      fs.createReadStream(filePath).pipe(res);
+      res.end(fileBuffer);
       return;
     } else {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
@@ -1341,11 +1344,13 @@ const server = http.createServer(async (req, res) => {
     const roleDir = decodeURIComponent(clPdfMatch[2]);
     const filePath = path.resolve(process.cwd(), 'applications', companyDir, roleDir, 'cover_letter.pdf');
     if (fs.existsSync(filePath)) {
+      const fileBuffer = fs.readFileSync(filePath);
       res.writeHead(200, {
         'Content-Type': 'application/pdf',
+        'Content-Length': fileBuffer.length,
         'Content-Disposition': 'inline; filename="cover_letter.pdf"',
       });
-      fs.createReadStream(filePath).pipe(res);
+      res.end(fileBuffer);
       return;
     } else {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
@@ -1418,10 +1423,23 @@ const server = http.createServer(async (req, res) => {
 
   res.writeHead(404, { 'Content-Type': 'text/plain' });
   res.end('Not Found');
-});
+}
 
-server.listen(PORT, () => {
-  console.log('='.repeat(80));
-  console.log(`🚀 JPilot Web Dashboard live at: http://localhost:${PORT}`);
-  console.log('='.repeat(80));
-});
+export const server = http.createServer(handleRequest);
+
+const isMain = Boolean(
+  process.argv[1] &&
+    (process.argv[1].endsWith('webServer.ts') ||
+      process.argv[1].endsWith('webServer.js') ||
+      process.argv[1].endsWith('webServer'))
+);
+
+if (isMain && !process.env.VERCEL && !process.env.NOW_REGION) {
+  server.listen(PORT, () => {
+    console.log('='.repeat(80));
+    console.log(`🚀 JPilot Web Dashboard live at: http://localhost:${PORT}`);
+    console.log('='.repeat(80));
+  });
+}
+
+export default handleRequest;
