@@ -1,0 +1,13 @@
+Senior Product Manager — Open Banking & Payments at Revolut.
+Location: London, UK or Remote EU. Relocation assistance and visa sponsorship provided.
+About Revolut:
+People deserve more from their money. More visibility, more control, more freedom. Revolut is building the world's first global financial super-app.
+What you will be doing:
+- Own the product vision and execution for Revolut Open Banking payment rails and bank account verification.
+- Scale multi-currency checkout, escrow features, and instant bank transfers via Plaid and regulatory APIs.
+- Collaborate with FCA and European regulatory bodies to guarantee full compliance (KYC, AML, PCI-DSS).
+- Analyze payment funnel conversion and drop-offs to improve first-time user transaction success.
+Qualifications:
+- 6+ years of Product Management experience in FinTech, Payments, or Neobanking.
+- Strong technical background in Open Banking APIs, webhooks, and multi-party payment reconciliation.
+- Track record of shipping high-impact features in fast-paced Agile environments.

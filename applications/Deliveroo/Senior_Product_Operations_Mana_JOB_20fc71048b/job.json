@@ -1,0 +1,50 @@
+{
+  "job_id": "JOB_20fc71048b",
+  "title": "Senior Product Operations Manager",
+  "company": "Deliveroo",
+  "location": "London, UK / Remote UK",
+  "country": "United Kingdom",
+  "city": "London",
+  "remote_policy": "REMOTE_REGIONAL",
+  "visa_status": "VISA_SPONSORED",
+  "visa_reasoning": "JD explicitly advertises visa sponsorship or relocation assistance package.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "SQL"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Analyze customer support incident trends and build closed-loop feedback mechanisms into product squads.",
+    "Oversee delivery slot capacity planning, automated order escalation, and out-of-stock substitution workflows.",
+    "Lead customer investigations and Jira support escalation workflows to achieve 99% SLA compliance.",
+    "Drive cross-functional alignment between engineering, operations leads, and retail partners.",
+    "+ years in Product Operations, Technical Project Management, or Marketplace Delivery.",
+    "Track record of reducing order cancellations, optimizing fulfillment SLAs, and analyzing customer logs.",
+    "Proficiency in SQL, Python, Mixpanel, and observability tools."
+  ],
+  "domains": [
+    "Marketplace"
+  ],
+  "tools": [
+    "Mixpanel",
+    "Jira"
+  ],
+  "technologies_and_apis": [
+    "REST APIs",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Mixpanel",
+    "Jira",
+    "SQL",
+    "Marketplace"
+  ],
+  "raw_text": "Senior Product Operations Manager at Deliveroo.\nLocation: London, UK. Visa sponsorship available.\nThe Role:\nDeliveroo is scaling its rapid delivery and grocery fulfillment marketplace. We need a Senior Product Operations Manager to bridge product engineering with operations, field fulfillment, delivery slot optimization, and customer support.\nResponsibilities:\n- Analyze customer support incident trends and build closed-loop feedback mechanisms into product squads.\n- Oversee delivery slot capacity planning, automated order escalation, and out-of-stock substitution workflows.\n- Lead customer investigations and Jira support escalation workflows to achieve 99% SLA compliance.\n- Drive cross-functional alignment between engineering, operations leads, and retail partners.\nRequirements:\n- 6+ years in Product Operations, Technical Project Management, or Marketplace Delivery.\n- Track record of reducing order cancellations, optimizing fulfillment SLAs, and analyzing customer logs.\n- Proficiency in SQL, Python, Mixpanel, and observability tools.",
+  "discovered_at": "2026-09-30T17:33:46.770Z"
+}

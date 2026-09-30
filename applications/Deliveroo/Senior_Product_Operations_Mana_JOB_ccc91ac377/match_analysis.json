@@ -1,5 +1,5 @@
 {
-  "overall_score": 94,
+  "overall_score": 96,
   "tier": "HIGH_ALIGNMENT",
   "breakdown": {
     "role_score": 100,
@@ -8,7 +8,7 @@
     "domain_score": 70,
     "tools_score": 100,
     "location_score": 100,
-    "preferred_score": 67
+    "preferred_score": 100
   },
   "strong_matches": [
     "Target Primary Role Match: \"Senior Product Operations Manager\" directly matches target Product Management specializations.",
@@ -19,9 +19,7 @@
   ],
   "partial_matches": [],
   "missing_mandatory": [],
-  "missing_preferred": [
-    "Growth Experimentation"
-  ],
+  "missing_preferred": [],
   "application_risks": [],
   "recommendation": "Strong match across core role, domain, and skills. Immediate package generation recommended."
 }

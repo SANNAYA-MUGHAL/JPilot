@@ -4,81 +4,220 @@
       "project_id": "PRJ_MANGOPAY_SPLIT",
       "project_name": "Multi-Vendor Marketplace Split Payments & Escrow Orchestration",
       "candidate_role": "Lead Product Manager",
-      "company": "Bayut & dubizzle",
-      "problem": "Manual agency payouts and refund processing caused heavy operational overhead, delayed seller disbursements, and checkout drop-offs during high-value real estate transaction reservations.",
-      "discovery": "Interviewed 35 brokerage partners and analyzed 12,000 checkout attempts; found 18% cart drop-offs stemmed from lack of flexible escrow splits and localized payment choices.",
-      "technical_context": "Integrated MangoPay and Adyen APIs to enable multi-party escrow, automated split payments, real-time KYC verification, and automated wallet balance orchestration.",
-      "stakeholders": ["Finance Directors", "Brokerage Partners", "Legal & Compliance", "Engineering Squad", "Customer Support"],
-      "tools": ["Mixpanel", "Postman", "Jira", "Figma", "Confluence", "Metabase"],
+      "company": "Bayuti / elGrocer",
+      "problem": "Manual agency payouts and refund processing caused heavy operational overhead and checkout drop-offs.",
+      "discovery": "Mapped multi-party payment models and identified 18% cart drop-offs from lack of flexible escrow splits.",
+      "technical_context": "Integrated MangoPay and Adyen APIs to enable multi-party escrow, automated split payments, real-time KYC, and wallet balance orchestration.",
+      "stakeholders": ["Finance Directors", "Brokerage Partners", "Legal & Compliance", "Engineering Squad"],
+      "tools": ["Mixpanel", "Postman", "Jira", "Figma", "Confluence"],
       "actions": [
         "Authored end-to-end PRDs and API sequence diagrams for automated escrow funding and disbursement.",
-        "Negotiated custom fee structures and SLA guarantees with payment gateway account teams.",
         "Designed fallback retry mechanics between Adyen and MangoPay to guarantee high transaction success."
       ],
       "results": [
-        "Reduced transaction drop-offs by 18% across high-value rental reservations.",
-        "Automated 92% of monthly merchant payouts, reducing finance manual reconciliation hours by 60 hours/month.",
-        "Achieved 99.8% payment processing reliability across peak marketing campaign periods."
+        "Reduced transaction drop-offs by 18% across reservations.",
+        "Automated 92% of monthly merchant payouts.",
+        "Achieved 99.8% payment processing reliability."
       ],
       "verified_metrics": [
         "18% transaction drop-off reduction",
         "24% increase in completed checkouts",
-        "92% automated payout rate",
-        "60 hours/month saved in manual reconciliation"
+        "92% automated payout rate"
       ],
-      "keywords": ["FinTech", "Payments", "Adyen", "MangoPay", "Split Payments", "Escrow", "Wallet Orchestration", "Checkout Optimization", "APIs", "PCI-DSS"]
+      "keywords": ["FinTech", "Payments", "Adyen", "MangoPay", "Split Payments", "Escrow", "Wallet Orchestration", "APIs"]
     },
     {
-      "project_id": "PRJ_CHURN_CANCELLATION",
-      "project_name": "Subscription Cancellation Redesign & Retention Funnel Optimization",
+      "project_id": "PRJ_CANCEL_REDUCTION",
+      "project_name": "Order Cancellation Reduction & Edit Order",
+      "candidate_role": "Product Manager / Technical Project Manager",
+      "company": "elGrocer by Smiles",
+      "problem": "High customer cancellation rates driven by rigid post-checkout order state and user behavioral friction.",
+      "discovery": "Led root-cause analysis using Mixpanel, New Relic, and production data, uncovering behavioural and payment-related cancellation drivers.",
+      "technical_context": "Translated insights into a 30-minute Edit Order capability for delivery slots, promotions, and additional products; combined improvements contributed to a 33% reduction in cancellations.",
+      "stakeholders": ["Engineering Squad", "Support Operations", "Merchant Fulfillment", "Leadership"],
+      "tools": ["Mixpanel", "New Relic", "Jira", "Mezmo", "SQL"],
+      "actions": [
+        "Uncovered cancellation root causes across checkout steps, payment failures, and delivery slot mismatches.",
+        "Specified and delivered 30-minute customer post-checkout Edit Order workflow."
+      ],
+      "results": [
+        "Contributed to a 33% reduction in order cancellations.",
+        "Significantly improved customer retention and reduced friction."
+      ],
+      "verified_metrics": [
+        "33% reduction in order cancellations",
+        "30-minute Edit Order window enabled"
+      ],
+      "keywords": ["Cancellation Reduction", "Edit Order", "Mixpanel", "New Relic", "Product Analytics", "Customer Retention"]
+    },
+    {
+      "project_id": "PRJ_SPLIT_PAYMENT_WALLET",
+      "project_name": "Split Payment & Wallet Orchestration",
+      "candidate_role": "Technical Project Manager, Product & Delivery",
+      "company": "elGrocer by Smiles",
+      "problem": "Customers lacked flexible multi-tender payment options when combining loyalty points, wallet balance, and cards.",
+      "discovery": "Mapped checkout failure patterns and customer requests for combined loyalty points and card payment checkout.",
+      "technical_context": "Delivered multi-source payment flows combining Adyen cards, Apple Pay, COD, wallet balance, Smiles points, and promotions, defining adjustment and refund behaviour across substitutions, out-of-stock items, cancellations, and changing order values.",
+      "stakeholders": ["Finance", "Payment Gateway Providers", "Engineering", "Operations"],
+      "tools": ["Adyen", "Apple Pay", "Jira", "Postman", "Webhooks"],
+      "actions": [
+        "Defined split payment rules and webhook handlers across multiple tender types.",
+        "Architected automated refund and adjustment logic for item substitutions."
+      ],
+      "results": [
+        "Seamless multi-source payment flows in production.",
+        "Streamlined reconciliation and minimized payment failure support tickets."
+      ],
+      "verified_metrics": [
+        "Multi-source tender combination across 6 payment methods",
+        "Zero-gap refund & adjustment automated logic"
+      ],
+      "keywords": ["Split Payments", "Wallet Orchestration", "Adyen", "Apple Pay", "Smiles Points", "COD", "Refunds"]
+    },
+    {
+      "project_id": "PRJ_OPEN_BANKING_UNIFIED",
+      "project_name": "Unified Payments & Open Banking Integration",
       "candidate_role": "Product Manager",
-      "company": "Bayut & dubizzle",
-      "problem": "Small and medium property agencies were experiencing high monthly subscription churn, with 30% citing inflexible billing cycles and lack of visibility into listing ROI.",
-      "discovery": "Audited exit surveys and segmented Mixpanel event streams to uncover that 45% of churners cancelled during months with seasonal inventory slowdowns.",
-      "technical_context": "Created conditional retention flows, automated pause/resume subscription mechanics, discount offers, and targeted in-app value reinforcement using CleverTap and Mixpanel.",
-      "stakeholders": ["Sales Leadership", "Customer Success", "Data Analytics Squad", "Frontend/Backend Engineering"],
-      "tools": ["Mixpanel", "CleverTap", "Metabase", "Jira", "Figma"],
+      "company": "Bayuti / elGrocer",
+      "problem": "Fragmented payment methods and lack of open banking / real-time verification led to high drop-offs.",
+      "discovery": "Identified high transaction costs and drop-offs during manual bank account entry and traditional card checkout.",
+      "technical_context": "Owned end-to-end integration of multiple payment methods and Open Banking across web, iOS, and Android, including Plaid (Open Banking), Adyen (cards), Apple Pay, Tabby (BNPL), Etisalat Payment Gateway, UTAP, Careem Pay, COD, and wallet/loyalty points. Defined webhook event schemas, transaction data validation, refund/adjustment logic, and reconciliation flows.",
+      "stakeholders": ["Banking Partners", "Compliance", "Executive Leadership", "Engineering"],
+      "tools": ["Plaid", "Adyen", "Tabby", "Etisalat Gateway", "UTAP", "Careem Pay", "Webhooks", "Postman"],
       "actions": [
-        "Designed personalized cancellation intervention flows with pause options and tailored listing boost credits.",
-        "Implemented real-time churn risk indicators triggering automated Customer Success outreach via Webhooks."
+        "Defined webhook event schemas and transaction data validation protocols.",
+        "Managed compliance auditing and automated reconciliation flows across web and mobile."
       ],
       "results": [
-        "Reduced gross subscription cancellations by 23% within the first two quarters.",
-        "Saved an estimated $340K in annualized recurring revenue through automated pause mechanics.",
-        "Boosted customer satisfaction score (CSAT) around subscription transparency from 62% to 84%."
+        "Improved payment success rate and reduced payment-related support tickets.",
+        "Enabled secure, real-time Open Banking bank account verification."
       ],
       "verified_metrics": [
-        "23% reduction in subscription cancellations",
-        "$340K ARR retained",
-        "CSAT increased from 62% to 84%"
+        "High payment success rate improvement",
+        "Reduced payment-related support tickets"
       ],
-      "keywords": ["SaaS", "Churn Reduction", "Subscription Billing", "Product Analytics", "Mixpanel", "CleverTap", "Retention Funnel", "Customer Lifecycle"]
+      "keywords": ["Open Banking", "Plaid", "Adyen", "Tabby BNPL", "Apple Pay", "Etisalat Gateway", "Webhooks", "FinTech"]
     },
     {
-      "project_id": "PRJ_DELIVERY_SLOTS",
-      "project_name": "Delivery Slot Optimization & Automated Field Operations Routing",
-      "candidate_role": "Associate Product Manager",
-      "company": "EMPG",
-      "problem": "Field verification agents faced severe travel inefficiencies, leading to delayed listing inspections, missed SLAs, and frustrated property sellers.",
-      "discovery": "Conducted ride-alongs with field inspectors and reviewed 6 months of dispatch logs; identified clusters of overlapping geographic appointments scheduled hours apart.",
-      "technical_context": "Formulated appointment clustering rules, geofencing validations, and dynamic slot reservation APIs within the internal operations engine.",
-      "stakeholders": ["Regional Operations Directors", "Field Inspection Leads", "Backend Platform Engineers"],
-      "tools": ["Metabase", "Jira", "Postman", "Google Maps API", "SQL"],
+      "project_id": "PRJ_SUPERAPP_SDK",
+      "project_name": "Super-App SDK Integration",
+      "candidate_role": "Product & Delivery Lead",
+      "company": "elGrocer by Smiles",
+      "problem": "Need to embed the grocery eCommerce experience natively inside a major partner super-app with full state parity.",
+      "discovery": "Analyzed SDK interface points, user authentication handshakes, and attribution leakage.",
+      "technical_context": "Led UAT and cross-functional delivery of an embedded grocery experience within a partner super-app, validating address synchronization, loyalty points, promotions, notifications, SDK order attribution, and cross-platform data integrity.",
+      "stakeholders": ["Super-App Partner Engineering", "Mobile Teams", "Marketing", "Product Leadership"],
+      "tools": ["Postman", "Charles Proxy", "Jira", "iOS/Android SDKs"],
       "actions": [
-        "Defined algorithmic assignment rules to group inspection slots by geographic density and traffic corridors.",
-        "Built responsive agent mobile dashboard with turn-by-turn routing and real-time status updates."
+        "Coordinated SDK test specifications and cross-platform release criteria.",
+        "Validated real-time address synchronization and loyalty attribution."
       ],
       "results": [
-        "Elevated on-time inspection completion rate from 78% to 94%.",
-        "Decreased average agent travel time between appointments by 28%.",
-        "Expanded daily inspection capacity by 22% with no additional headcount."
+        "Successful super-app launch with end-to-end data integrity.",
+        "Seamless embedded grocery ordering for millions of super-app users."
       ],
       "verified_metrics": [
-        "94% on-time inspection SLA (up from 78%)",
-        "28% reduction in field travel time",
-        "22% increase in inspection capacity"
+        "100% address & loyalty synchronization parity",
+        "Cross-platform launch across iOS & Android"
       ],
-      "keywords": ["Product Operations", "Logistics", "Delivery Optimization", "Workflow Automation", "API", "Field Operations", "SLA"]
+      "keywords": ["Super-App", "SDK Integration", "Mobile UAT", "Partner Engineering", "Data Integrity"]
+    },
+    {
+      "project_id": "PRJ_ORDER_ESCALATION",
+      "project_name": "Automated Order Lifecycle Escalation",
+      "candidate_role": "Technical Project Manager",
+      "company": "elGrocer by Smiles",
+      "problem": "Manual tracking of stuck orders caused fulfillment delays and SLA breaches.",
+      "discovery": "Audited order transition timestamps and identified key bottleneck states in order fulfillment.",
+      "technical_context": "Automated SLA-based escalation across Pending, In Progress, Picking, Checkout, and En Route states using role-based IVR triggers, up to three retry attempts, and Slack escalation for unresolved orders, reducing reliance on manual operational monitoring.",
+      "stakeholders": ["Operations Leads", "Customer Support", "Engineering Squad"],
+      "tools": ["Jira", "Slack API", "IVR Telephony", "Mezmo"],
+      "actions": [
+        "Designed state machine escalation rules and automated role-based IVR calling.",
+        "Integrated instant Slack alerts with order context for edge-case resolutions."
+      ],
+      "results": [
+        "Eliminated manual monitoring bottlenecks and prevented order state stalls.",
+        "Maintained 99% SLA compliance across fulfillment operations."
+      ],
+      "verified_metrics": [
+        "3 automated retry attempts with IVR triggers",
+        "99% SLA compliance maintained"
+      ],
+      "keywords": ["Workflow Automation", "SLA Escalation", "IVR", "Operations Management", "Slack Integration"]
+    },
+    {
+      "project_id": "PRJ_SLOT_DEMAND_OPT",
+      "project_name": "Delivery Slot Demand Optimization",
+      "candidate_role": "Product & Analytics Lead",
+      "company": "elGrocer by Smiles",
+      "problem": "Uneven order distribution caused severe peak-hour capacity overloads and idle off-peak slots.",
+      "discovery": "Mined 12 months of historical order logs and slot utilization datasets using Python.",
+      "technical_context": "Analysed 12 months of historical order data using Python to identify delivery-slot, weekday, and seasonal demand patterns, generating capacity-planning insights to better align operational availability with customer demand.",
+      "stakeholders": ["Fleet Operations", "Data Science", "Commercial Team"],
+      "tools": ["Python", "SQL", "Pandas", "Metabase"],
+      "actions": [
+        "Built predictive slot demand models and capacity visualization dashboards.",
+        "Informed dynamic slot availability and capacity allocation parameters."
+      ],
+      "results": [
+        "Optimized fleet capacity and smoothed peak-hour fulfillment strain.",
+        "Improved on-time delivery slot fulfillment."
+      ],
+      "verified_metrics": [
+        "12 months historical order data analyzed",
+        "Dynamic capacity-planning insights deployed"
+      ],
+      "keywords": ["Demand Optimization", "Python", "Data Analysis", "Capacity Planning", "Delivery Slots"]
+    },
+    {
+      "project_id": "PRJ_SUBSTITUTION_PICKER",
+      "project_name": "Out-of-Stock Substitution & Picker Fulfilment",
+      "candidate_role": "Product Manager",
+      "company": "elGrocer by Smiles",
+      "problem": "Out-of-stock items created fulfillment delays and customer dissatisfaction.",
+      "discovery": "Identified that picker wait times for customer response averaged over 15 minutes, causing cascading SLA failures.",
+      "technical_context": "Delivered a substitution workflow connecting customer preferences with Picker operations through call, WhatsApp, and item-removal options, including relevant product alternatives and a six-minute response/fallback mechanism to balance customer choice with fulfilment SLAs.",
+      "stakeholders": ["Retail Partners", "Picker Fleet", "Customer Experience", "Mobile Apps Squad"],
+      "tools": ["WhatsApp API", "Mobile App Push", "Jira", "Mixpanel"],
+      "actions": [
+        "Specified real-time communication channels (Call, WhatsApp, In-App) for substitutions.",
+        "Established a 6-minute fallback window to safeguard fulfillment SLAs."
+      ],
+      "results": [
+        "Balanced customer choice with operational fulfillment speed.",
+        "Decreased picker wait idle time while maintaining high customer satisfaction."
+      ],
+      "verified_metrics": [
+        "6-minute fallback mechanism enforced",
+        "Multichannel substitution via Call, WhatsApp, and In-App"
+      ],
+      "keywords": ["Fulfillment", "Substitution Workflow", "WhatsApp API", "Picker App", "SLA Optimization"]
+    },
+    {
+      "project_id": "PRJ_SUPPORT_SLA_OPT",
+      "project_name": "Customer Support SLA Optimization",
+      "candidate_role": "Tech Support Manager / Technical Project Manager",
+      "company": "elGrocer by Smiles",
+      "problem": "High support ticket volumes and slow resolution times impacted customer satisfaction.",
+      "discovery": "Audited 500+ daily tickets; identified repetitive defect signatures and lack of automated categorization.",
+      "technical_context": "Implemented structured ticket classification and escalation workflows for 500+ daily support tickets, achieving 99% SLA compliance and reducing average resolution time by 35% through data-driven operational improvements.",
+      "stakeholders": ["Customer Support Leads", "QA Squad", "Product Engineering"],
+      "tools": ["Jira Service Desk", "Mezmo", "CleverTap", "SQL"],
+      "actions": [
+        "Established automated ticket classification workflows and severity tagging.",
+        "Created closed-loop root-cause feedback directly into engineering bug triage."
+      ],
+      "results": [
+        "Achieved 99% SLA compliance on 500+ daily tickets.",
+        "Reduced average incident resolution time by 35%."
+      ],
+      "verified_metrics": [
+        "500+ daily tickets processed",
+        "99% SLA compliance",
+        "35% reduction in incident resolution time"
+      ],
+      "keywords": ["SLA Optimization", "Jira", "Customer Support", "Incident Management", "Root-Cause Analysis"]
     }
   ]
 }

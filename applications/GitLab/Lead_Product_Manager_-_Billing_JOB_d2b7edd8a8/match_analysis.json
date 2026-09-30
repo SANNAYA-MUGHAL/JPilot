@@ -1,27 +1,26 @@
 {
-  "overall_score": 98,
+  "overall_score": 80,
   "tier": "HIGH_ALIGNMENT",
   "breakdown": {
     "role_score": 100,
     "experience_score": 100,
-    "skills_score": 100,
+    "skills_score": 0,
     "domain_score": 100,
     "tools_score": 100,
     "location_score": 100,
-    "preferred_score": 67
+    "preferred_score": 100
   },
   "strong_matches": [
     "Target Primary Role Match: \"Lead Product Manager - Billing & Subscriptions\" directly matches target Product Management specializations.",
     "Years of Experience: Candidate has 7+ years exceeding required 5 years.",
-    "Mandatory Skill Match: Checkout",
     "Domain Alignment: Strong background in SaaS",
     "Location Compatibility: 100% Remote Worldwide arrangement."
   ],
   "partial_matches": [],
-  "missing_mandatory": [],
-  "missing_preferred": [
-    "Growth Experimentation"
+  "missing_mandatory": [
+    "Checkout"
   ],
+  "missing_preferred": [],
   "application_risks": [],
   "recommendation": "Strong match across core role, domain, and skills. Immediate package generation recommended."
 }

@@ -1,0 +1,60 @@
+{
+  "job_id": "JOB_0e2670ce63",
+  "title": "Lead Product Manager — Billing & Revenue SaaS",
+  "company": "GitLab",
+  "location": "Remote Worldwide",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 7,
+  "seniority_level": "Senior / Lead level",
+  "must_have_skills": [
+    "Product Strategy",
+    "Agile",
+    "Scrum",
+    "PRD",
+    "Analytics"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Lead product strategy for subscription lifecycle management, self-service tier upgrades, and automated retention flows.",
+    "Spearhead churn reduction initiatives, analyzing cohort drop-offs using Mixpanel and product analytics.",
+    "Build automated billing workflows and customer notification webhooks.",
+    "Partner with finance and revenue operations to ensure billing reconciliation and auditability.",
+    "+ years of experience in Product Management in B2B SaaS or Marketplaces.",
+    "Proven track record of reducing subscription churn and improving conversion funnels.",
+    "Deep experience in Agile/Scrum delivery, PRD authoring, and cross-functional leadership.",
+    "Technical understanding of REST APIs, webhook architectures, and event-driven systems."
+  ],
+  "domains": [
+    "SaaS",
+    "Marketplace"
+  ],
+  "tools": [
+    "Mixpanel"
+  ],
+  "technologies_and_apis": [
+    "REST API",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Product Strategy",
+    "Agile",
+    "Scrum",
+    "PRD",
+    "Mixpanel",
+    "REST API",
+    "Webhooks",
+    "SaaS",
+    "Marketplace",
+    "Analytics"
+  ],
+  "raw_text": "Lead Product Manager — Billing, Subscriptions & Revenue SaaS at GitLab.\nLocation: 100% Remote Worldwide. B2B contract or EOR payroll supported.\nAbout GitLab:\nGitLab is the leading DevSecOps platform. We are looking for a Lead Product Manager for our Growth and Monetization division, focusing on self-service subscription upgrades, billing retention, and churn prevention.\nKey Responsibilities:\n- Lead product strategy for subscription lifecycle management, self-service tier upgrades, and automated retention flows.\n- Spearhead churn reduction initiatives, analyzing cohort drop-offs using Mixpanel and product analytics.\n- Build automated billing workflows and customer notification webhooks.\n- Partner with finance and revenue operations to ensure billing reconciliation and auditability.\nRequirements:\n- 7+ years of experience in Product Management in B2B SaaS or Marketplaces.\n- Proven track record of reducing subscription churn and improving conversion funnels.\n- Deep experience in Agile/Scrum delivery, PRD authoring, and cross-functional leadership.\n- Technical understanding of REST APIs, webhook architectures, and event-driven systems.",
+  "discovered_at": "2026-09-30T17:33:46.725Z"
+}

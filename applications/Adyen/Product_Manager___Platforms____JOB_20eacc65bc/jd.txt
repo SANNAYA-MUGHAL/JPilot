@@ -1,0 +1,13 @@
+Product Manager — Platforms, Escrow & Multi-Party Settlements at Adyen.
+Location: Amsterdam, Netherlands. Full relocation package and EU visa sponsorship provided.
+About Adyen:
+Adyen is the financial technology platform of choice for leading companies. We are seeking a Product Manager for our Platforms division, focusing on multi-party marketplace payouts, escrow orchestration, and real-time KYC.
+What you will do:
+- Design product features for complex marketplace settlement models, including split tender and automated escrow release.
+- Work closely with engineering on API specifications, webhook delivery reliability, and data pipelines.
+- Analyze platform telemetry with New Relic to prevent integration errors and minimize incident resolution times.
+- Drive customer discovery sessions with enterprise marketplace merchants across Europe.
+Who you are:
+- 5+ years of PM experience in payments, banking, or platform SaaS.
+- Hands-on knowledge of escrow, Mangopay/Adyen platform workflows, and Onfido KYC pipelines.
+- Bachelor's degree in Software Engineering or equivalent technical experience.

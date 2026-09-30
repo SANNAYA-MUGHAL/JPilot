@@ -1,0 +1,63 @@
+{
+  "job_id": "JOB_4abc9f323a",
+  "title": "Senior Product Manager — Checkout & Payment Systems",
+  "company": "Wise",
+  "location": "London, UK / Remote EU",
+  "country": "United Kingdom",
+  "city": "London",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "VISA_SPONSORED",
+  "visa_reasoning": "JD explicitly advertises visa sponsorship or relocation assistance package.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Agile",
+    "Scrum",
+    "A/B Testing",
+    "SQL",
+    "Checkout"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Own the end-to-end checkout conversion funnel and multi-currency payment execution.",
+    "Lead a cross-functional squad of 12+ engineers, QA, data analysts, and product designers in Agile/Scrum.",
+    "Architect fallback routing between payment processors and alternative payment methods.",
+    "Monitor payment gateway telemetry, error spikes, and transaction success rates using New Relic and Mixpanel.",
+    "Partner with compliance, legal, and banking partners to maintain PCI-DSS compliance and financial auditing.",
+    "+ years of Product Management experience in FinTech, Payments, or SaaS.",
+    "Hands-on experience with payment gateways (Adyen, Stripe, or local rails), split payments, or escrow workflows.",
+    "Strong quantitative acumen: A/B testing, funnel analysis, SQL, and event tracking (Mixpanel/Amplitude)."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments",
+    "SaaS"
+  ],
+  "tools": [
+    "Mixpanel",
+    "New Relic"
+  ],
+  "technologies_and_apis": [
+    "Adyen"
+  ],
+  "ats_keywords": [
+    "Agile",
+    "Scrum",
+    "A/B Testing",
+    "Mixpanel",
+    "New Relic",
+    "SQL",
+    "FinTech",
+    "Payments",
+    "Adyen",
+    "Checkout",
+    "SaaS"
+  ],
+  "raw_text": "Senior Product Manager — Checkout & Payment Systems at Wise.\nLocation: London, UK or Remote (Europe). Visa sponsorship available for UK relocation.\nAbout the role:\nWise is looking for an experienced Senior Product Manager to lead our Checkout and Payment Rails infrastructure squad. You will be responsible for defining the product vision, roadmap, and delivery of multi-currency payment checkout flows, API payment gateways, and reconciliation systems.\nResponsibilities:\n- Own the end-to-end checkout conversion funnel and multi-currency payment execution.\n- Lead a cross-functional squad of 12+ engineers, QA, data analysts, and product designers in Agile/Scrum.\n- Architect fallback routing between payment processors and alternative payment methods.\n- Monitor payment gateway telemetry, error spikes, and transaction success rates using New Relic and Mixpanel.\n- Partner with compliance, legal, and banking partners to maintain PCI-DSS compliance and financial auditing.\nRequirements:\n- 5+ years of Product Management experience in FinTech, Payments, or SaaS.\n- Hands-on experience with payment gateways (Adyen, Stripe, or local rails), split payments, or escrow workflows.\n- Strong quantitative acumen: A/B testing, funnel analysis, SQL, and event tracking (Mixpanel/Amplitude).\n- Excellent stakeholder communication and track record of working with banking partners.",
+  "discovered_at": "2026-09-30T17:33:46.651Z"
+}

@@ -1,0 +1,30 @@
+{
+  "overall_score": 93,
+  "tier": "HIGH_ALIGNMENT",
+  "breakdown": {
+    "role_score": 100,
+    "experience_score": 100,
+    "skills_score": 67,
+    "domain_score": 100,
+    "tools_score": 100,
+    "location_score": 100,
+    "preferred_score": 100
+  },
+  "strong_matches": [
+    "Target Primary Role Match: \"Product Manager — Platforms & Escrow Solutions\" directly matches target Product Management specializations.",
+    "Years of Experience: Candidate has 7+ years exceeding required 5 years.",
+    "Mandatory Skill Match: Product Strategy",
+    "Mandatory Skill Match: Agile/Scrum",
+    "Domain Alignment: Strong background in Payments",
+    "Domain Alignment: Strong background in SaaS",
+    "Domain Alignment: Strong background in Marketplace",
+    "Relocation & Visa: Employer provides visa sponsorship in Netherlands."
+  ],
+  "partial_matches": [],
+  "missing_mandatory": [
+    "Roadmap Planning"
+  ],
+  "missing_preferred": [],
+  "application_risks": [],
+  "recommendation": "Strong match across core role, domain, and skills. Immediate package generation recommended."
+}

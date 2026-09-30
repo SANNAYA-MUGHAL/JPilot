@@ -1,0 +1,30 @@
+{
+  "job_id": "JOB_20fc71048b",
+  "company": "Deliveroo",
+  "role": "Senior Product Operations Manager",
+  "overall_match": 100,
+  "tier": "HIGH_ALIGNMENT",
+  "visa_status": "VISA_SPONSORED",
+  "remote_policy": "REMOTE_REGIONAL",
+  "created_at": "2026-09-30T17:33:46.793Z",
+  "timing_ms": 23,
+  "truth_validation": {
+    "verified_claims": 14,
+    "supported_rewrites": 3,
+    "unverified_claims": 0
+  },
+  "trello": {
+    "card_id": "card_87yj43p9",
+    "card_title": "[100%] Deliveroo | Senior Product Operations Manager | London, UK / Remote UK",
+    "card_url": "https://trello.com/c/card_87yj43p9/%5B100%25%5D%20Deliveroo%20%7C%20S",
+    "list_name": "🔥 High Match",
+    "attachments_count": 3
+  },
+  "files": {
+    "resume_pdf": "tailored_resume.pdf",
+    "resume_tex": "tailored_resume.tex",
+    "cover_letter_pdf": "cover_letter.pdf",
+    "cover_letter_md": "cover_letter.md",
+    "jd": "jd.txt"
+  }
+}

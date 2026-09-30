@@ -1,0 +1,55 @@
+{
+  "job_id": "JOB_20eacc65bc",
+  "title": "Product Manager — Platforms & Escrow Solutions",
+  "company": "Adyen",
+  "location": "Amsterdam, Netherlands",
+  "country": "Netherlands",
+  "city": "Amsterdam",
+  "remote_policy": "UNSPECIFIED",
+  "visa_status": "VISA_SPONSORED",
+  "visa_reasoning": "JD explicitly advertises visa sponsorship or relocation assistance package.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Product Strategy",
+    "Agile/Scrum",
+    "Roadmap Planning"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Design product features for complex marketplace settlement models, including split tender and automated escrow release.",
+    "Work closely with engineering on API specifications, webhook delivery reliability, and data pipelines.",
+    "Analyze platform telemetry with New Relic to prevent integration errors and minimize incident resolution times.",
+    "Drive customer discovery sessions with enterprise marketplace merchants across Europe.",
+    "+ years of PM experience in payments, banking, or platform SaaS.",
+    "Hands-on knowledge of escrow, Mangopay/Adyen platform workflows, and Onfido KYC pipelines.",
+    "Bachelor's degree in Software Engineering or equivalent technical experience."
+  ],
+  "domains": [
+    "Payments",
+    "SaaS",
+    "Marketplace"
+  ],
+  "tools": [
+    "New Relic"
+  ],
+  "technologies_and_apis": [
+    "Adyen",
+    "MangoPay"
+  ],
+  "ats_keywords": [
+    "New Relic",
+    "Payments",
+    "Adyen",
+    "MangoPay",
+    "SaaS",
+    "Marketplace"
+  ],
+  "raw_text": "Product Manager — Platforms, Escrow & Multi-Party Settlements at Adyen.\nLocation: Amsterdam, Netherlands. Full relocation package and EU visa sponsorship provided.\nAbout Adyen:\nAdyen is the financial technology platform of choice for leading companies. We are seeking a Product Manager for our Platforms division, focusing on multi-party marketplace payouts, escrow orchestration, and real-time KYC.\nWhat you will do:\n- Design product features for complex marketplace settlement models, including split tender and automated escrow release.\n- Work closely with engineering on API specifications, webhook delivery reliability, and data pipelines.\n- Analyze platform telemetry with New Relic to prevent integration errors and minimize incident resolution times.\n- Drive customer discovery sessions with enterprise marketplace merchants across Europe.\nWho you are:\n- 5+ years of PM experience in payments, banking, or platform SaaS.\n- Hands-on knowledge of escrow, Mangopay/Adyen platform workflows, and Onfido KYC pipelines.\n- Bachelor's degree in Software Engineering or equivalent technical experience.",
+  "discovered_at": "2026-09-30T17:33:46.896Z"
+}

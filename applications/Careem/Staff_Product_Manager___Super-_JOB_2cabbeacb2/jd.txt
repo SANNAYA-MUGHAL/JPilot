@@ -1,0 +1,13 @@
+Staff Product Manager — Super-App Wallets & Digital Payments at Careem (an Uber company).
+Location: Dubai, UAE. Relocation and UAE residency visa provided.
+About the Role:
+Careem is the everyday super-app of the greater Middle East. In Careem Pay, you will lead the core digital wallet, split payments, and customer loyalty points redemption systems used by tens of millions of customers.
+Responsibilities:
+- Own the roadmap for Careem Pay digital wallet balance, card-on-file tokenization, and multi-source checkout (wallet + card + loyalty points).
+- Architect automated escalation workflows for stuck transactions and customer support refund requests.
+- Collaborate with UAE central bank and regional financial regulators on KYC/AML standards.
+- Lead a squad of 18+ engineers, product analysts, and UX researchers.
+Requirements:
+- 7+ years of product experience across FinTech, super-apps, or high-volume marketplace checkouts.
+- Direct experience with multi-tender payment orchestration, Adyen, Apple Pay, and webhook events.
+- Outstanding analytical skills: Mixpanel, SQL, and cohort retention modeling.

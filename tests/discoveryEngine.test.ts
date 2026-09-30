@@ -13,6 +13,8 @@ import { JobScheduler } from '../src/services/scheduler/jobScheduler.js';
 test('JobDiscoveryEngine processes batch with deduplication and error isolation', async () => {
   const testAppsDir = path.resolve(process.cwd(), 'tests/tmp_discovery_apps');
   const testRegistryPath = path.resolve(process.cwd(), 'tests/tmp_discovery_registry.json');
+  if (fs.existsSync(testAppsDir)) fs.rmSync(testAppsDir, { recursive: true, force: true });
+  if (fs.existsSync(testRegistryPath)) fs.rmSync(testRegistryPath, { force: true });
 
   const dedupe = new DeduplicationAgent(testRegistryPath);
   const filter = new EligibilityFilter();

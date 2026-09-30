@@ -1,0 +1,14 @@
+Senior Product Manager — Payment Core & Cards at N26.
+Location: Berlin, Germany (Hybrid or Remote EU). Relocation & Visa Sponsorship provided.
+About the Role:
+As Senior Product Manager in Payment Core, you will drive the expansion of N26 digital banking payment rails, Open Banking APIs, card transaction routing, and customer dispute resolution.
+Responsibilities:
+- Drive the roadmap for SEPA instant, Open Banking (PSD2), Apple Pay/Google Pay, and digital wallet integrations.
+- Optimize transaction authorization rates and cut checkout latency across EMEA.
+- Lead root-cause investigations on payment failures, chargebacks, and webhook delivery errors.
+- Collaborate with Banking Operations, Risk, and Engineering teams.
+Requirements:
+- 6+ years in digital banking, FinTech, or eCommerce payment systems.
+- Proven experience with Open Banking APIs, Plaid, Adyen, or core payment gateways.
+- Expertise in SLA management, incident triage, and production observability (New Relic, Mezmo, Datadog).
+- Fluent English communication; Bachelor's degree in Software Engineering, CS, or related field.

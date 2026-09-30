@@ -1,0 +1,57 @@
+{
+  "job_id": "JOB_d80a9244a1",
+  "title": "Product Manager — Connect & Global Payouts",
+  "company": "Stripe",
+  "location": "Dublin, Ireland / Remote EU",
+  "country": "Ireland",
+  "city": "Dublin",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Product Strategy",
+    "SQL"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Lead product strategy for marketplace split payments, escrow holding rules, and multi-tender disbursements.",
+    "Work with global engineering squads to design webhook schemas, KYC flows, and automated reconciliation APIs.",
+    "Drive reduction in payout failure rates through proactive log analysis and intelligent retry mechanisms.",
+    "Engage directly with platform partners to gather user feedback and prioritize technical backlogs.",
+    "+ years of PM experience building developer platforms, FinTech products, or payment gateways.",
+    "Deep familiarity with Adyen, Mangopay, Stripe, or proprietary payment orchestration systems.",
+    "Strong analytical foundation with SQL, telemetry analysis, and conversion funnel optimization."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments",
+    "Marketplace"
+  ],
+  "tools": [
+    "Jira",
+    "Mixpanel",
+    "Figma"
+  ],
+  "technologies_and_apis": [
+    "Adyen",
+    "MangoPay"
+  ],
+  "ats_keywords": [
+    "Product Strategy",
+    "SQL",
+    "FinTech",
+    "Payments",
+    "Adyen",
+    "MangoPay",
+    "Marketplace"
+  ],
+  "raw_text": "Product Manager — Connect, Marketplaces & Global Payouts at Stripe.\nLocation: Dublin, Ireland or Remote EU. Visa sponsorship supported.\nAbout Stripe Connect:\nStripe Connect is the engine behind marketplaces like Shopify, DoorDash, and Lyft. As PM for Connect Payouts, you will shape how platforms split payments, onboard merchants, and disburse billions in funds globally.\nResponsibilities:\n- Lead product strategy for marketplace split payments, escrow holding rules, and multi-tender disbursements.\n- Work with global engineering squads to design webhook schemas, KYC flows, and automated reconciliation APIs.\n- Drive reduction in payout failure rates through proactive log analysis and intelligent retry mechanisms.\n- Engage directly with platform partners to gather user feedback and prioritize technical backlogs.\nRequirements:\n- 5+ years of PM experience building developer platforms, FinTech products, or payment gateways.\n- Deep familiarity with Adyen, Mangopay, Stripe, or proprietary payment orchestration systems.\n- Strong analytical foundation with SQL, telemetry analysis, and conversion funnel optimization.",
+  "discovered_at": "2026-09-30T17:33:46.822Z"
+}

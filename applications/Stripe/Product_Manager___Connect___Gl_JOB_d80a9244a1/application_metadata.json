@@ -1,0 +1,30 @@
+{
+  "job_id": "JOB_d80a9244a1",
+  "company": "Stripe",
+  "role": "Product Manager — Connect & Global Payouts",
+  "overall_match": 100,
+  "tier": "HIGH_ALIGNMENT",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "created_at": "2026-09-30T17:33:46.843Z",
+  "timing_ms": 21,
+  "truth_validation": {
+    "verified_claims": 14,
+    "supported_rewrites": 3,
+    "unverified_claims": 0
+  },
+  "trello": {
+    "card_id": "card_muwd2zr9",
+    "card_title": "[100%] Stripe | Product Manager — Connect & Global Payouts | Dublin, Ireland / Remote EU",
+    "card_url": "https://trello.com/c/card_muwd2zr9/%5B100%25%5D%20Stripe%20%7C%20Prod",
+    "list_name": "🔥 High Match",
+    "attachments_count": 3
+  },
+  "files": {
+    "resume_pdf": "tailored_resume.pdf",
+    "resume_tex": "tailored_resume.tex",
+    "cover_letter_pdf": "cover_letter.pdf",
+    "cover_letter_md": "cover_letter.md",
+    "jd": "jd.txt"
+  }
+}

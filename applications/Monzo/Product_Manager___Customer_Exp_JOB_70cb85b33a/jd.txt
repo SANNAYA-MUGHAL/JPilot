@@ -1,0 +1,15 @@
+Product Manager — Customer Experience & Operations Automation at Monzo.
+Location: London, UK. Visa sponsorship provided.
+About Monzo:
+Monzo is on a mission to make money work for everyone. We have over 9 million customers and are expanding rapidly.
+The Role:
+We are looking for a Product Manager to lead our Customer Operations & Automated Incident Response squad. You will be responsible for building internal tools that empower support operations to hit 99% SLA compliance and uncover product defect root causes.
+Responsibilities:
+- Build automated ticket categorization and intelligent routing tools for high-volume customer inquiries.
+- Bridge customer support feedback directly into core banking engineering squads.
+- Utilize observability tools (Mezmo, New Relic) to detect user experience issues before customers report them.
+- Measure and optimize incident resolution time (MTTR) and customer CSAT.
+Requirements:
+- 5+ years of experience in Product Management, Product Operations, or Customer Support Engineering.
+- Experience with Jira Service Management, ticket classification workflows, and telephony/IVR escalation.
+- Strong analytical and problem-solving mindset.

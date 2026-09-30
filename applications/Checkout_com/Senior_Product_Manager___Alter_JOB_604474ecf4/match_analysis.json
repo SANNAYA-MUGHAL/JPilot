@@ -1,0 +1,29 @@
+{
+  "overall_score": 79,
+  "tier": "GOOD_ALIGNMENT",
+  "breakdown": {
+    "role_score": 100,
+    "experience_score": 100,
+    "skills_score": 0,
+    "domain_score": 100,
+    "tools_score": 100,
+    "location_score": 80,
+    "preferred_score": 100
+  },
+  "strong_matches": [
+    "Target Primary Role Match: \"Senior Product Manager — Alternative Payment Methods\" directly matches target Product Management specializations.",
+    "Years of Experience: Candidate has 7+ years exceeding required 5 years.",
+    "Domain Alignment: Strong background in FinTech",
+    "Domain Alignment: Strong background in Payments",
+    "Domain Alignment: Strong background in eCommerce"
+  ],
+  "partial_matches": [
+    "Location Alignment: Located in target geography (United Kingdom)."
+  ],
+  "missing_mandatory": [
+    "Checkout"
+  ],
+  "missing_preferred": [],
+  "application_risks": [],
+  "recommendation": "Solid match with minor skill or domain variance. Ready to tailor with strategic emphasis."
+}

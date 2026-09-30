@@ -1,0 +1,30 @@
+{
+  "job_id": "JOB_2cabbeacb2",
+  "company": "Careem",
+  "role": "Staff Product Manager — Super-App Wallets & FinTech",
+  "overall_match": 90,
+  "tier": "HIGH_ALIGNMENT",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "created_at": "2026-09-30T17:33:46.896Z",
+  "timing_ms": 24,
+  "truth_validation": {
+    "verified_claims": 14,
+    "supported_rewrites": 3,
+    "unverified_claims": 0
+  },
+  "trello": {
+    "card_id": "card_gdp8174e",
+    "card_title": "[90%] Careem | Staff Product Manager — Super-App Wallets & FinTech | Dubai, UAE / Remote GCC",
+    "card_url": "https://trello.com/c/card_gdp8174e/%5B90%25%5D%20Careem%20%7C%20Staff",
+    "list_name": "🔥 High Match",
+    "attachments_count": 3
+  },
+  "files": {
+    "resume_pdf": "tailored_resume.pdf",
+    "resume_tex": "tailored_resume.tex",
+    "cover_letter_pdf": "cover_letter.pdf",
+    "cover_letter_md": "cover_letter.md",
+    "jd": "jd.txt"
+  }
+}

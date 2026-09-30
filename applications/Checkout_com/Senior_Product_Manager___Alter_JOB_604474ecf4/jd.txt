@@ -1,0 +1,13 @@
+Senior Product Manager — Alternative Payment Methods (APMs) & Wallets at Checkout.com.
+Location: Dubai, UAE or London, UK. Local employment / visa transfer available.
+The Opportunity:
+Checkout.com is a global digital payments company. We are looking for a Senior Product Manager to spearhead our alternative payment methods portfolio across the Middle East and Europe, including Tabby (BNPL), Apple Pay, digital wallets, and local clearing networks.
+Key Responsibilities:
+- Lead end-to-end integration and lifecycle management of regional payment methods (Tabby, Apple Pay, Etisalat Gateway).
+- Partner with merchants to analyze drop-offs at checkout and improve authorization success rates.
+- Establish automated testing and QA validation frameworks for new payment gateway adapters.
+- Define product metrics, monitor incident resolution SLAs, and report progress to executive leadership.
+Experience:
+- 6+ years in payments, eCommerce, or FinTech product delivery.
+- Proven experience with BNPL (Tabby/Tamara), digital wallets, and POS/eCommerce integrations.
+- Background working with cross-functional squads across product, engineering, and partner operations.

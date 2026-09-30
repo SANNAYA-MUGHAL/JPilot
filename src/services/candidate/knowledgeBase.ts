@@ -106,6 +106,10 @@ export class CandidateKnowledgeBase {
     return this.profile;
   }
 
+  public getProfile(): CandidateProfile {
+    return this.profile;
+  }
+
   public getExperiences(): EmploymentRecord[] {
     return this.experiences;
   }

@@ -58,7 +58,7 @@ test('ResumeTailoringAgent reorders bullets and retains fact IDs', async () => {
   // Verify employers and dates are strictly preserved
   const bayutExp = ast.experiences.find((e) => e.company.includes('Bayut'));
   assert.ok(bayutExp);
-  assert.equal(bayutExp.role, 'Product Manager — FinTech, Payments & Monetization');
+  assert.equal(bayutExp.role, 'Product Manager');
 
   // Verify top bullet for Bayut is the Split Payments/Adyen bullet (BAYUT_ACHIEVE_01)
   const topBullet = bayutExp.bullets[0];

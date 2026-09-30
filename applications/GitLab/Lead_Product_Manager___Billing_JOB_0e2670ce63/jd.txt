@@ -1,0 +1,14 @@
+Lead Product Manager — Billing, Subscriptions & Revenue SaaS at GitLab.
+Location: 100% Remote Worldwide. B2B contract or EOR payroll supported.
+About GitLab:
+GitLab is the leading DevSecOps platform. We are looking for a Lead Product Manager for our Growth and Monetization division, focusing on self-service subscription upgrades, billing retention, and churn prevention.
+Key Responsibilities:
+- Lead product strategy for subscription lifecycle management, self-service tier upgrades, and automated retention flows.
+- Spearhead churn reduction initiatives, analyzing cohort drop-offs using Mixpanel and product analytics.
+- Build automated billing workflows and customer notification webhooks.
+- Partner with finance and revenue operations to ensure billing reconciliation and auditability.
+Requirements:
+- 7+ years of experience in Product Management in B2B SaaS or Marketplaces.
+- Proven track record of reducing subscription churn and improving conversion funnels.
+- Deep experience in Agile/Scrum delivery, PRD authoring, and cross-functional leadership.
+- Technical understanding of REST APIs, webhook architectures, and event-driven systems.

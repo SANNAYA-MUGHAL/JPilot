@@ -1,0 +1,13 @@
+Product Manager — Connect, Marketplaces & Global Payouts at Stripe.
+Location: Dublin, Ireland or Remote EU. Visa sponsorship supported.
+About Stripe Connect:
+Stripe Connect is the engine behind marketplaces like Shopify, DoorDash, and Lyft. As PM for Connect Payouts, you will shape how platforms split payments, onboard merchants, and disburse billions in funds globally.
+Responsibilities:
+- Lead product strategy for marketplace split payments, escrow holding rules, and multi-tender disbursements.
+- Work with global engineering squads to design webhook schemas, KYC flows, and automated reconciliation APIs.
+- Drive reduction in payout failure rates through proactive log analysis and intelligent retry mechanisms.
+- Engage directly with platform partners to gather user feedback and prioritize technical backlogs.
+Requirements:
+- 5+ years of PM experience building developer platforms, FinTech products, or payment gateways.
+- Deep familiarity with Adyen, Mangopay, Stripe, or proprietary payment orchestration systems.
+- Strong analytical foundation with SQL, telemetry analysis, and conversion funnel optimization.

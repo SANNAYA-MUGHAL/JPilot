@@ -1,0 +1,30 @@
+{
+  "overall_score": 100,
+  "tier": "HIGH_ALIGNMENT",
+  "breakdown": {
+    "role_score": 100,
+    "experience_score": 100,
+    "skills_score": 100,
+    "domain_score": 100,
+    "tools_score": 100,
+    "location_score": 100,
+    "preferred_score": 100
+  },
+  "strong_matches": [
+    "Target Primary Role Match: \"Lead Product Manager — Billing & Revenue SaaS\" directly matches target Product Management specializations.",
+    "Years of Experience: Candidate has 7+ years exceeding required 7 years.",
+    "Mandatory Skill Match: Product Strategy",
+    "Mandatory Skill Match: Agile",
+    "Mandatory Skill Match: Scrum",
+    "Mandatory Skill Match: PRD",
+    "Mandatory Skill Match: Analytics",
+    "Domain Alignment: Strong background in SaaS",
+    "Domain Alignment: Strong background in Marketplace",
+    "Location Compatibility: 100% Remote Worldwide arrangement."
+  ],
+  "partial_matches": [],
+  "missing_mandatory": [],
+  "missing_preferred": [],
+  "application_risks": [],
+  "recommendation": "Strong match across core role, domain, and skills. Immediate package generation recommended."
+}

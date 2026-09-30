@@ -1,0 +1,13 @@
+Senior Product Operations Manager at Deliveroo.
+Location: London, UK. Visa sponsorship available.
+The Role:
+Deliveroo is scaling its rapid delivery and grocery fulfillment marketplace. We need a Senior Product Operations Manager to bridge product engineering with operations, field fulfillment, delivery slot optimization, and customer support.
+Responsibilities:
+- Analyze customer support incident trends and build closed-loop feedback mechanisms into product squads.
+- Oversee delivery slot capacity planning, automated order escalation, and out-of-stock substitution workflows.
+- Lead customer investigations and Jira support escalation workflows to achieve 99% SLA compliance.
+- Drive cross-functional alignment between engineering, operations leads, and retail partners.
+Requirements:
+- 6+ years in Product Operations, Technical Project Management, or Marketplace Delivery.
+- Track record of reducing order cancellations, optimizing fulfillment SLAs, and analyzing customer logs.
+- Proficiency in SQL, Python, Mixpanel, and observability tools.

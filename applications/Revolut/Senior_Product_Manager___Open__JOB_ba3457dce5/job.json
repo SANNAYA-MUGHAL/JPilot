@@ -1,0 +1,53 @@
+{
+  "job_id": "JOB_ba3457dce5",
+  "title": "Senior Product Manager — Open Banking & Payments",
+  "company": "Revolut",
+  "location": "London, UK / Remote Europe",
+  "country": "United Kingdom",
+  "city": "London",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "VISA_SPONSORED",
+  "visa_reasoning": "JD explicitly advertises visa sponsorship or relocation assistance package.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Agile",
+    "Checkout"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Own the product vision and execution for Revolut Open Banking payment rails and bank account verification.",
+    "Scale multi-currency checkout, escrow features, and instant bank transfers via Plaid and regulatory APIs.",
+    "Collaborate with FCA and European regulatory bodies to guarantee full compliance (KYC, AML, PCI-DSS).",
+    "Analyze payment funnel conversion and drop-offs to improve first-time user transaction success.",
+    "+ years of Product Management experience in FinTech, Payments, or Neobanking.",
+    "Strong technical background in Open Banking APIs, webhooks, and multi-party payment reconciliation.",
+    "Track record of shipping high-impact features in fast-paced Agile environments."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments"
+  ],
+  "tools": [
+    "Jira",
+    "Mixpanel",
+    "Figma"
+  ],
+  "technologies_and_apis": [
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Agile",
+    "Webhooks",
+    "FinTech",
+    "Payments",
+    "Checkout"
+  ],
+  "raw_text": "Senior Product Manager — Open Banking & Payments at Revolut.\nLocation: London, UK or Remote EU. Relocation assistance and visa sponsorship provided.\nAbout Revolut:\nPeople deserve more from their money. More visibility, more control, more freedom. Revolut is building the world's first global financial super-app.\nWhat you will be doing:\n- Own the product vision and execution for Revolut Open Banking payment rails and bank account verification.\n- Scale multi-currency checkout, escrow features, and instant bank transfers via Plaid and regulatory APIs.\n- Collaborate with FCA and European regulatory bodies to guarantee full compliance (KYC, AML, PCI-DSS).\n- Analyze payment funnel conversion and drop-offs to improve first-time user transaction success.\nQualifications:\n- 6+ years of Product Management experience in FinTech, Payments, or Neobanking.\n- Strong technical background in Open Banking APIs, webhooks, and multi-party payment reconciliation.\n- Track record of shipping high-impact features in fast-paced Agile environments.",
+  "discovered_at": "2026-09-30T17:33:46.793Z"
+}

@@ -1,0 +1,30 @@
+{
+  "job_id": "JOB_ba3457dce5",
+  "company": "Revolut",
+  "role": "Senior Product Manager — Open Banking & Payments",
+  "overall_match": 90,
+  "tier": "HIGH_ALIGNMENT",
+  "visa_status": "VISA_SPONSORED",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "created_at": "2026-09-30T17:33:46.822Z",
+  "timing_ms": 29,
+  "truth_validation": {
+    "verified_claims": 14,
+    "supported_rewrites": 3,
+    "unverified_claims": 0
+  },
+  "trello": {
+    "card_id": "card_9am3thqs",
+    "card_title": "[90%] Revolut | Senior Product Manager — Open Banking & Payments | London, UK / Remote Europe",
+    "card_url": "https://trello.com/c/card_9am3thqs/%5B90%25%5D%20Revolut%20%7C%20Seni",
+    "list_name": "🔥 High Match",
+    "attachments_count": 3
+  },
+  "files": {
+    "resume_pdf": "tailored_resume.pdf",
+    "resume_tex": "tailored_resume.tex",
+    "cover_letter_pdf": "cover_letter.pdf",
+    "cover_letter_md": "cover_letter.md",
+    "jd": "jd.txt"
+  }
+}

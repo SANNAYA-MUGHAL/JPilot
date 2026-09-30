@@ -1,0 +1,27 @@
+{
+  "overall_score": 80,
+  "tier": "HIGH_ALIGNMENT",
+  "breakdown": {
+    "role_score": 100,
+    "experience_score": 100,
+    "skills_score": 0,
+    "domain_score": 100,
+    "tools_score": 100,
+    "location_score": 100,
+    "preferred_score": 100
+  },
+  "strong_matches": [
+    "Target Primary Role Match: \"Senior Product Manager — Payment Core & Cards\" directly matches target Product Management specializations.",
+    "Years of Experience: Candidate has 7+ years exceeding required 5 years.",
+    "Domain Alignment: Strong background in FinTech",
+    "Domain Alignment: Strong background in eCommerce",
+    "Relocation & Visa: Employer provides visa sponsorship in Germany."
+  ],
+  "partial_matches": [],
+  "missing_mandatory": [
+    "Checkout"
+  ],
+  "missing_preferred": [],
+  "application_risks": [],
+  "recommendation": "Strong match across core role, domain, and skills. Immediate package generation recommended."
+}

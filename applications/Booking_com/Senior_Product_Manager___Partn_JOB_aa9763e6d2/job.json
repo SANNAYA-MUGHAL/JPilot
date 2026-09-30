@@ -1,0 +1,56 @@
+{
+  "job_id": "JOB_aa9763e6d2",
+  "title": "Senior Product Manager — Partner Payments & Settlements",
+  "company": "Booking.com",
+  "location": "Amsterdam, Netherlands / Hybrid",
+  "country": "Netherlands",
+  "city": "Amsterdam",
+  "remote_policy": "HYBRID",
+  "visa_status": "VISA_SPONSORED",
+  "visa_reasoning": "JD explicitly advertises visa sponsorship or relocation assistance package.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Agile",
+    "SQL",
+    "Analytics"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Lead the product roadmap for property partner payout schedules, dynamic fee adjustments, and cancellation policies.",
+    "Reduce partner churn by designing flexible payout pause/resume options and transparent analytics dashboards.",
+    "Partner with machine learning teams to detect fraud signals and optimize transaction routing.",
+    "Lead Agile sprint ceremonies with distributed cross-functional teams.",
+    "+ years of Product Management experience in FinTech, travel tech, or marketplaces.",
+    "Strong experience with payment settlement pipelines, cancellation workflows, and root-cause analysis.",
+    "Proven ability to use data (SQL, Mixpanel, Tableau) to drive product decisions."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments",
+    "Marketplace"
+  ],
+  "tools": [
+    "Mixpanel"
+  ],
+  "technologies_and_apis": [
+    "REST APIs",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Agile",
+    "Mixpanel",
+    "SQL",
+    "FinTech",
+    "Payments",
+    "Marketplace",
+    "Analytics"
+  ],
+  "raw_text": "Senior Product Manager — Partner Payments & Settlements at Booking.com.\nLocation: Amsterdam, Netherlands. Relocation assistance and 30% ruling visa support provided.\nThe Opportunity:\nBooking Holdings is the world's leading online travel marketplace. In Booking FinTech, you will manage partner payout orchestration, multi-currency wallet adjustments, and refund cancellation workflows.\nResponsibilities:\n- Lead the product roadmap for property partner payout schedules, dynamic fee adjustments, and cancellation policies.\n- Reduce partner churn by designing flexible payout pause/resume options and transparent analytics dashboards.\n- Partner with machine learning teams to detect fraud signals and optimize transaction routing.\n- Lead Agile sprint ceremonies with distributed cross-functional teams.\nRequirements:\n- 6+ years of Product Management experience in FinTech, travel tech, or marketplaces.\n- Strong experience with payment settlement pipelines, cancellation workflows, and root-cause analysis.\n- Proven ability to use data (SQL, Mixpanel, Tableau) to drive product decisions.",
+  "discovered_at": "2026-09-30T17:33:46.917Z"
+}

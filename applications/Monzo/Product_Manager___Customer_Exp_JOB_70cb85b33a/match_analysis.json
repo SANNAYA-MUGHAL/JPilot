@@ -1,0 +1,28 @@
+{
+  "overall_score": 89,
+  "tier": "HIGH_ALIGNMENT",
+  "breakdown": {
+    "role_score": 100,
+    "experience_score": 100,
+    "skills_score": 67,
+    "domain_score": 70,
+    "tools_score": 100,
+    "location_score": 100,
+    "preferred_score": 100
+  },
+  "strong_matches": [
+    "Target Primary Role Match: \"Product Manager — Customer Experience & Operations\" directly matches target Product Management specializations.",
+    "Years of Experience: Candidate has 7+ years exceeding required 5 years.",
+    "Mandatory Skill Match: Product Strategy",
+    "Mandatory Skill Match: Agile/Scrum",
+    "Domain Alignment: Strong background in SaaS",
+    "Relocation & Visa: Employer provides visa sponsorship in United Kingdom."
+  ],
+  "partial_matches": [],
+  "missing_mandatory": [
+    "Roadmap Planning"
+  ],
+  "missing_preferred": [],
+  "application_risks": [],
+  "recommendation": "Strong match across core role, domain, and skills. Immediate package generation recommended."
+}

@@ -1,0 +1,51 @@
+{
+  "job_id": "JOB_91a90be2cf",
+  "title": "Platform Product Manager — Integrations & APIs",
+  "company": "Personio",
+  "location": "Munich, Germany / Amsterdam, Netherlands",
+  "country": "Germany",
+  "city": "Munich",
+  "remote_policy": "HYBRID",
+  "visa_status": "VISA_SPONSORED",
+  "visa_reasoning": "JD explicitly advertises visa sponsorship or relocation assistance package.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Scrum"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Define developer experience and architecture for public REST APIs, webhooks, and third-party data exchange.",
+    "Scale automated partner onboarding and technical validation test pipelines.",
+    "Work closely with QA leads to establish automated API testing frameworks and reduce bug escape rates.",
+    "Maintain 99.9% uptime SLA across partner synchronization endpoints.",
+    "+ years of Technical Product Management or API platform experience.",
+    "Background in Software Engineering, QA coordination, or API architecture.",
+    "Demonstrated success collaborating with cross-functional engineering teams in Scrum.",
+    "Experience with Postman, Swagger/OpenAPI, and log monitoring tools."
+  ],
+  "domains": [
+    "Marketplace"
+  ],
+  "tools": [
+    "Postman"
+  ],
+  "technologies_and_apis": [
+    "REST API",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Scrum",
+    "Postman",
+    "REST API",
+    "Webhooks",
+    "Marketplace"
+  ],
+  "raw_text": "Platform Product Manager — Partner Integrations & APIs at Personio.\nLocation: Munich or Amsterdam (Hybrid/Remote EU). Full visa sponsorship & relocation package.\nOverview:\nPersonio is Europe's leading HR and payroll software for SMBs. We are searching for a Platform Product Manager to spearhead our external partner API ecosystem, webhook delivery service, and marketplace marketplace connectors.\nResponsibilities:\n- Define developer experience and architecture for public REST APIs, webhooks, and third-party data exchange.\n- Scale automated partner onboarding and technical validation test pipelines.\n- Work closely with QA leads to establish automated API testing frameworks and reduce bug escape rates.\n- Maintain 99.9% uptime SLA across partner synchronization endpoints.\nRequirements:\n- 5+ years of Technical Product Management or API platform experience.\n- Background in Software Engineering, QA coordination, or API architecture.\n- Demonstrated success collaborating with cross-functional engineering teams in Scrum.\n- Experience with Postman, Swagger/OpenAPI, and log monitoring tools.",
+  "discovered_at": "2026-09-30T17:33:46.747Z"
+}

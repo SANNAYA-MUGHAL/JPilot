@@ -2,56 +2,75 @@
   "candidate_profile": {
     "personal_information": {
       "full_name": "Sana Liaqat",
-      "email": "sana.liaqat.pm@gmail.com",
-      "phone": "+971 50 000 0000",
+      "email": "sannayamughal9@gmail.com",
+      "phone": "(+92) 3062520001",
       "location": "Dubai, United Arab Emirates",
-      "linkedin": "https://linkedin.com/in/sana-liaqat-pm",
-      "github": "https://github.com/sanapm",
-      "portfolio": "https://sanapm.me"
+      "nationality": "Pakistani",
+      "date_of_birth": "1995-05-12",
+      "linkedin": "https://www.linkedin.com/in/sana-liaqat/",
+      "website": "https://sana-liaqat-portfolio.vercel.app/",
+      "portfolio": "https://sana-liaqat-portfolio.vercel.app/"
     },
-    "professional_summary": "Impact-driven Product Manager with 7+ years of cross-functional technology experience across Product Management, Technical Support, Quality Assurance, and Product Operations. Proven track record leading high-scale B2B/B2C SaaS, FinTech, PropTech, marketplaces, and eCommerce platforms across Europe and the Middle East. Deep technical expertise in multi-provider payment integrations (Adyen, MangoPay, Tabby, Split Payments), complex API ecosystems, product analytics (Mixpanel, CleverTap, New Relic, Mezmo), and conversion optimization. Adept at translating ambiguous business objectives into scalable roadmaps, data-driven backlogs, and measurable customer value.",
+    "professional_summary": "Product Manager with 7+ years of experience shipping data-driven products across FinTech, SaaS, and PropTech. Owned product strategy and roadmaps that reduced order cancellations by 33%, improved incident resolution time by 35%, and maintained 99% SLA compliance in high-volume environments. Deep expertise in payments, KYC, Open Banking, and customer experience, with extensive hands-on work leading customer-side investigations, support operations, and root-cause analysis to drive measurable product improvements. Skilled in leveraging Mixpanel, New Relic, Mezmo, SQL, and generative AI tools to translate user behaviour and production telemetry into prioritised feature decisions.",
     "positioning": {
       "years_of_experience": 7,
       "primary_discipline": "Product Management",
-      "industries": ["FinTech", "PropTech", "SaaS", "Marketplaces", "eCommerce"],
-      "core_focus": ["Payments & Checkout", "API & Platform Integrations", "Product Analytics & Growth", "Operations & Delivery Optimization"]
+      "industries": [
+        "FinTech",
+        "SaaS",
+        "PropTech",
+        "Marketplace",
+        "eCommerce",
+        "Embedded Finance",
+        "Open Banking",
+        "Payments",
+        "Lending & BNPL",
+        "Wealth & Investor Tech"
+      ],
+      "core_focus": [
+        "Product Vision & Strategy",
+        "FinTech & Payments (Cards, Wallets, BNPL, COD, Escrow, Open Banking)",
+        "Customer Experience & Operations (Root-Cause Analysis, Support SLA Optimization)",
+        "API Design & Platform Integrations (Webhooks, Microservices)",
+        "Growth, Data & Experimentation (Mixpanel, New Relic, Funnel Analysis)",
+        "AI & Modern Product Tools (Generative AI, Prompt Engineering, LLMs)"
+      ]
     },
     "target_roles": {
       "primary": [
         "Product Manager",
+        "Senior Product Manager",
         "Technical Product Manager",
-        "Product Owner",
         "Platform Product Manager",
         "FinTech Product Manager",
-        "SaaS Product Manager",
         "Product Operations Manager",
-        "Associate Product Manager",
+        "Technical Project Manager",
         "AI Product Manager",
-        "Project Manager"
+        "Product Owner"
       ],
       "secondary": [
-        "Technical Project Manager",
         "QA Lead",
-        "Senior QA Engineer"
+        "Project Coordinator",
+        "Delivery Manager"
       ]
     },
     "location_preferences": {
       "preferred_geographies": [
         "Remote Worldwide",
-        "Europe",
         "United Kingdom",
-        "United Arab Emirates",
-        "France",
-        "Luxembourg",
+        "Europe",
         "Germany",
-        "Netherlands"
+        "Netherlands",
+        "France",
+        "United Arab Emirates",
+        "Pakistan"
       ],
       "remote_preference": "Remote Preferred or Hybrid",
       "relocation_supported": true,
       "work_authorization_status": {
-        "current_residence": "UAE (Valid Residency & Work Authorization)",
+        "current_residence": "Dubai, UAE (Valid Residency & Work Authorization)",
+        "uk_relocation": "Open to Visa Sponsorship & Relocation (Prior experience with FCA-regulated UK PropTech)",
         "eu_relocation": "Open to Visa Sponsorship & Relocation",
-        "uk_relocation": "Open to Visa Sponsorship & Relocation",
         "b2b_contract_open": true,
         "eor_payroll_open": true
       }
@@ -59,31 +78,126 @@
     "work_preferences": {
       "contract_types": ["Full-Time Permanent", "Contract (B2B)", "Remote (EOR)"],
       "notice_period_days": 30,
-      "preferred_team_structure": "Cross-functional Agile (Product, Engineering, Design, Data)"
+      "preferred_team_structure": "Cross-functional Agile (Product, Engineering, Design, Compliance, Data)"
     },
     "education": [
       {
-        "degree": "Bachelor of Science in Computer Science",
-        "institution": "FAST National University of Computer and Emerging Sciences",
-        "graduation_year": "2017",
-        "location": "Pakistan"
+        "degree": "Bachelor of Science in Software Engineering",
+        "institution": "University of Sargodha",
+        "graduation_year": "2018",
+        "graduation_period": "2014–2018",
+        "location": "Pakistan",
+        "dates": "01/09/2014 – 10/10/2018",
+        "gpa": "3.3/4.0",
+        "city": "Faisalabad",
+        "country": "Pakistan",
+        "eqf_level": "EQF level 6",
+        "coursework": [
+          "Artificial Intelligence Fundamentals",
+          "Data Structures & Algorithms",
+          "Database Systems & SQL",
+          "Software Architecture",
+          "Web & Enterprise Application Development",
+          "Software Testing & Quality Engineering",
+          "Agile Project Management"
+        ]
       }
     ],
     "certifications": [
       {
-        "name": "Certified Scrum Product Owner (CSPO)",
-        "issuer": "Scrum Alliance",
-        "year": "2021"
+        "name": "IBM AI Product Manager Professional Certificate",
+        "issuer": "Coursera",
+        "year": "2026"
       },
       {
-        "name": "Pragmatic Institute Certified (Foundations & Build)",
-        "issuer": "Pragmatic Institute",
-        "year": "2022"
+        "name": "Google Data Analytics Professional Certificate",
+        "issuer": "Coursera",
+        "year": "2025"
+      },
+      {
+        "name": "Generative AI: Prompt Engineering Basics",
+        "issuer": "IBM",
+        "year": "2025"
+      },
+      {
+        "name": "UI/UX & Visual Design",
+        "issuer": "e-rozgaar Program Pakistan",
+        "year": "2019"
+      }
+    ],
+    "certifications_and_training": [
+      {
+        "name": "IBM AI Product Manager Professional Certificate",
+        "issuer": "Coursera (10-Course Series)",
+        "status": "In progress, expected completion 2026",
+        "focus": "AI product strategy, product lifecycle management, generative AI fundamentals, Agile methodologies, stakeholder management"
+      },
+      {
+        "name": "Google Data Analytics Professional Certificate",
+        "issuer": "Coursera (9-Course Series)",
+        "status": "In progress",
+        "focus": "SQL, R programming, Tableau, data storytelling, statistical thinking, hands-on capstone project"
+      },
+      {
+        "name": "Generative AI: Prompt Engineering Basics",
+        "issuer": "IBM via Coursera",
+        "status": "In progress",
+        "focus": "Prompt patterns, model evaluation, practical prompt engineering with ChatGPT and IBM watsonx"
+      },
+      {
+        "name": "UI/UX & Visual Design",
+        "issuer": "e-rozgaar Program Pakistan",
+        "year": "2019",
+        "focus": "Adobe XD and Adobe Illustrator"
+      },
+      {
+        "name": "Web Development & Technical Foundations",
+        "issuer": "Virtual Soft",
+        "period": "2016–2017",
+        "focus": "HTML, CSS, JavaScript, jQuery, PHP, SQL, Java"
+      },
+      {
+        "name": "IEEE Conference Participation",
+        "issuer": "IEEE",
+        "year": "2016",
+        "focus": "Emerging Technologies & Product Innovation"
+      }
+    ],
+    "honours_and_awards": [
+      {
+        "title": "Outstanding Contribution Award",
+        "issuer": "elGrocer by Smiles",
+        "date": "2023-06-04",
+        "description": "Recognized during the June 2023 Town Hall Meeting for exceptional performance as Tech Support Manager at elGrocer by Smiles."
+      },
+      {
+        "title": "Best KPI Achiever – Performance Excellence",
+        "issuer": "elGrocer by Smiles",
+        "date": "2023-06-15",
+        "description": "Awarded for consistently exceeding key performance indicators related to issue resolution, service efficiency, and operational performance across support and QA functions."
+      },
+      {
+        "title": "Hackathon Recognition – Project Management & Product Execution",
+        "issuer": "elGrocer by Smiles",
+        "date": "2024-06-29",
+        "description": "Recognized for leading a cross-functional team during a hackathon, successfully delivering a product concept with strong execution, user focus, and business alignment."
+      },
+      {
+        "title": "Product Vision & Fintech Domain Recognition",
+        "issuer": "elGrocer by Smiles",
+        "date": "2024-10-04",
+        "description": "Acknowledged for strong understanding of fintech product workflows, user behavior, and system processes, contributing to improved product decisions and enhanced user experience."
       }
     ],
     "languages": [
-      { "language": "English", "proficiency": "Full Professional / Fluent" },
-      { "language": "Urdu", "proficiency": "Native" }
+      { "language": "Urdu", "proficiency": "Mother tongue / Native" },
+      { "language": "English", "proficiency": "Proficient (Reading C1, Writing C1, Spoken Interaction C1, Spoken Production B2, Listening B1)" },
+      { "language": "French", "proficiency": "Basic (Reading A2, Listening A1, Writing A1, Spoken A1)" }
+    ],
+    "hobbies_and_interests": [
+      "Emerging technologies and continuous learning through online courses",
+      "Strategic games (chess)",
+      "Active lifestyle including table tennis and football"
     ],
     "resume_rules": {
       "strict_truth_only": true,
