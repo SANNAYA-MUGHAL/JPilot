@@ -1,8 +1,8 @@
 **Sana Liaqat**  
-Dubai, United Arab Emirates | sannayamughal9@gmail.com | (+92) 3062520001  
-https://www.linkedin.com/in/sana-liaqat/  
+Pakistan (Open to Relocation & Remote) | sannayamughal9@gmail.com | (+92) 3062520001
+https://www.linkedin.com/in/sanaliaqatpage/ | https://sana-liaqat-portfolio.vercel.app/  
 
-September 30, 2026  
+October 1, 2026  
 
 Hiring Team  
 Checkout.com  
@@ -20,7 +20,7 @@ My background directly aligns with the priorities outlined for this role:
 
 • **Data-Driven Optimization & Retention:** Led root-cause investigations across user behaviour, payment processing, and promo code workflows using Mixpanel, Mezmo, New Relic, and CleverTap, directly informing product changes that reduced order cancellations by 33%.  
 
-• **Operational Rigor & Execution:** Led root-cause investigations across user behaviour, payment processing, and promo code workflows using Mixpanel, Mezmo, New Relic, and CleverTap, directly informing product changes that reduced order cancellations by 33%.  
+• **Operational Rigor & Execution:** Built and maintained real-time observability dashboards (New Relic, Mixpanel, Mezmo), applying statistical analysis to production telemetry to reduce incident resolution time by 35%.  
 
 At Checkout.com, I am excited by the opportunity to apply this operational discipline to drive product innovation, scale platform capabilities, and champion customer-centric outcomes. Whether orchestrating partner API integrations, analyzing funnel conversion, or rallying engineering squads around a focused roadmap, I bring a collaborative, metrics-driven approach.  
 

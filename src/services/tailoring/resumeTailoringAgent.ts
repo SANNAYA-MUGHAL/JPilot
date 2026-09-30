@@ -68,18 +68,28 @@ ${profile.professional_summary}`;
     const isAnalyticsHeavy = jd.tools.includes('Mixpanel') || jd.raw_text.toLowerCase().includes('analytics') || jd.raw_text.toLowerCase().includes('metric');
 
     let competencies = {
-      product_strategy: 'Product Roadmapping, PRDs & User Stories, Backlog Grooming, Customer Discovery, Agile/Scrum, A/B Testing, Funnel & Conversion Optimization',
-      fintech_payments: 'Payment Gateways (Adyen, MangoPay, Tabby), Split Payments, Escrow, Digital Wallets, PCI-DSS, 3D Secure 2.0, Subscription Invoicing',
-      technical_integrations: 'RESTful APIs, Webhooks, Postman, System Architecture, Microservices Concepts, SQL',
-      analytics_tools: 'Mixpanel, CleverTap, New Relic, Mezmo, Metabase, Jira, Confluence, Figma, Miro',
+      product_strategy: 'Product Roadmapping, PRDs & User Stories, Customer Discovery, Agile/Scrum, A/B Testing',
+      fintech_payments: 'Multi-Gateway Routing (Adyen), Split Payments, Escrow (MangoPay), Open Banking (Plaid)',
+      technical_integrations: 'RESTful APIs, Webhook Architecture, Postman, Microservices Concepts, SQL',
+      analytics_tools: 'Mixpanel, New Relic, Mezmo Log Analysis, Firebase Crashlytics, Jira, Figma',
     };
 
     // 4. Tailor Experience Bullet Points (Preserving 100% of Employer & Dates, Reordering & Emphasizing)
     const tailoredExperiences: TailoredExperienceItem[] = experiences.map((exp) => {
       const allBullets = [...exp.achievements, ...exp.responsibilities];
-      const ranked = BulletRanker.rankBullets(allBullets, jd);
+      // Deduplicate by normalized text to ensure zero repeated bullets
+      const seenTexts = new Set<string>();
+      const uniqueBullets = allBullets.filter((b) => {
+        const norm = b.text.trim().toLowerCase();
+        if (seenTexts.has(norm)) return false;
+        seenTexts.add(norm);
+        return true;
+      });
+      const ranked = BulletRanker.rankBullets(uniqueBullets, jd);
 
-      const tailoredBullets: TailoredBullet[] = ranked.slice(0, 5).map((rb, index) => {
+      // Keep 3 high-impact bullets per role (4 for extensive elGrocer tenure) for clean readability
+      const maxBullets = exp.company.toLowerCase().includes('elgrocer') ? 4 : 3;
+      const tailoredBullets: TailoredBullet[] = ranked.slice(0, maxBullets).map((rb, index) => {
         const isEmphasized = rb.matched_terms.length > 0;
         return {
           generated_text: rb.text,
@@ -91,18 +101,20 @@ ${profile.professional_summary}`;
         };
       });
 
+      const formattedDates = (exp as any).period || this.formatDateRange(exp.start_date, exp.end_date);
+
       return {
         company: exp.company,
         role: exp.role,
-        dates: `${exp.start_date} -- ${exp.end_date}`,
+        dates: formattedDates,
         location: exp.location,
         bullets: tailoredBullets,
       };
     });
 
-    // 5. Tailor Projects (Reordering Top Relevance to the Top)
+    // 5. Tailor Projects (Select top 2 highest impact projects to keep CV uncluttered)
     const rankedProjects = BulletRanker.rankProjects(projects, jd);
-    const tailoredProjects: TailoredProjectItem[] = rankedProjects.slice(0, 3).map((rp, idx) => {
+    const tailoredProjects: TailoredProjectItem[] = rankedProjects.slice(0, 2).map((rp, idx) => {
       const prj = rp.project;
       const highlight = prj.tools.slice(0, 3).join(', ');
       const resultBullet = `${prj.actions[0]} ${prj.results[0]}`;
@@ -132,4 +144,21 @@ ${profile.professional_summary}`;
       ats_keywords_targeted: jd.ats_keywords.slice(0, 10),
     };
   }
+
+  private formatDateRange(start?: string, end?: string): string {
+    if (!start) return '';
+    const formatPart = (d: string) => {
+      if (!d || d.toLowerCase() === 'present') return 'Present';
+      const parts = d.split('-');
+      if (parts.length >= 2) {
+        const year = parts[0];
+        const monthIndex = parseInt(parts[1], 10) - 1;
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        return `${months[monthIndex] || parts[1]} ${year}`;
+      }
+      return d;
+    };
+    return `${formatPart(start)} – ${formatPart(end || 'Present')}`;
+  }
 }
+

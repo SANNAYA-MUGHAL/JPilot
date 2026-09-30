@@ -6,17 +6,17 @@
   "tier": "HIGH_ALIGNMENT",
   "visa_status": "VISA_SPONSORED",
   "remote_policy": "HYBRID",
-  "created_at": "2026-09-30T17:33:46.725Z",
+  "created_at": "2026-09-30T19:57:57.530Z",
   "timing_ms": 24,
   "truth_validation": {
-    "verified_claims": 14,
-    "supported_rewrites": 3,
+    "verified_claims": 10,
+    "supported_rewrites": 2,
     "unverified_claims": 0
   },
   "trello": {
-    "card_id": "card_7bjicb6i",
+    "card_id": "card_r9annbi0",
     "card_title": "[80%] N26 | Senior Product Manager — Payment Core & Cards | Berlin, Germany / Remote EU",
-    "card_url": "https://trello.com/c/card_7bjicb6i/%5B80%25%5D%20N26%20%7C%20Senior%20P",
+    "card_url": "https://trello.com/c/card_r9annbi0/%5B80%25%5D%20N26%20%7C%20Senior%20P",
     "list_name": "🔥 High Match",
     "attachments_count": 3
   },

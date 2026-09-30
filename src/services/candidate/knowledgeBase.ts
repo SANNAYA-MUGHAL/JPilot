@@ -100,6 +100,22 @@ export class CandidateKnowledgeBase {
         });
       });
     }
+
+    // Register bidirectional aliases for backward compatibility without duplicating bullets in arrays
+    const aliases: Record<string, string> = {
+      'BAYUT_RESP_01': 'BAYUTI_RESP_01',
+      'BAYUTI_RESP_01': 'BAYUT_RESP_01',
+      'BAYUT_ACHIEVE_01': 'BAYUTI_ACHIEVE_01',
+      'BAYUTI_ACHIEVE_01': 'BAYUT_ACHIEVE_01',
+      'BAYUT_ACHIEVE_02': 'BAYUTI_ACHIEVE_02',
+      'BAYUTI_ACHIEVE_02': 'BAYUT_ACHIEVE_02',
+    };
+    for (const [alias, target] of Object.entries(aliases)) {
+      const existing = this.factCatalog.get(target);
+      if (existing && !this.factCatalog.has(alias)) {
+        this.factCatalog.set(alias, { ...existing, fact_id: alias });
+      }
+    }
   }
 
   public getCandidateProfile(): CandidateProfile {

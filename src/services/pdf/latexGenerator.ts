@@ -50,6 +50,18 @@ export class LatexGenerator {
       \\resumeItemListEnd`;
     }
 
+    const linksRow: string[] = [];
+    if (contact.linkedin) {
+      const cleanLinkedIn = contact.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+      linksRow.push(`\\href{${contact.linkedin}}{\\underline{${esc(cleanLinkedIn)}}}`);
+    }
+    if (contact.portfolio || contact.website) {
+      const pUrl = contact.portfolio || contact.website;
+      const cleanPortfolio = pUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+      linksRow.push(`\\href{${pUrl}}{\\underline{${esc(cleanPortfolio)}}}`);
+    }
+    const linksLatex = linksRow.length > 0 ? ` \\\\ \\vspace{1pt} \n    \\small ${linksRow.join(' $|$ ')}` : '';
+
     const latexDoc = `\\documentclass[letterpaper,10pt]{article}
 
 \\usepackage{latexsym}
@@ -124,10 +136,8 @@ export class LatexGenerator {
 %----------HEADING----------
 \\begin{center}
     \\textbf{\\Huge \\scshape ${esc(contact.full_name)}} \\\\ \\vspace{2pt}
-    \\textbf{\\large ${esc(ast.headline)}} \\\\ \\vspace{2pt}
-    \\small ${esc(contact.location)} $|$ ${esc(contact.email)} $|$ ${esc(contact.phone)} \\\\
-    \\href{${contact.linkedin}}{\\underline{linkedin.com/in/sana-liaqat-pm}} $|$ 
-    \\href{${contact.portfolio}}{\\underline{sanapm.me}}
+    \\textbf{\\large ${esc(ast.headline)}} \\\\ \\vspace{3pt}
+    \\small ${esc(contact.location)} $|$ ${esc(contact.phone)} $|$ ${esc(contact.email)}${linksLatex}
 \\end{center}
 
 %-----------SUMMARY-----------
@@ -159,17 +169,18 @@ ${expSection}
 ${prjSection}
   \\resumeSubHeadingListEnd
 
-%-----------EDUCATION & CERTIFICATIONS-----------
-\\section{Education \\& Certifications}
+%-----------EDUCATION & CREDENTIALS-----------
+\\section{Education, Certifications \\& Honors}
   \\resumeSubHeadingListStart
     \\resumeSubheading
-      {FAST National University of Computer and Emerging Sciences}{2017}
-      {Bachelor of Science in Computer Science}{Pakistan}
+      {University of Sargodha}{2014 -- 2018}
+      {Bachelor of Science in Software Engineering}{Pakistan (GPA: 3.3/4.0)}
   \\resumeSubHeadingListEnd
   \\vspace{-4pt}
   \\begin{itemize}[leftmargin=0.15in, label={}]
     \\small{\\item{
-     \\textbf{Certifications:} Certified Scrum Product Owner (CSPO) -- Scrum Alliance $|$ Pragmatic Institute Certified (Foundations \\& Build)
+     \\textbf{Certifications:} IBM AI Product Manager Specialization (2024) $|$ Google Data Analytics Certificate (2023) $|$ Generative AI: Prompt Engineering (IBM, 2024) \\\\
+     \\textbf{Honors \\& Awards:} Outstanding Contribution Award -- elGrocer/Smiles (2024) $|$ Best KPI Achiever -- elGrocer (2023)
     }}
   \\end{itemize}
 

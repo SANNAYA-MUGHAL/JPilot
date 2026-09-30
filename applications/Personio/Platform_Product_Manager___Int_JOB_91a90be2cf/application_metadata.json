@@ -6,17 +6,17 @@
   "tier": "HIGH_ALIGNMENT",
   "visa_status": "VISA_SPONSORED",
   "remote_policy": "HYBRID",
-  "created_at": "2026-09-30T17:33:46.770Z",
-  "timing_ms": 23,
+  "created_at": "2026-09-30T19:57:57.575Z",
+  "timing_ms": 21,
   "truth_validation": {
-    "verified_claims": 14,
-    "supported_rewrites": 3,
+    "verified_claims": 10,
+    "supported_rewrites": 2,
     "unverified_claims": 0
   },
   "trello": {
-    "card_id": "card_ykrxerdr",
+    "card_id": "card_r2zz3lx0",
     "card_title": "[100%] Personio | Platform Product Manager — Integrations & APIs | Munich, Germany / Amsterdam, Netherlands",
-    "card_url": "https://trello.com/c/card_ykrxerdr/%5B100%25%5D%20Personio%20%7C%20Pl",
+    "card_url": "https://trello.com/c/card_r2zz3lx0/%5B100%25%5D%20Personio%20%7C%20Pl",
     "list_name": "🔥 High Match",
     "attachments_count": 3
   },

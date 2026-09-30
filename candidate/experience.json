@@ -1,53 +1,49 @@
 {
   "employment_history": [
     {
-      "company": "Bayuti (FCA-Regulated PropTech), London, UK (Remote)",
+      "company": "Bayuti (PropTech)",
       "company_short": "Bayuti",
       "role": "Product Manager",
       "start_date": "2025-11-01",
       "end_date": "2026-04-22",
-      "period": "01/11/2025 – 22/04/2026",
-      "location": "London, United Kingdom (Remote)",
+      "period": "Nov 2025 – Apr 2026",
+      "location": "London, UK (Remote)",
       "industry": "PropTech / FinTech / FCA-Regulated Investments",
       "overview": "Owned product roadmap and strategy for investor onboarding flows, aligning feature priorities with FCA regulatory requirements and business OKRs.",
       "responsibilities": [
-        {
-          "fact_id": "BAYUTI_RESP_01",
-          "text": "Owned product roadmap and strategy for investor onboarding flows, aligning feature priorities with FCA regulatory requirements and business OKRs."
-        },
         {
           "fact_id": "BAYUT_RESP_01",
           "text": "Owned product roadmap and strategy for investor onboarding flows, aligning feature priorities with FCA regulatory requirements and business OKRs."
         },
         {
-          "fact_id": "BAYUTI_RESP_02",
+          "fact_id": "BAYUT_RESP_02",
           "text": "Managed FinTech data integrations including Mangopay (escrow, multi-party payments), Onfido (KYC/identity verification), and DocuSign (digital contracts), ensuring data integrity and auditability for compliance reporting."
         },
         {
-          "fact_id": "BAYUTI_RESP_03",
+          "fact_id": "BAYUT_RESP_03",
           "text": "Led integration of Plaid Open Banking API, enabling secure bank account verification and real-time financial data access; coordinated requirements, QA, and launch across web, iOS, and Android."
         },
         {
-          "fact_id": "BAYUTI_RESP_04",
+          "fact_id": "BAYUT_RESP_04",
           "text": "Defined structured data models for investor UX flows and collaborated with engineering on API specifications, webhook schemas, and data architecture for regulatory reporting."
         },
         {
-          "fact_id": "BAYUTI_RESP_05",
+          "fact_id": "BAYUT_RESP_05",
           "text": "Oversaw end-to-end product lifecycle from data requirements through production release, coordinating cross-functional teams across engineering, compliance, and operations."
         }
       ],
       "achievements": [
         {
-          "fact_id": "BAYUTI_ACHIEVE_01",
-          "text": "Conducted quantitative analysis of user journey funnels (Mixpanel) and platform telemetry (New Relic) to validate hypotheses and prioritise iterations based on behavioural signals."
-        },
-        {
           "fact_id": "BAYUT_ACHIEVE_01",
           "text": "Engineered split payments architecture and multi-gateway fallback routing (Adyen & MangoPay), reducing transaction drop-offs by 18% and boosting checkout completion by 24%."
         },
         {
-          "fact_id": "BAYUTI_ACHIEVE_02",
+          "fact_id": "BAYUT_ACHIEVE_02",
           "text": "Reduced bug escape rate by 50% through systematic, data-driven QA frameworks and root-cause analysis applied across the product lifecycle."
+        },
+        {
+          "fact_id": "BAYUT_ACHIEVE_03",
+          "text": "Conducted quantitative analysis of user journey funnels (Mixpanel) and platform telemetry (New Relic) to validate hypotheses and prioritise iterations based on behavioural signals."
         }
       ],
       "tools": ["Mixpanel", "New Relic", "Mangopay", "Onfido", "DocuSign", "Plaid", "Jira", "Postman", "Figma", "SQL"],
@@ -55,13 +51,13 @@
       "integrations": ["Mangopay", "Onfido KYC", "DocuSign", "Plaid Open Banking API", "Webhooks", "REST APIs"]
     },
     {
-      "company": "elGrocer by Smiles Private Limited Pakistan",
-      "company_short": "elGrocer by Smiles",
+      "company": "elGrocer by Smiles",
+      "company_short": "elGrocer",
       "role": "Technical Project Manager, Product & Delivery",
       "start_date": "2022-06-13",
       "end_date": "2025-10-31",
-      "period": "13/06/2022 – 31/10/2025",
-      "location": "Dubai, United Arab Emirates",
+      "period": "Jun 2022 – Oct 2025",
+      "location": "Dubai, UAE (Remote)",
       "industry": "eCommerce / Quick Commerce / FinTech & Marketplaces",
       "overview": "Led product delivery, customer-side investigations, support operations, observability, and payment integrations across high-volume marketplace platforms.",
       "responsibilities": [
@@ -92,10 +88,6 @@
           "text": "Led root-cause investigations across user behaviour, payment processing, and promo code workflows using Mixpanel, Mezmo, New Relic, and CleverTap, directly informing product changes that reduced order cancellations by 33%."
         },
         {
-          "fact_id": "BAYUT_ACHIEVE_02",
-          "text": "Led root-cause investigations across user behaviour, payment processing, and promo code workflows using Mixpanel, Mezmo, New Relic, and CleverTap, directly informing product changes that reduced order cancellations by 33%."
-        },
-        {
           "fact_id": "ELGROCER_ACHIEVE_03",
           "text": "Used Firebase Crashlytics to analyse mobile app crashes and error trends, prioritising fixes that drove a significant increase in crash-free user sessions from a 27.3% baseline."
         },
@@ -113,12 +105,12 @@
       "integrations": ["Adyen", "Tabby BNPL", "Etisalat Gateway", "Apple Pay", "UTAP POS", "Careem Pay", "Webhooks", "Jira Service Desk"]
     },
     {
-      "company": "Dzine Media, Faisalabad, Pakistan",
+      "company": "Dzine Media",
       "company_short": "Dzine Media",
       "role": "QA Lead & Project Coordinator",
       "start_date": "2019-08-05",
       "end_date": "2022-06-09",
-      "period": "05/08/2019 – 09/06/2022",
+      "period": "Aug 2019 – Jun 2022",
       "location": "Faisalabad, Pakistan",
       "industry": "Software Engineering & Digital Platforms",
       "overview": "Directed QA release pipelines, systematic defect analysis, and cross-functional project coordination across web and mobile platforms.",

@@ -51,8 +51,9 @@ async function main() {
   }
 
   // Job Details Inspection if Wise app exists
-  const wiseAppDir = path.resolve(process.cwd(), 'applications/Wise/Senior_Product_Manager___Check_JOB_dcfbeeef07');
-  if (fs.existsSync(wiseAppDir)) {
+  const wiseJobs = dashboard.listAllJobs().filter(j => j.company.toLowerCase().includes('wise'));
+  const wiseAppDir = wiseJobs.length > 0 ? wiseJobs[0].appDir : '';
+  if (wiseAppDir && fs.existsSync(wiseAppDir)) {
     console.log('\n[4] MULTI-TAB JOB INSPECTOR (Previewing: Wise Senior Product Manager):');
     const details = dashboard.getJobDetails(wiseAppDir);
 

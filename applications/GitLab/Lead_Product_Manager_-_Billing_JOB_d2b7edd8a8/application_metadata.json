@@ -6,17 +6,17 @@
   "tier": "HIGH_ALIGNMENT",
   "visa_status": "REMOTE_CONTRACT_OPEN",
   "remote_policy": "REMOTE_WORLDWIDE",
-  "created_at": "2026-09-30T17:35:50.808Z",
-  "timing_ms": 23,
+  "created_at": "2026-09-30T19:59:34.847Z",
+  "timing_ms": 25,
   "truth_validation": {
-    "verified_claims": 14,
-    "supported_rewrites": 3,
+    "verified_claims": 10,
+    "supported_rewrites": 2,
     "unverified_claims": 0
   },
   "trello": {
-    "card_id": "card_iglkz94j",
+    "card_id": "card_z3mas1g2",
     "card_title": "[80%] GitLab | Lead Product Manager - Billing & Subscriptions | Remote Worldwide",
-    "card_url": "https://trello.com/c/card_iglkz94j/%5B80%25%5D%20GitLab%20%7C%20Lead%20",
+    "card_url": "https://trello.com/c/card_z3mas1g2/%5B80%25%5D%20GitLab%20%7C%20Lead%20",
     "list_name": "🔥 High Match",
     "attachments_count": 4
   },

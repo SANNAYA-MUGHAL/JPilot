@@ -322,7 +322,7 @@ function getHTML(): string {
             <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mt-2">
               <span><i class="fa-solid fa-envelope mr-1 text-slate-400"></i>sannayamughal9@gmail.com</span>
               <span><i class="fa-solid fa-phone mr-1 text-slate-400"></i>(+92) 3062520001</span>
-              <span><i class="fa-solid fa-location-dot mr-1 text-slate-400"></i>Dubai, UAE (Open to UK, EU & Remote)</span>
+              <span><i class="fa-solid fa-location-dot mr-1 text-slate-400"></i>Pakistan (Open to UK, EU & Remote)</span>
               <a href="https://sana-liaqat-portfolio.vercel.app/" target="_blank" class="text-indigo-600 hover:underline"><i class="fa-solid fa-globe mr-1"></i>Portfolio</a>
               <a href="https://www.linkedin.com/in/sana-liaqat/" target="_blank" class="text-indigo-600 hover:underline"><i class="fa-brands fa-linkedin mr-1"></i>LinkedIn</a>
             </div>

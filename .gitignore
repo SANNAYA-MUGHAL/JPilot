@@ -3,4 +3,5 @@ node_modules/
 dist/
 *.log
 tests/tmp_*
-.env
+tests/*.pdf
+.env*

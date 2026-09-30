@@ -6,17 +6,17 @@
   "tier": "GOOD_ALIGNMENT",
   "visa_status": "UNSPECIFIED_NEEDS_CHECK",
   "remote_policy": "UNSPECIFIED",
-  "created_at": "2026-09-30T17:33:46.871Z",
-  "timing_ms": 28,
+  "created_at": "2026-09-30T19:57:57.694Z",
+  "timing_ms": 24,
   "truth_validation": {
-    "verified_claims": 14,
-    "supported_rewrites": 3,
+    "verified_claims": 10,
+    "supported_rewrites": 2,
     "unverified_claims": 0
   },
   "trello": {
-    "card_id": "card_kmtt3368",
+    "card_id": "card_5ddubpc4",
     "card_title": "[79%] Checkout.com | Senior Product Manager — Alternative Payment Methods | Dubai, UAE / London, UK",
-    "card_url": "https://trello.com/c/card_kmtt3368/%5B79%25%5D%20Checkout.com%20%7C",
+    "card_url": "https://trello.com/c/card_5ddubpc4/%5B79%25%5D%20Checkout.com%20%7C",
     "list_name": "🟢 Ready to Apply",
     "attachments_count": 3
   },

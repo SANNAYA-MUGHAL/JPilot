@@ -1,8 +1,8 @@
 **Sana Liaqat**  
-Dubai, United Arab Emirates | sannayamughal9@gmail.com | (+92) 3062520001  
-https://www.linkedin.com/in/sana-liaqat/  
+Pakistan (Open to Relocation & Remote) | sannayamughal9@gmail.com | (+92) 3062520001
+https://www.linkedin.com/in/sanaliaqatpage/ | https://sana-liaqat-portfolio.vercel.app/  
 
-September 30, 2026  
+October 1, 2026  
 
 Hiring Team  
 Personio  

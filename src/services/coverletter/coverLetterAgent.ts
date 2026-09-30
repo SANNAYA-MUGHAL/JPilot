@@ -114,10 +114,14 @@ ${jd.responsibilities.slice(0, 3).join('\n')}`;
     evidence: string[]
   ): string {
     const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const location = contact.location || 'Pakistan (Open to Relocation & Remote)';
+    const linksRow: string[] = [];
+    if (contact.linkedin) linksRow.push(contact.linkedin);
+    if (contact.portfolio || contact.website) linksRow.push(contact.portfolio || contact.website);
+    const linksLine = linksRow.length > 0 ? `\n${linksRow.join(' | ')}  ` : '';
 
     return `**${contact.full_name}**  
-${contact.location} | ${contact.email} | ${contact.phone}  
-${contact.linkedin}  
+${location} | ${contact.email} | ${contact.phone}${linksLine}
 
 ${today}  
 
@@ -165,14 +169,23 @@ Senior Product Manager`;
       doc.pipe(writeStream);
 
       // Header Letterhead
-      doc.font('Helvetica-Bold').fontSize(16).fillColor('#1a365d').text(contact.full_name);
+      doc.font('Helvetica-Bold').fontSize(18).fillColor('#0f172a').text(contact.full_name);
       doc.moveDown(0.15);
-      doc.font('Helvetica').fontSize(9).fillColor('#4a5568').text(
-        `${contact.location}  |  ${contact.email}  |  ${contact.phone}  |  linkedin.com/in/sana-liaqat-pm`
+      const locText = contact.location || 'Pakistan (Open to Relocation & Remote)';
+      doc.font('Helvetica').fontSize(9).fillColor('#475569').text(
+        `${locText}   •   ${contact.phone}   •   ${contact.email}`
       );
-      doc.moveDown(0.3);
+      if (contact.linkedin || contact.portfolio || contact.website) {
+        doc.moveDown(0.1);
+        const cleanLinkedIn = contact.linkedin ? contact.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
+        const pUrl = contact.portfolio || contact.website;
+        const cleanPortfolio = pUrl ? pUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
+        const links = [cleanLinkedIn, cleanPortfolio].filter(Boolean).join('   •   ');
+        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#1e40af').text(links);
+      }
+      doc.moveDown(0.25);
       doc.strokeColor('#cbd5e1').lineWidth(0.8).moveTo(54, doc.y).lineTo(558, doc.y).stroke();
-      doc.moveDown(1.0);
+      doc.moveDown(0.8);
 
       // Format Body Paragraphs
       const paragraphs = markdownText
