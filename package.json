@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test --loader ts-node/esm || node --test",
-    "demo": "tsx src/cli/runPhase1Demo.ts"
+    "demo": "tsx src/cli/runPhase1Demo.ts",
+    "dashboard": "tsx src/cli/runDashboardDemo.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.36.3",
