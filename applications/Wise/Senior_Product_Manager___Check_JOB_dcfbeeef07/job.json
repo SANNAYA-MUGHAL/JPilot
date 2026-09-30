@@ -1,0 +1,69 @@
+{
+  "job_id": "JOB_dcfbeeef07",
+  "title": "Senior Product Manager — Checkout & Payment Systems",
+  "company": "Wise",
+  "location": "London, UK / Remote EU",
+  "country": "United Kingdom",
+  "city": "London",
+  "remote_policy": "REMOTE_REGIONAL",
+  "visa_status": "VISA_SPONSORED",
+  "visa_reasoning": "JD explicitly advertises visa sponsorship or relocation assistance package.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Product Strategy",
+    "Agile",
+    "Scrum",
+    "A/B Testing",
+    "SQL",
+    "Checkout",
+    "Analytics"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Own the product strategy and execution roadmap for payment gateway integrations (including Adyen, local APMs, and digital wallets).",
+    "Lead a cross-functional squad of 10+ engineers, designers, and data analysts in fast-paced Agile/Scrum sprint cycles.",
+    "Utilize product analytics (Mixpanel, cohort tracking, and transaction telemetry) to identify drop-offs, optimize checkout conversion rates, and decrease payment failures.",
+    "Partner with compliance, legal, and risk teams to guarantee PCI-DSS compliance, 3D Secure 2.0 authentication, and seamless financial reconciliation.",
+    "Champion continuous experimentation, A/B testing, and user feedback to enhance customer satisfaction.",
+    "+ years of technical Product Management experience in FinTech, SaaS, or high-scale multi-vendor marketplaces.",
+    "Proven track record integrating third-party payment rails, split payments, or escrow workflows.",
+    "Strong analytical mindset with demonstrated experience using Mixpanel, SQL, or BI visualization tools to drive quantifiable conversion uplifts."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments",
+    "SaaS",
+    "Marketplace"
+  ],
+  "tools": [
+    "Mixpanel"
+  ],
+  "technologies_and_apis": [
+    "Webhooks",
+    "Adyen"
+  ],
+  "ats_keywords": [
+    "Product Strategy",
+    "Agile",
+    "Scrum",
+    "A/B Testing",
+    "Mixpanel",
+    "Webhooks",
+    "SQL",
+    "FinTech",
+    "Payments",
+    "Adyen",
+    "Checkout",
+    "SaaS",
+    "Marketplace",
+    "Analytics"
+  ],
+  "raw_text": "\nSenior Product Manager — Checkout & Payment Systems\nWise (formerly TransferWise) — London, UK / Remote (Europe Timezones)\n\nAbout Wise:\nWise is a global technology company building the best way to move money around the world. Over 16 million people and businesses use Wise to process billions each month.\n\nThe Role:\nWe are looking for an experienced Senior Product Manager to lead our Core Checkout & Multi-Currency Payment Routing squad. You will own the strategic roadmap for payment gateway integrations, checkout funnel conversion, and high-availability payout infrastructure across the UK, Europe, and the Middle East.\n\nKey Responsibilities:\n• Own the product strategy and execution roadmap for payment gateway integrations (including Adyen, local APMs, and digital wallets).\n• Lead a cross-functional squad of 10+ engineers, designers, and data analysts in fast-paced Agile/Scrum sprint cycles.\n• Utilize product analytics (Mixpanel, cohort tracking, and transaction telemetry) to identify drop-offs, optimize checkout conversion rates, and decrease payment failures.\n• Partner with compliance, legal, and risk teams to guarantee PCI-DSS compliance, 3D Secure 2.0 authentication, and seamless financial reconciliation.\n• Champion continuous experimentation, A/B testing, and user feedback to enhance customer satisfaction.\n\nWhat We Look For:\n• 6+ years of technical Product Management experience in FinTech, SaaS, or high-scale multi-vendor marketplaces.\n• Proven track record integrating third-party payment rails, split payments, or escrow workflows.\n• Strong analytical mindset with demonstrated experience using Mixpanel, SQL, or BI visualization tools to drive quantifiable conversion uplifts.\n• Deep understanding of RESTful API architecture, webhooks, and technical discovery.\n• Excellent stakeholder communication skills across finance, risk, and distributed engineering squads.\n\nLocation & Work Arrangement:\n• London, UK / Remote within European timezones (CET/GMT).\n• Comprehensive visa sponsorship and relocation support provided for qualifying international candidates.\n",
+  "discovered_at": "2026-09-30T12:27:18.342Z"
+}

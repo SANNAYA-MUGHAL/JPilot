@@ -1,0 +1,27 @@
+
+Senior Product Manager — Checkout & Payment Systems
+Wise (formerly TransferWise) — London, UK / Remote (Europe Timezones)
+
+About Wise:
+Wise is a global technology company building the best way to move money around the world. Over 16 million people and businesses use Wise to process billions each month.
+
+The Role:
+We are looking for an experienced Senior Product Manager to lead our Core Checkout & Multi-Currency Payment Routing squad. You will own the strategic roadmap for payment gateway integrations, checkout funnel conversion, and high-availability payout infrastructure across the UK, Europe, and the Middle East.
+
+Key Responsibilities:
+• Own the product strategy and execution roadmap for payment gateway integrations (including Adyen, local APMs, and digital wallets).
+• Lead a cross-functional squad of 10+ engineers, designers, and data analysts in fast-paced Agile/Scrum sprint cycles.
+• Utilize product analytics (Mixpanel, cohort tracking, and transaction telemetry) to identify drop-offs, optimize checkout conversion rates, and decrease payment failures.
+• Partner with compliance, legal, and risk teams to guarantee PCI-DSS compliance, 3D Secure 2.0 authentication, and seamless financial reconciliation.
+• Champion continuous experimentation, A/B testing, and user feedback to enhance customer satisfaction.
+
+What We Look For:
+• 6+ years of technical Product Management experience in FinTech, SaaS, or high-scale multi-vendor marketplaces.
+• Proven track record integrating third-party payment rails, split payments, or escrow workflows.
+• Strong analytical mindset with demonstrated experience using Mixpanel, SQL, or BI visualization tools to drive quantifiable conversion uplifts.
+• Deep understanding of RESTful API architecture, webhooks, and technical discovery.
+• Excellent stakeholder communication skills across finance, risk, and distributed engineering squads.
+
+Location & Work Arrangement:
+• London, UK / Remote within European timezones (CET/GMT).
+• Comprehensive visa sponsorship and relocation support provided for qualifying international candidates.
