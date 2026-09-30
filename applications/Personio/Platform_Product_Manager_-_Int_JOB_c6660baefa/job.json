@@ -1,0 +1,44 @@
+{
+  "job_id": "JOB_c6660baefa",
+  "title": "Platform Product Manager - Integrations & APIs",
+  "company": "Personio",
+  "location": "Munich, Germany / Remote EU",
+  "country": "Germany",
+  "city": "Munich",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Product Strategy",
+    "Agile/Scrum",
+    "Roadmap Planning"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [],
+  "domains": [
+    "SaaS",
+    "Marketplace"
+  ],
+  "tools": [
+    "Postman"
+  ],
+  "technologies_and_apis": [
+    "REST APIs",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Postman",
+    "SaaS",
+    "Marketplace"
+  ],
+  "raw_text": "Platform Product Manager - Integrations & APIs at Personio\nLocation: Munich, Germany / Remote EU\nDrive B2B SaaS public APIs and partner marketplace connections. Deep experience in developer platforms, webhook architectures, and Postman API testing.",
+  "source_url": "https://personio.com/careers/platform-pm",
+  "discovered_at": "2026-09-30T14:42:02.166Z"
+}

@@ -1,0 +1,27 @@
+{
+  "overall_score": 94,
+  "tier": "HIGH_ALIGNMENT",
+  "breakdown": {
+    "role_score": 100,
+    "experience_score": 100,
+    "skills_score": 100,
+    "domain_score": 70,
+    "tools_score": 100,
+    "location_score": 100,
+    "preferred_score": 67
+  },
+  "strong_matches": [
+    "Target Primary Role Match: \"Senior Product Operations Manager\" directly matches target Product Management specializations.",
+    "Years of Experience: Candidate has 7+ years exceeding required 5 years.",
+    "Mandatory Skill Match: SQL",
+    "Domain Alignment: Strong background in SaaS",
+    "Location Compatibility: 100% Remote Worldwide arrangement."
+  ],
+  "partial_matches": [],
+  "missing_mandatory": [],
+  "missing_preferred": [
+    "Growth Experimentation"
+  ],
+  "application_risks": [],
+  "recommendation": "Strong match across core role, domain, and skills. Immediate package generation recommended."
+}

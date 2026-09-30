@@ -1,0 +1,42 @@
+{
+  "job_id": "JOB_ccc91ac377",
+  "title": "Senior Product Operations Manager",
+  "company": "Deliveroo",
+  "location": "London, UK / Remote",
+  "country": "United Kingdom",
+  "city": "London",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "SQL"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [],
+  "domains": [
+    "SaaS",
+    "Digital Platform"
+  ],
+  "tools": [
+    "Jira",
+    "Mixpanel",
+    "Figma"
+  ],
+  "technologies_and_apis": [
+    "REST APIs",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "SQL"
+  ],
+  "raw_text": "Senior Product Operations Manager at Deliveroo\nLocation: London, UK / Remote\nOptimize fulfillment SLAs, delivery slot routing algorithms, and merchant dispatching tools. Experience with operations dashboards, Metabase, and SQL.",
+  "source_url": "https://deliveroo.com/careers/prod-ops-manager",
+  "discovered_at": "2026-09-30T14:42:02.211Z"
+}

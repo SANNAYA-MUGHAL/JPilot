@@ -1,0 +1,3 @@
+Senior Product Operations Manager at Deliveroo
+Location: London, UK / Remote
+Optimize fulfillment SLAs, delivery slot routing algorithms, and merchant dispatching tools. Experience with operations dashboards, Metabase, and SQL.

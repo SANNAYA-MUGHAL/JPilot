@@ -6,12 +6,19 @@
   "tier": "HIGH_ALIGNMENT",
   "visa_status": "VISA_SPONSORED",
   "remote_policy": "REMOTE_REGIONAL",
-  "created_at": "2026-09-30T12:27:18.391Z",
-  "timing_ms": 49,
+  "created_at": "2026-09-30T12:37:36.753Z",
+  "timing_ms": 46,
   "truth_validation": {
     "verified_claims": 15,
     "supported_rewrites": 3,
     "unverified_claims": 0
+  },
+  "trello": {
+    "card_id": "card_lvajfi08",
+    "card_title": "[98%] Wise | Senior Product Manager — Checkout & Payment Systems | London, UK / Remote EU",
+    "card_url": "https://trello.com/c/card_lvajfi08/%5B98%25%5D%20Wise%20%7C%20Senior%20",
+    "list_name": "🔥 High Match",
+    "attachments_count": 3
   },
   "files": {
     "resume_pdf": "tailored_resume.pdf",
