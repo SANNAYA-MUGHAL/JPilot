@@ -5,9 +5,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test --loader ts-node/esm || node --test",
+    "test": "tsx --test tests/*.test.ts",
     "demo": "tsx src/cli/runPhase1Demo.ts",
-    "dashboard": "tsx src/cli/runDashboardDemo.ts"
+    "dashboard": "tsx src/cli/runDashboardDemo.ts",
+    "web": "tsx src/server/webServer.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.36.3",

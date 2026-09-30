@@ -5,6 +5,24 @@ import type { TailoredResumeAST } from '../../types/resume.js';
 import type { ParsedJobDescription } from '../../types/job.js';
 import type { MatchResult } from '../../types/match.js';
 import { CandidateKnowledgeBase } from '../candidate/knowledgeBase.js';
+export interface JobSummaryItem {
+  id: string;
+  company: string;
+  role: string;
+  companyDir: string;
+  roleDir: string;
+  appDir: string;
+  matchScore: number;
+  tier: string;
+  location: string;
+  remote_policy: string;
+  date: string;
+  salary?: string;
+  trello_url?: string;
+  hasResumePdf: boolean;
+  hasCoverLetterPdf: boolean;
+  hasTex: boolean;
+}
 
 export interface JobDetailsTabs {
   overview: {
@@ -175,4 +193,64 @@ export class DashboardService {
 
     return changes;
   }
+
+  public listAllJobs(appsBaseDir?: string): JobSummaryItem[] {
+    const baseDir = appsBaseDir || path.resolve(process.cwd(), 'applications');
+    const jobs: JobSummaryItem[] = [];
+    if (!fs.existsSync(baseDir)) return jobs;
+
+    const companies = fs.readdirSync(baseDir);
+    for (const comp of companies) {
+      const compPath = path.join(baseDir, comp);
+      if (!fs.statSync(compPath).isDirectory()) continue;
+      const roles = fs.readdirSync(compPath);
+      for (const roleDir of roles) {
+        const appDir = path.join(compPath, roleDir);
+        if (!fs.statSync(appDir).isDirectory()) continue;
+        const metaPath = path.join(appDir, 'application_metadata.json');
+        const jobPath = path.join(appDir, 'job.json');
+        const matchPath = path.join(appDir, 'match_analysis.json');
+        if (fs.existsSync(metaPath) && fs.existsSync(jobPath)) {
+          try {
+            const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+            const job = JSON.parse(fs.readFileSync(jobPath, 'utf8')) as ParsedJobDescription;
+            const match = fs.existsSync(matchPath) ? JSON.parse(fs.readFileSync(matchPath, 'utf8')) as MatchResult : null;
+            jobs.push({
+              id: meta.job_id || job.job_id,
+              company: job.company,
+              role: job.title,
+              companyDir: comp,
+              roleDir,
+              appDir,
+              matchScore: meta.overall_match ?? match?.overall_score ?? 0,
+              tier: meta.tier ?? match?.tier ?? 'UNKNOWN',
+              location: job.location,
+              remote_policy: job.remote_policy,
+              date: meta.created_at || job.discovered_at,
+              salary: job.salary_range,
+              trello_url: meta.trello?.card_url,
+              hasResumePdf: fs.existsSync(path.join(appDir, 'tailored_resume.pdf')),
+              hasCoverLetterPdf: fs.existsSync(path.join(appDir, 'cover_letter.pdf')),
+              hasTex: fs.existsSync(path.join(appDir, 'tailored_resume.tex')),
+            });
+          } catch (e) {
+            // ignore malformed
+          }
+        }
+      }
+    }
+
+    return jobs.sort((a, b) => b.matchScore - a.matchScore);
+  }
+
+  public getCandidateProfile() {
+    return {
+      profile: this.kb.getProfile(),
+      experience: this.kb.getExperiences(),
+      projects: this.kb.getProjects(),
+      skills: this.kb.getSkills(),
+      verified_fact_count: this.kb.getAllFactIds().length,
+    };
+  }
 }
+
