@@ -8,7 +8,7 @@
   ],
   "functions": {
     "api/index.ts": {
-      "includeFiles": "candidate/**,applications/**",
+      "includeFiles": "{candidate/**,applications/**}",
       "maxDuration": 60
     }
   }

@@ -5,20 +5,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
     "demo": "tsx src/cli/runPhase1Demo.ts",
     "dashboard": "tsx src/cli/runDashboardDemo.ts",
     "web": "tsx src/server/webServer.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.36.3",
-    "dotenv": "^16.4.7",
-    "pdfkit": "^0.16.0"
-  },
-  "devDependencies": {
     "@types/node": "^22.13.0",
     "@types/pdfkit": "^0.13.9",
+    "dotenv": "^16.4.7",
+    "pdfkit": "^0.16.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   }
