@@ -99,6 +99,18 @@ async function main() {
     console.log(`   📝 Cover Letter MD:    ${path.basename(result.files.cover_letter_md)}`);
     console.log(`   📊 Match Analysis:    ${path.basename(result.files.match_analysis_json)}`);
     console.log(`   📋 Original JD:       ${path.basename(result.files.jd_txt)}`);
+
+    if (result.trello) {
+      console.log('\n📌 TRELLO APPLICATION CARD CREATED:');
+      console.log(`   • Board:             AI Job Applications`);
+      console.log(`   • List:              ${result.trello.list_name}`);
+      console.log(`   • Card Title:        ${result.trello.card_title}`);
+      console.log(`   • Card URL:          ${result.trello.card_url}`);
+      console.log(`   • Checklist Items:   11 items attached (Application Checklist)`);
+      console.log(`   • Attachments:       ${result.trello.attachments_count} files linked (Resume PDF, Cover Letter, LaTeX)`);
+      console.log(`   • Review Gate:       Ready for human review before applying (HUMAN_APPROVAL_MODE=true)`);
+    }
+
     console.log(`   ⏱️ Pipeline Timing:    ${(result.timing_ms / 1000).toFixed(2)} seconds`);
 
     console.log('\n' + '='.repeat(80));

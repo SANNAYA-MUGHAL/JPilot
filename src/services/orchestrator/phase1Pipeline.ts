@@ -5,6 +5,7 @@ import type { MatchResult } from '../../types/match.js';
 import type { TailoredResumeAST, TruthValidationReport } from '../../types/resume.js';
 import type { CompilationResult } from '../pdf/pdfCompiler.js';
 import type { CoverLetterResult } from '../coverletter/coverLetterAgent.js';
+import type { TrelloApplicationResult } from '../trello/trelloAgent.js';
 
 import { CandidateKnowledgeBase } from '../candidate/knowledgeBase.js';
 import { JDIntelligenceAgent } from '../jd/jdIntelligenceAgent.js';
@@ -14,6 +15,7 @@ import { TruthValidationAgent } from '../validation/truthValidationAgent.js';
 import { LatexGenerator } from '../pdf/latexGenerator.js';
 import { PDFCompiler } from '../pdf/pdfCompiler.js';
 import { CoverLetterAgent } from '../coverletter/coverLetterAgent.js';
+import { TrelloAgent } from '../trello/trelloAgent.js';
 import { ClaudeClient } from '../ai/claudeClient.js';
 
 export interface PipelineOptions {
@@ -23,6 +25,7 @@ export interface PipelineOptions {
   company_hint?: string;
   location_hint?: string;
   applications_dir?: string;
+  enable_trello?: boolean;
 }
 
 export interface PipelinePackageResult {
@@ -44,6 +47,7 @@ export interface PipelinePackageResult {
   };
   compilation: CompilationResult;
   cover_letter: CoverLetterResult;
+  trello?: TrelloApplicationResult;
   timing_ms: number;
 }
 
@@ -56,6 +60,7 @@ export class Phase1Pipeline {
   private latexGen: LatexGenerator;
   private pdfCompiler: PDFCompiler;
   private coverLetterAgent: CoverLetterAgent;
+  private trelloAgent: TrelloAgent;
 
   constructor(customCandidateDir?: string) {
     this.kb = new CandidateKnowledgeBase(customCandidateDir);
@@ -67,6 +72,7 @@ export class Phase1Pipeline {
     this.latexGen = new LatexGenerator(this.kb);
     this.pdfCompiler = new PDFCompiler(this.kb);
     this.coverLetterAgent = new CoverLetterAgent(this.kb, claude);
+    this.trelloAgent = new TrelloAgent(undefined, this.kb);
   }
 
   public async execute(options: PipelineOptions): Promise<PipelinePackageResult> {
@@ -141,36 +147,7 @@ export class Phase1Pipeline {
       packageDir
     );
 
-    const timing = Date.now() - startTime;
-
-    // 10. Write Application Metadata
-    const metadata = {
-      job_id: parsedJd.job_id,
-      company: parsedJd.company,
-      role: parsedJd.title,
-      overall_match: match.overall_score,
-      tier: match.tier,
-      visa_status: parsedJd.visa_status,
-      remote_policy: parsedJd.remote_policy,
-      created_at: new Date().toISOString(),
-      timing_ms: timing,
-      truth_validation: {
-        verified_claims: truthReport.verified_count,
-        supported_rewrites: truthReport.supported_rewrites,
-        unverified_claims: truthReport.unverified_count,
-      },
-      files: {
-        resume_pdf: 'tailored_resume.pdf',
-        resume_tex: 'tailored_resume.tex',
-        cover_letter_pdf: 'cover_letter.pdf',
-        cover_letter_md: 'cover_letter.md',
-        jd: 'jd.txt',
-      },
-    };
-
-    fs.writeFileSync(metadataJsonPath, JSON.stringify(metadata, null, 2), 'utf8');
-
-    return {
+    const intermediatePackage: PipelinePackageResult = {
       job_id: parsedJd.job_id,
       company: parsedJd.company,
       role: parsedJd.title,
@@ -189,7 +166,63 @@ export class Phase1Pipeline {
       },
       compilation,
       cover_letter: coverLetter,
-      timing_ms: timing,
+      timing_ms: 0,
     };
+
+    // 10. Trello Integration (Phase 2)
+    let trelloResult: TrelloApplicationResult | undefined = undefined;
+    if (options.enable_trello !== false) {
+      try {
+        trelloResult = await this.trelloAgent.createApplicationCard(
+          parsedJd,
+          match,
+          intermediatePackage
+        );
+      } catch (err: any) {
+        console.warn(`Trello card creation warning: ${err.message}`);
+      }
+    }
+
+    const timing = Date.now() - startTime;
+    intermediatePackage.timing_ms = timing;
+    intermediatePackage.trello = trelloResult;
+
+    // 11. Write Application Metadata with Trello reference
+    const metadata = {
+      job_id: parsedJd.job_id,
+      company: parsedJd.company,
+      role: parsedJd.title,
+      overall_match: match.overall_score,
+      tier: match.tier,
+      visa_status: parsedJd.visa_status,
+      remote_policy: parsedJd.remote_policy,
+      created_at: new Date().toISOString(),
+      timing_ms: timing,
+      truth_validation: {
+        verified_claims: truthReport.verified_count,
+        supported_rewrites: truthReport.supported_rewrites,
+        unverified_claims: truthReport.unverified_count,
+      },
+      trello: trelloResult
+        ? {
+            card_id: trelloResult.card_id,
+            card_title: trelloResult.card_title,
+            card_url: trelloResult.card_url,
+            list_name: trelloResult.list_name,
+            attachments_count: trelloResult.attachments_count,
+          }
+        : null,
+      files: {
+        resume_pdf: 'tailored_resume.pdf',
+        resume_tex: 'tailored_resume.tex',
+        cover_letter_pdf: 'cover_letter.pdf',
+        cover_letter_md: 'cover_letter.md',
+        jd: 'jd.txt',
+      },
+    };
+
+    fs.writeFileSync(metadataJsonPath, JSON.stringify(metadata, null, 2), 'utf8');
+
+    return intermediatePackage;
   }
 }
