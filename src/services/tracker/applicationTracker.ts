@@ -31,6 +31,9 @@ export interface TrackedApplication {
   updated_at: string;
   hasResumePdf: boolean;
   hasCoverLetterPdf: boolean;
+  is_expired?: boolean;
+  visa_status?: string;
+  expiration_reason?: string;
 }
 
 export interface TrackerData {
@@ -95,8 +98,8 @@ export class ApplicationTracker {
 
     for (const j of jobs) {
       const savedInfo = saved[j.id];
-      // Default stage: if match >= 80, put in REVIEW_QUEUE; otherwise DISCOVERED
-      const defaultStage: TrackerStage = j.matchScore >= 80 ? 'REVIEW_QUEUE' : 'DISCOVERED';
+      // Default stage: if job is expired, automatically archive it
+      const defaultStage: TrackerStage = j.is_expired ? 'ARCHIVED' : (j.matchScore >= 80 ? 'REVIEW_QUEUE' : 'DISCOVERED');
       const stage: TrackerStage = savedInfo ? savedInfo.stage : defaultStage;
 
       const tracked: TrackedApplication = {
@@ -115,10 +118,13 @@ export class ApplicationTracker {
         stage,
         applied_date: savedInfo?.applied_date,
         interview_date: savedInfo?.interview_date,
-        notes: savedInfo?.notes,
+        notes: savedInfo?.notes || (j.is_expired ? j.expiration_reason : undefined),
         updated_at: j.date || new Date().toISOString(),
         hasResumePdf: j.hasResumePdf,
         hasCoverLetterPdf: j.hasCoverLetterPdf,
+        is_expired: j.is_expired,
+        visa_status: j.visa_status,
+        expiration_reason: j.expiration_reason,
       };
 
       if (stages[stage]) {

@@ -77,6 +77,71 @@ export class EligibilityFilter {
       }
     }
 
+    // 5. Visa Sponsorship & In-Country Relocation Hard Filter
+    // Candidate is based in Pakistan and does not hold foreign work visas.
+    // Roles that require visa sponsorship, require local work authorization,
+    // or demand physical relocation are strictly skipped.
+    const textAndLoc = `${job.title} ${job.location || ''} ${job.country || ''} ${job.description}`.toLowerCase();
+
+    const isExplicitWorldwide =
+      textAndLoc.includes('remote worldwide') ||
+      textAndLoc.includes('work from anywhere') ||
+      textAndLoc.includes('anywhere in the world') ||
+      textAndLoc.includes('global remote') ||
+      textAndLoc.includes('b2b contract') ||
+      textAndLoc.includes('hire via deel') ||
+      textAndLoc.includes('hire via remote.com');
+
+    const visaAndLocExclusions = [
+      'visa sponsorship required',
+      'visa sponsorship provided',
+      'visa sponsorship available',
+      'requires visa sponsorship',
+      'relocation package',
+      'relocation assistance',
+      'relocation support',
+      'relocation provided',
+      'willing to relocate',
+      'must have right to work in',
+      'must be authorized to work in',
+      'legally authorized to work in',
+      'without sponsorship',
+      'no visa sponsorship',
+      'cannot sponsor',
+      'unable to sponsor',
+      'hybrid',
+      'on-site',
+      'onsite',
+      'in-office'
+    ];
+
+    if (!isExplicitWorldwide) {
+      for (const exclusion of visaAndLocExclusions) {
+        if (textAndLoc.includes(exclusion)) {
+          flags.push('VISA_OR_RELOCATION_DISQUALIFIED');
+          return {
+            eligible: false,
+            reason: `Hard filter: Job requires visa sponsorship, local work authorization, or physical relocation (${exclusion}). Candidate requires 100% Remote Worldwide / B2B without visa dependency.`,
+            flags,
+          };
+        }
+      }
+    } else {
+      if (
+        textAndLoc.includes('visa sponsorship required') ||
+        textAndLoc.includes('must have right to work in the uk') ||
+        textAndLoc.includes('must have right to work in the us') ||
+        textAndLoc.includes('must have right to work in the eu')
+      ) {
+        flags.push('VISA_SPONSORSHIP_RESTRICTED');
+        return {
+          eligible: false,
+          reason: 'Hard filter: Role restricts to candidates possessing existing in-country work authorization or requiring local visa.',
+          flags,
+        };
+      }
+    }
+
     return {
       eligible: true,
       flags,

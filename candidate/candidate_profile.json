@@ -4,7 +4,7 @@
       "full_name": "Sana Liaqat",
       "email": "sannayamughal9@gmail.com",
       "phone": "(+92) 3062520001",
-      "location": "Pakistan (Open to Relocation & Remote)",
+      "location": "Faisalabad, Pakistan (100% Remote / Worldwide B2B)",
       "nationality": "Pakistani",
       "date_of_birth": "1995-05-12",
       "linkedin": "https://www.linkedin.com/in/sanaliaqatpage/",
@@ -57,20 +57,17 @@
     "location_preferences": {
       "preferred_geographies": [
         "Remote Worldwide",
-        "United Kingdom",
-        "Europe",
-        "Germany",
-        "Netherlands",
-        "France",
-        "United Arab Emirates",
-        "Pakistan"
+        "Work from Anywhere",
+        "Global Remote (B2B / EOR)"
       ],
-      "remote_preference": "Remote Preferred or Hybrid",
-      "relocation_supported": true,
+      "remote_preference": "100% Remote Only (Worldwide / B2B / EOR)",
+      "relocation_supported": false,
       "work_authorization_status": {
-        "current_residence": "Pakistan (Open to Relocation & Remote)",
-        "uk_relocation": "Open to Visa Sponsorship & Relocation (Prior experience with FCA-regulated UK PropTech)",
-        "eu_relocation": "Open to Visa Sponsorship & Relocation",
+        "current_residence": "Pakistan",
+        "visa_sponsorship_needed": false,
+        "requires_foreign_visa": false,
+        "uk_relocation": "None (Skip roles requiring UK visa sponsorship or in-country presence)",
+        "eu_relocation": "None (Skip roles requiring EU visa sponsorship or in-country presence)",
         "b2b_contract_open": true,
         "eor_payroll_open": true
       }

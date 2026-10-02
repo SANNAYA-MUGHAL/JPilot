@@ -22,6 +22,10 @@ export interface JobSummaryItem {
   hasResumePdf: boolean;
   hasCoverLetterPdf: boolean;
   hasTex: boolean;
+  is_expired?: boolean;
+  status?: string;
+  visa_status?: string;
+  expiration_reason?: string;
 }
 
 export interface JobDetailsTabs {
@@ -232,6 +236,10 @@ export class DashboardService {
               hasResumePdf: fs.existsSync(path.join(appDir, 'tailored_resume.pdf')),
               hasCoverLetterPdf: fs.existsSync(path.join(appDir, 'cover_letter.pdf')),
               hasTex: fs.existsSync(path.join(appDir, 'tailored_resume.tex')),
+              is_expired: Boolean(meta.is_expired || (job as any).is_expired || meta.status === 'EXPIRED'),
+              status: meta.status || (job as any).status || 'ACTIVE',
+              visa_status: job.visa_status || 'UNSPECIFIED',
+              expiration_reason: meta.expiration_reason || (job as any).expiration_reason,
             });
           } catch (e) {
             // ignore malformed

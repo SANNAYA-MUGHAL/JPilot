@@ -148,10 +148,18 @@ function getHTML(): string {
           </button>
         </div>
 
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-2.5">
+          <label class="flex items-center space-x-1.5 text-xs text-slate-700 cursor-pointer bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 transition select-none">
+            <input type="checkbox" id="toggle-hide-expired" onchange="filterTrackerJobs()" checked class="rounded text-indigo-600 focus:ring-0">
+            <span class="font-medium">Hide Expired</span>
+          </label>
+          <label class="flex items-center space-x-1.5 text-xs text-slate-700 cursor-pointer bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 transition select-none">
+            <input type="checkbox" id="toggle-remote-only" onchange="filterTrackerJobs()" checked class="rounded text-indigo-600 focus:ring-0">
+            <span class="font-medium">100% Remote (No Visa Needed)</span>
+          </label>
           <div class="relative">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-            <input type="text" id="tracker-search" oninput="filterTrackerJobs()" placeholder="Search company, title, location..." class="pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:bg-white w-64">
+            <input type="text" id="tracker-search" oninput="filterTrackerJobs()" placeholder="Search company, title, location..." class="pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:bg-white w-60">
           </div>
         </div>
       </div>
@@ -207,6 +215,12 @@ function getHTML(): string {
             <p id="insp-title" class="text-xs text-slate-500 mt-1">Select an opportunity to view complete tailoring details</p>
           </div>
           <div id="insp-actions" class="flex items-center space-x-2"></div>
+        </div>
+
+        <!-- Expired Warning Banner -->
+        <div id="insp-expired-banner" class="hidden px-5 py-2.5 bg-rose-50 border-b border-rose-200 text-xs text-rose-800 flex items-center space-x-2">
+          <i class="fa-solid fa-triangle-exclamation text-rose-600"></i>
+          <span id="insp-expired-banner-text">Notice: This job is expired on the job board and no longer accepting applications.</span>
         </div>
 
         <!-- Inspector Tabs -->
@@ -486,6 +500,16 @@ function getHTML(): string {
 
       container.innerHTML = stageDefinitions.map(stage => {
         let jobsInStage = globalTrackerData.stages[stage.id] || [];
+        const hideExpired = document.getElementById('toggle-hide-expired')?.checked ?? true;
+        const remoteOnly = document.getElementById('toggle-remote-only')?.checked ?? false;
+
+        if (hideExpired) {
+          jobsInStage = jobsInStage.filter(j => !j.is_expired);
+        }
+        if (remoteOnly) {
+          jobsInStage = jobsInStage.filter(j => j.remote_policy === 'REMOTE_WORLDWIDE' && j.visa_status !== 'VISA_SPONSORED');
+        }
+
         if (searchQuery) {
           jobsInStage = jobsInStage.filter(j => 
             j.company.toLowerCase().includes(searchQuery) ||
@@ -511,7 +535,11 @@ function getHTML(): string {
                 return \`
                   <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-xs hover:shadow-md transition">
                     <div class="flex items-start justify-between">
-                      <span class="font-bold text-xs text-slate-900">\${job.company}</span>
+                      <div class="flex items-center space-x-1 flex-wrap">
+                        <span class="font-bold text-xs text-slate-900">\${job.company}</span>
+                        \${job.is_expired ? '<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">EXPIRED</span>' : ''}
+                        \${job.visa_status === 'VISA_SPONSORED' ? '<span class="text-[9px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200">Visa Req</span>' : ''}
+                      </div>
                       <span class="text-[10px] font-bold px-1.5 py-0.5 rounded border \${badgeColor}">\${job.matchScore}%</span>
                     </div>
                     <div class="text-xs font-medium text-slate-700 mt-1 line-clamp-2" title="\${job.role}">\${job.role}</div>
@@ -555,6 +583,16 @@ function getHTML(): string {
       const searchQuery = (document.getElementById('tracker-search')?.value || '').toLowerCase();
       let jobs = globalTrackerData.all_jobs;
 
+      const hideExpired = document.getElementById('toggle-hide-expired')?.checked ?? true;
+      const remoteOnly = document.getElementById('toggle-remote-only')?.checked ?? false;
+
+      if (hideExpired) {
+        jobs = jobs.filter(j => !j.is_expired);
+      }
+      if (remoteOnly) {
+        jobs = jobs.filter(j => j.remote_policy === 'REMOTE_WORLDWIDE' && j.visa_status !== 'VISA_SPONSORED');
+      }
+
       if (searchQuery) {
         jobs = jobs.filter(j => 
           j.company.toLowerCase().includes(searchQuery) ||
@@ -570,7 +608,11 @@ function getHTML(): string {
         return \`
           <tr class="hover:bg-slate-50/80 transition">
             <td class="py-3 px-4">
-              <div class="font-bold text-slate-900">\${j.company}</div>
+              <div class="flex items-center space-x-1.5 flex-wrap">
+                <span class="font-bold text-slate-900">\${j.company}</span>
+                \${j.is_expired ? '<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">EXPIRED</span>' : ''}
+                \${j.visa_status === 'VISA_SPONSORED' ? '<span class="text-[9px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200">Visa Req</span>' : ''}
+              </div>
               <div class="text-slate-600">\${j.role}</div>
             </td>
             <td class="py-3 px-4 text-slate-600">
@@ -674,7 +716,11 @@ function getHTML(): string {
               : 'bg-white border-slate-200 hover:bg-slate-50'
           }">
             <div class="flex items-start justify-between">
-              <span class="font-bold text-xs text-slate-900">\${job.company}</span>
+              <div class="flex items-center space-x-1 flex-wrap">
+                <span class="font-bold text-xs text-slate-900">\${job.company}</span>
+                \${job.is_expired ? '<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">EXPIRED</span>' : ''}
+                \${job.visa_status === 'VISA_SPONSORED' ? '<span class="text-[9px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200">Visa Req</span>' : ''}
+              </div>
               <span class="text-[11px] font-bold px-2 py-0.5 rounded border \${scoreColor}">\${job.matchScore}%</span>
             </div>
             <div class="text-xs text-slate-700 font-medium mt-1 truncate">\${job.role}</div>
@@ -696,6 +742,18 @@ function getHTML(): string {
     async function selectJob(job) {
       selectedJob = job;
       renderSidebarJobs();
+
+      // Show/Hide Expired Banner
+      const expiredBanner = document.getElementById('insp-expired-banner');
+      if (expiredBanner) {
+        if (job.is_expired) {
+          expiredBanner.classList.remove('hidden');
+          document.getElementById('insp-expired-banner-text').innerText =
+            job.expiration_reason || 'Notice: This job was marked as expired on the job board and is no longer accepting applications.';
+        } else {
+          expiredBanner.classList.add('hidden');
+        }
+      }
 
       document.getElementById('insp-company').innerText = job.company;
       document.getElementById('insp-title').innerText = job.role + ' · ' + (job.location || 'Remote');

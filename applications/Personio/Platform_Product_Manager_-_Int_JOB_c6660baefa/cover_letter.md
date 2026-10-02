@@ -1,8 +1,8 @@
 **Sana Liaqat**  
-Pakistan (Open to Relocation & Remote) | sannayamughal9@gmail.com | (+92) 3062520001
+Faisalabad, Pakistan (100% Remote / Worldwide B2B) | sannayamughal9@gmail.com | (+92) 3062520001
 https://www.linkedin.com/in/sanaliaqatpage/ | https://sana-liaqat-portfolio.vercel.app/  
 
-October 1, 2026  
+October 3, 2026  
 
 Hiring Team  
 Personio  

@@ -26,5 +26,8 @@
     "cover_letter_pdf": "cover_letter.pdf",
     "cover_letter_md": "cover_letter.md",
     "jd": "jd.txt"
-  }
+  },
+  "status": "EXPIRED",
+  "is_expired": true,
+  "expiration_reason": "Job expired on Glassdoor on Mar 30, 2026."
 }
