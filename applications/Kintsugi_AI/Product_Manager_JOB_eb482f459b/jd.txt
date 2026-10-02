@@ -1,0 +1,13 @@
+Product Manager at Kintsugi AI.
+Location: Remote (Pakistan, South Asia, Worldwide).
+About Us:
+Kintsugi is an AI-powered sales tax automation platform that helps e-commerce and SaaS businesses monitor nexus, calculate taxes, and automate filing.
+Responsibilities:
+- Simplify Tax Operations workflows and eliminate inefficiencies by conceptualizing, delivering, and iterating products.
+- Gather requirements and launch automation products by collaborating with operations, design, and engineering teams.
+- Identify suitable third-party tools and automation solutions, collaborate with these partners, and ensure seamless integration.
+Requirements:
+- 1-5 years of B2B SaaS Product Management experience in early-stage, fast-paced SaaS startups.
+- Product development experience as a Software Engineer/QA or Technical PM.
+- Experience with third-party APIs, webhooks, and technical integrations.
+- Nice-to-have: Fintech Product Management experience.

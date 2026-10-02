@@ -1,0 +1,52 @@
+{
+  "job_id": "JOB_eb482f459b",
+  "title": "Product Manager",
+  "company": "Kintsugi AI",
+  "location": "Remote Worldwide / Pakistan",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Product Strategy",
+    "Agile/Scrum",
+    "Roadmap Planning"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Simplify Tax Operations workflows and eliminate inefficiencies by conceptualizing, delivering, and iterating products.",
+    "Gather requirements and launch automation products by collaborating with operations, design, and engineering teams.",
+    "Identify suitable third-party tools and automation solutions, collaborate with these partners, and ensure seamless integration.",
+    "years of B2B SaaS Product Management experience in early-stage, fast-paced SaaS startups.",
+    "Product development experience as a Software Engineer/QA or Technical PM.",
+    "Experience with third-party APIs, webhooks, and technical integrations.",
+    "Nice-to-have: Fintech Product Management experience."
+  ],
+  "domains": [
+    "FinTech",
+    "SaaS"
+  ],
+  "tools": [
+    "Jira",
+    "Mixpanel",
+    "Figma"
+  ],
+  "technologies_and_apis": [
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Webhooks",
+    "FinTech",
+    "SaaS"
+  ],
+  "raw_text": "Product Manager at Kintsugi AI.\nLocation: Remote (Pakistan, South Asia, Worldwide).\nAbout Us:\nKintsugi is an AI-powered sales tax automation platform that helps e-commerce and SaaS businesses monitor nexus, calculate taxes, and automate filing.\nResponsibilities:\n- Simplify Tax Operations workflows and eliminate inefficiencies by conceptualizing, delivering, and iterating products.\n- Gather requirements and launch automation products by collaborating with operations, design, and engineering teams.\n- Identify suitable third-party tools and automation solutions, collaborate with these partners, and ensure seamless integration.\nRequirements:\n- 1-5 years of B2B SaaS Product Management experience in early-stage, fast-paced SaaS startups.\n- Product development experience as a Software Engineer/QA or Technical PM.\n- Experience with third-party APIs, webhooks, and technical integrations.\n- Nice-to-have: Fintech Product Management experience.",
+  "source_url": "https://himalayas.app/companies/kintsugi-ai/jobs/product-manager",
+  "discovered_at": "2026-10-02T22:48:17.977Z"
+}

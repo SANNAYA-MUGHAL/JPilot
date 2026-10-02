@@ -1,0 +1,30 @@
+{
+  "job_id": "JOB_0cecc9d7a6",
+  "company": "Automattic",
+  "role": "Senior Product Manager, Payments",
+  "overall_match": 80,
+  "tier": "HIGH_ALIGNMENT",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "created_at": "2026-10-02T22:48:18.041Z",
+  "timing_ms": 20,
+  "truth_validation": {
+    "verified_claims": 10,
+    "supported_rewrites": 2,
+    "unverified_claims": 0
+  },
+  "trello": {
+    "card_id": "card_xu1ixos0",
+    "card_title": "[80%] Automattic | Senior Product Manager, Payments | Remote Worldwide",
+    "card_url": "https://trello.com/c/card_xu1ixos0/%5B80%25%5D%20Automattic%20%7C%20S",
+    "list_name": "🔥 High Match",
+    "attachments_count": 4
+  },
+  "files": {
+    "resume_pdf": "tailored_resume.pdf",
+    "resume_tex": "tailored_resume.tex",
+    "cover_letter_pdf": "cover_letter.pdf",
+    "cover_letter_md": "cover_letter.md",
+    "jd": "jd.txt"
+  }
+}

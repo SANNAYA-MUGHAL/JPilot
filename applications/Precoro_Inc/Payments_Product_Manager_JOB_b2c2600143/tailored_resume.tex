@@ -1,0 +1,162 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Sana Liaqat} \\ \vspace{2pt}
+    \textbf{\large Senior Product Manager — Payments, Payments \& Platform Integrations} \\ \vspace{3pt}
+    \small Faisalabad, Pakistan (100\% Remote / Worldwide B2B) $|$ (+92) 3062520001 $|$ sannayamughal9@gmail.com \\ \vspace{1pt} 
+    \small \href{https://www.linkedin.com/in/sanaliaqatpage/}{\underline{linkedin.com/in/sanaliaqatpage}} $|$ \href{https://sana-liaqat-portfolio.vercel.app/}{\underline{sana-liaqat-portfolio.vercel.app}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+\small{
+Product Manager with 7+ years of experience driving FinTech, SaaS, and marketplace platforms. Proven record scaling multi-gateway payment architectures, Open Banking integrations, and data-driven operational workflows that reduced order cancellations by 33\% and sustained 99\% SLA compliance.
+}
+
+%-----------SKILLS-----------
+\section{Core Competencies \& Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Product Strategy \& Execution:} Product Roadmapping, PRDs \& User Stories, Customer Discovery, Agile/Scrum, A/B Testing \\
+     \textbf{FinTech \& Payments:} Multi-Gateway Routing (Adyen), Split Payments, Escrow (MangoPay), Open Banking (Plaid) \\
+     \textbf{Technical \& Integrations:} RESTful APIs, Webhook Architecture, Postman, Microservices Concepts, SQL \\
+     \textbf{Analytics \& Tools:} Mixpanel, New Relic, Mezmo Log Analysis, Firebase Crashlytics, Jira, Figma
+    }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Bayuti (PropTech)}{Nov 2025 – Apr 2026}
+      {Product Manager}{London, UK (Remote)}
+      \resumeItemListStart
+        \resumeItem{Engineered split payments architecture and multi-gateway fallback routing (Adyen \& MangoPay), reducing transaction drop-offs by 18\% and boosting checkout completion by 24\%.}
+        \resumeItem{Managed FinTech data integrations including Mangopay (escrow, multi-party payments), Onfido (KYC/identity verification), and DocuSign (digital contracts), ensuring data integrity and auditability for compliance reporting.}
+        \resumeItem{Reduced bug escape rate by 50\% through systematic, data-driven QA frameworks and root-cause analysis applied across the product lifecycle.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {elGrocer by Smiles}{Jun 2022 – Oct 2025}
+      {Technical Project Manager, Product \& Delivery}{Dubai, UAE (Remote)}
+      \resumeItemListStart
+        \resumeItem{Led root-cause investigations across user behaviour, payment processing, and promo code workflows using Mixpanel, Mezmo, New Relic, and CleverTap, directly informing product changes that reduced order cancellations by 33\%.}
+        \resumeItem{Built and maintained real-time observability dashboards (New Relic, Mixpanel, Mezmo), applying statistical analysis to production telemetry to reduce incident resolution time by 35\%.}
+        \resumeItem{Analysed and processed 500+ daily Jira support tickets using structured data classification workflows, achieving 99\% SLA compliance and enabling closed-loop feedback into product improvements.}
+        \resumeItem{Used Firebase Crashlytics to analyse mobile app crashes and error trends, prioritising fixes that drove a significant increase in crash-free user sessions from a 27.3\% baseline.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Dzine Media}{Aug 2019 – Jun 2022}
+      {QA Lead \& Project Coordinator}{Faisalabad, Pakistan}
+      \resumeItemListStart
+        \resumeItem{Applied systematic defect analysis and root-cause investigation across web stacks (HTML, CSS, JavaScript, PHP, SQL), identifying defect patterns through data-driven quality metrics.}
+        \resumeItem{Designed and executed structured test data frameworks for web and application systems, building automated issue-tracking pipelines that reduced bug escape rates by 50\%.}
+        \resumeItem{Collaborated with cross-functional teams across the full SDLC, from requirements analysis through production deployment and post-launch performance monitoring.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------KEY PROJECTS-----------
+\section{Key Projects \& Impact}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Multi-Vendor Marketplace Split Payments \& Escrow Orchestration} $|$ \emph{Mixpanel, Postman, Jira}}{Bayuti / elGrocer}
+      \resumeItemListStart
+        \resumeItem{Authored end-to-end PRDs and API sequence diagrams for automated escrow funding and disbursement. Reduced transaction drop-offs by 18\% across reservations.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Split Payment \& Wallet Orchestration} $|$ \emph{Adyen, Apple Pay, Jira}}{elGrocer by Smiles}
+      \resumeItemListStart
+        \resumeItem{Defined split payment rules and webhook handlers across multiple tender types. Seamless multi-source payment flows in production.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION & CREDENTIALS-----------
+\section{Education, Certifications \& Honors}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Sargodha}{2014 -- 2018}
+      {Bachelor of Science in Software Engineering}{Pakistan (GPA: 3.3/4.0)}
+  \resumeSubHeadingListEnd
+  \vspace{-4pt}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Certifications:} IBM AI Product Manager Specialization (2024) $|$ Google Data Analytics Certificate (2023) $|$ Generative AI: Prompt Engineering (IBM, 2024) \\
+     \textbf{Honors \& Awards:} Outstanding Contribution Award -- elGrocer/Smiles (2024) $|$ Best KPI Achiever -- elGrocer (2023)
+    }}
+  \end{itemize}
+
+\end{document}

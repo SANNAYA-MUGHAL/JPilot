@@ -1,0 +1,50 @@
+{
+  "job_id": "JOB_b2c2600143",
+  "title": "Payments Product Manager",
+  "company": "Precoro Inc",
+  "location": "Remote Worldwide",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "SQL"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Own the Payments product area end-to-end from discovery through delivery, launch, and iteration.",
+    "Create and maintain integrations with payment providers, PSPs, gateways, and banking partners.",
+    "Navigate partner limitations, versioning, error handling, reconciliation, and automated payout flows.",
+    "Coordinate across Engineering, CS, and external payment partners to keep the product ready for new payment methods.",
+    "Define and track success metrics, writing SQL queries and building KPI dashboards.",
+    "+ years as a Product Manager with hands-on experience building or scaling payment integrations (routing, PSP/acquirer integrations, virtual cards, ACH, or cross-border payments).",
+    "Strong ability to work with APIs, webhooks, and technical integrations.",
+    "Experience writing SQL queries or using BI tools for data-driven decisions."
+  ],
+  "domains": [
+    "Payments"
+  ],
+  "tools": [
+    "Jira",
+    "Mixpanel",
+    "Figma"
+  ],
+  "technologies_and_apis": [
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Webhooks",
+    "SQL",
+    "Payments"
+  ],
+  "raw_text": "Payments Product Manager at Precoro Inc.\nLocation: Remote Worldwide (Anywhere).\nAbout Precoro:\nPrecoro is an innovative AI-powered procurement centralization and automation platform serving 1,000+ customers in 80+ countries.\nWhat you'll do:\n- Own the Payments product area end-to-end from discovery through delivery, launch, and iteration.\n- Create and maintain integrations with payment providers, PSPs, gateways, and banking partners.\n- Navigate partner limitations, versioning, error handling, reconciliation, and automated payout flows.\n- Coordinate across Engineering, CS, and external payment partners to keep the product ready for new payment methods.\n- Define and track success metrics, writing SQL queries and building KPI dashboards.\nWhat we look for:\n- 3-5+ years as a Product Manager with hands-on experience building or scaling payment integrations (routing, PSP/acquirer integrations, virtual cards, ACH, or cross-border payments).\n- Strong ability to work with APIs, webhooks, and technical integrations.\n- Experience writing SQL queries or using BI tools for data-driven decisions.",
+  "source_url": "https://himalayas.app/companies/precoro-inc/jobs/payments-product-manager",
+  "discovered_at": "2026-10-02T22:48:17.998Z"
+}

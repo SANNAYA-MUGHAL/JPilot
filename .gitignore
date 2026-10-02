@@ -6,3 +6,4 @@ tests/tmp_*
 tests/*.pdf
 .env*
 .vercel
+scratch/

@@ -1,0 +1,53 @@
+{
+  "job_id": "JOB_26d2c5b7f0",
+  "title": "Senior Product Manager",
+  "company": "SadaPay",
+  "location": "Faisalabad, Pakistan / 100% Remote",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "SQL",
+    "Analytics"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Proactively define and articulate a clear vision and strategy across personal accounts, SME, and payments.",
+    "Weigh options against technical, operational, and SBP compliance feasibility.",
+    "Drive delivery with cross-functional engineering, design, and ops squads.",
+    "Deep hands-on analytics: write SQL, build dashboards for funnels, retention curves, cohort breakdowns, and run A/B experiments.",
+    "Embrace AI as a force multiplier: accelerate research and spec writing, prototype with Figma, Claude, v0, and AI-assisted data analysis.",
+    "Partner with compliance and risk to treat SBP regulatory requirements as core design constraints.",
+    "+ years of product management experience shipping products end-to-end in payments, FinTech, or transactional platforms.",
+    "Deep data fluency: SQL, analytics instrumentation, conversion funnels."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments"
+  ],
+  "tools": [
+    "Figma"
+  ],
+  "technologies_and_apis": [
+    "REST APIs",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Figma",
+    "SQL",
+    "FinTech",
+    "Payments",
+    "Analytics"
+  ],
+  "raw_text": "Senior Product Manager at SadaPay.\nLocation: 100% remote (Karachi, Lahore or Islamabad / Nationwide Pakistan).\nAbout SadaPay:\nSadaPay is transforming financial services in Pakistan with a digital-first experience that makes managing money simple, transparent, and hassle-free. With over 3 million+ users, licensed by State Bank of Pakistan as an Electronic Money Institution (EMI).\nResponsibilities:\n- Proactively define and articulate a clear vision and strategy across personal accounts, SME, and payments.\n- Weigh options against technical, operational, and SBP compliance feasibility.\n- Drive delivery with cross-functional engineering, design, and ops squads.\n- Deep hands-on analytics: write SQL, build dashboards for funnels, retention curves, cohort breakdowns, and run A/B experiments.\n- Embrace AI as a force multiplier: accelerate research and spec writing, prototype with Figma, Claude, v0, and AI-assisted data analysis.\n- Partner with compliance and risk to treat SBP regulatory requirements as core design constraints.\nRequirements:\n- 5+ years of product management experience shipping products end-to-end in payments, FinTech, or transactional platforms.\n- Deep data fluency: SQL, analytics instrumentation, conversion funnels.\n- Working knowledge of Pakistan's fintech regulatory environment: SBP, EMI regulations, NADRA BVS.\n- Understanding of how ML models and LLMs behave.",
+  "source_url": "https://www.sadapay.pk/jobs-listing/senior-product-manager",
+  "discovered_at": "2026-10-02T22:48:17.909Z"
+}

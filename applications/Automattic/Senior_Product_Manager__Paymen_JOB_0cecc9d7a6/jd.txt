@@ -1,0 +1,15 @@
+Senior Product Manager, Payments at Automattic (WooCommerce).
+Location: Remote Worldwide (Anywhere).
+The role:
+Automattic is hiring a senior, hands-on Product Manager to join WooCommerce Payments and take ownership of our payments products and partner integrations.
+What you'll work on:
+- Improve merchant and shopper experiences across onboarding, checkout, refunds and disputes, payouts, reporting, and overall reliability.
+- Raise the quality bar by reducing failures and friction, lowering support volume, and improving transaction authorization.
+- Work closely with priority payments partners (including Stripe and PayPal) to improve integrations, ship changes, and manage dependencies.
+- Use data, telemetry, and merchant feedback to prioritize the roadmap and measure outcomes.
+- Communicate with clarity in a distributed, async environment.
+What we're looking for:
+- 7+ years in product roles, with senior IC experience owning complex problem spaces and influencing cross-functional teams.
+- 4+ years in payments or fintech, ideally on products operating at scale.
+- Strong analytical habits and a practical approach to metrics, dashboards, and error instrumentation.
+- Familiarity with WooCommerce, WordPress, or eCommerce checkout flows.

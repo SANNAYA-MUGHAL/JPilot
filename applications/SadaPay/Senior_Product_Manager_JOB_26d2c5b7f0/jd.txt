@@ -1,0 +1,16 @@
+Senior Product Manager at SadaPay.
+Location: 100% remote (Karachi, Lahore or Islamabad / Nationwide Pakistan).
+About SadaPay:
+SadaPay is transforming financial services in Pakistan with a digital-first experience that makes managing money simple, transparent, and hassle-free. With over 3 million+ users, licensed by State Bank of Pakistan as an Electronic Money Institution (EMI).
+Responsibilities:
+- Proactively define and articulate a clear vision and strategy across personal accounts, SME, and payments.
+- Weigh options against technical, operational, and SBP compliance feasibility.
+- Drive delivery with cross-functional engineering, design, and ops squads.
+- Deep hands-on analytics: write SQL, build dashboards for funnels, retention curves, cohort breakdowns, and run A/B experiments.
+- Embrace AI as a force multiplier: accelerate research and spec writing, prototype with Figma, Claude, v0, and AI-assisted data analysis.
+- Partner with compliance and risk to treat SBP regulatory requirements as core design constraints.
+Requirements:
+- 5+ years of product management experience shipping products end-to-end in payments, FinTech, or transactional platforms.
+- Deep data fluency: SQL, analytics instrumentation, conversion funnels.
+- Working knowledge of Pakistan's fintech regulatory environment: SBP, EMI regulations, NADRA BVS.
+- Understanding of how ML models and LLMs behave.

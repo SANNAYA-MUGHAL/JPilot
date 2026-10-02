@@ -1,0 +1,54 @@
+{
+  "job_id": "JOB_0cecc9d7a6",
+  "title": "Senior Product Manager, Payments",
+  "company": "Automattic",
+  "location": "Remote Worldwide",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Checkout"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Improve merchant and shopper experiences across onboarding, checkout, refunds and disputes, payouts, reporting, and overall reliability.",
+    "Raise the quality bar by reducing failures and friction, lowering support volume, and improving transaction authorization.",
+    "Work closely with priority payments partners (including Stripe and PayPal) to improve integrations, ship changes, and manage dependencies.",
+    "Use data, telemetry, and merchant feedback to prioritize the roadmap and measure outcomes.",
+    "Communicate with clarity in a distributed, async environment.",
+    "+ years in product roles, with senior IC experience owning complex problem spaces and influencing cross-functional teams.",
+    "+ years in payments or fintech, ideally on products operating at scale.",
+    "Strong analytical habits and a practical approach to metrics, dashboards, and error instrumentation."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments",
+    "eCommerce"
+  ],
+  "tools": [
+    "Jira",
+    "Mixpanel",
+    "Figma"
+  ],
+  "technologies_and_apis": [
+    "REST APIs",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "FinTech",
+    "Payments",
+    "Checkout",
+    "eCommerce"
+  ],
+  "raw_text": "Senior Product Manager, Payments at Automattic (WooCommerce).\nLocation: Remote Worldwide (Anywhere).\nThe role:\nAutomattic is hiring a senior, hands-on Product Manager to join WooCommerce Payments and take ownership of our payments products and partner integrations.\nWhat you'll work on:\n- Improve merchant and shopper experiences across onboarding, checkout, refunds and disputes, payouts, reporting, and overall reliability.\n- Raise the quality bar by reducing failures and friction, lowering support volume, and improving transaction authorization.\n- Work closely with priority payments partners (including Stripe and PayPal) to improve integrations, ship changes, and manage dependencies.\n- Use data, telemetry, and merchant feedback to prioritize the roadmap and measure outcomes.\n- Communicate with clarity in a distributed, async environment.\nWhat we're looking for:\n- 7+ years in product roles, with senior IC experience owning complex problem spaces and influencing cross-functional teams.\n- 4+ years in payments or fintech, ideally on products operating at scale.\n- Strong analytical habits and a practical approach to metrics, dashboards, and error instrumentation.\n- Familiarity with WooCommerce, WordPress, or eCommerce checkout flows.",
+  "source_url": "https://himalayas.app/companies/automattic/jobs/senior-product-manager-payments",
+  "discovered_at": "2026-10-02T22:48:18.021Z"
+}

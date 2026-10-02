@@ -1,0 +1,27 @@
+{
+  "overall_score": 100,
+  "tier": "HIGH_ALIGNMENT",
+  "breakdown": {
+    "role_score": 100,
+    "experience_score": 100,
+    "skills_score": 100,
+    "domain_score": 100,
+    "tools_score": 100,
+    "location_score": 100,
+    "preferred_score": 100
+  },
+  "strong_matches": [
+    "Target Primary Role Match: \"Senior Product Manager\" directly matches target Product Management specializations.",
+    "Years of Experience: Candidate has 7+ years exceeding required 5 years.",
+    "Mandatory Skill Match: SQL",
+    "Mandatory Skill Match: Analytics",
+    "Domain Alignment: Strong background in FinTech",
+    "Domain Alignment: Strong background in Payments",
+    "Location Compatibility: 100% Remote Worldwide arrangement."
+  ],
+  "partial_matches": [],
+  "missing_mandatory": [],
+  "missing_preferred": [],
+  "application_risks": [],
+  "recommendation": "Strong match across core role, domain, and skills. Immediate package generation recommended."
+}

@@ -1,0 +1,14 @@
+Payments Product Manager at Precoro Inc.
+Location: Remote Worldwide (Anywhere).
+About Precoro:
+Precoro is an innovative AI-powered procurement centralization and automation platform serving 1,000+ customers in 80+ countries.
+What you'll do:
+- Own the Payments product area end-to-end from discovery through delivery, launch, and iteration.
+- Create and maintain integrations with payment providers, PSPs, gateways, and banking partners.
+- Navigate partner limitations, versioning, error handling, reconciliation, and automated payout flows.
+- Coordinate across Engineering, CS, and external payment partners to keep the product ready for new payment methods.
+- Define and track success metrics, writing SQL queries and building KPI dashboards.
+What we look for:
+- 3-5+ years as a Product Manager with hands-on experience building or scaling payment integrations (routing, PSP/acquirer integrations, virtual cards, ACH, or cross-border payments).
+- Strong ability to work with APIs, webhooks, and technical integrations.
+- Experience writing SQL queries or using BI tools for data-driven decisions.
