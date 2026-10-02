@@ -414,6 +414,36 @@ function getHTML(): string {
         globalData = await dashRes.json();
         globalTrackerData = await trackerRes.json();
 
+        // Restore custom stages saved by user in localStorage (resilient across serverless cold starts)
+        try {
+          const localStages = JSON.parse(localStorage.getItem('jpilot_job_stages') || '{}');
+          if (Object.keys(localStages).length > 0 && globalTrackerData && globalTrackerData.all_jobs) {
+            for (const s of Object.keys(globalTrackerData.stages)) {
+              globalTrackerData.stages[s] = [];
+            }
+            for (const job of globalTrackerData.all_jobs) {
+              if (localStages[job.id]) {
+                job.stage = localStages[job.id];
+              }
+              if (globalTrackerData.stages[job.stage]) {
+                globalTrackerData.stages[job.stage].push(job);
+              } else {
+                globalTrackerData.stages['DISCOVERED'].push(job);
+              }
+            }
+            const s = globalTrackerData.summary;
+            s.discovered = globalTrackerData.stages.DISCOVERED.length;
+            s.review_queue = globalTrackerData.stages.REVIEW_QUEUE.length;
+            s.ready_to_apply = globalTrackerData.stages.READY_TO_APPLY.length;
+            s.applied = globalTrackerData.stages.APPLIED.length;
+            s.interviewing = globalTrackerData.stages.INTERVIEWING.length;
+            s.offer = globalTrackerData.stages.OFFER.length;
+            s.archived = (globalTrackerData.stages.ARCHIVED || []).length;
+          }
+        } catch (e) {
+          console.warn('LocalStorage stage merge error:', e);
+        }
+
         document.getElementById('badge-tracker-total').innerText = globalTrackerData.summary.total;
         document.getElementById('insp-list-count').innerText = globalTrackerData.summary.total;
 
@@ -673,16 +703,49 @@ function getHTML(): string {
 
     async function updateJobStage(jobId, newStage) {
       try {
-        const res = await fetch('/api/tracker/update', {
+        // 1. Optimistic Local State & LocalStorage Update (zero-latency)
+        const localStages = JSON.parse(localStorage.getItem('jpilot_job_stages') || '{}');
+        localStages[jobId] = newStage;
+        localStorage.setItem('jpilot_job_stages', JSON.stringify(localStages));
+
+        if (globalTrackerData && globalTrackerData.all_jobs) {
+          const targetJob = globalTrackerData.all_jobs.find(j => j.id === jobId);
+          if (targetJob) {
+            const oldStage = targetJob.stage;
+            targetJob.stage = newStage;
+
+            // Remove from old stage bucket
+            if (globalTrackerData.stages[oldStage]) {
+              globalTrackerData.stages[oldStage] = globalTrackerData.stages[oldStage].filter(j => j.id !== jobId);
+            }
+            // Add to new stage bucket
+            if (!globalTrackerData.stages[newStage]) {
+              globalTrackerData.stages[newStage] = [];
+            }
+            globalTrackerData.stages[newStage].push(targetJob);
+
+            // Recompute summary counts
+            const s = globalTrackerData.summary;
+            s.discovered = globalTrackerData.stages.DISCOVERED.length;
+            s.review_queue = globalTrackerData.stages.REVIEW_QUEUE.length;
+            s.ready_to_apply = globalTrackerData.stages.READY_TO_APPLY.length;
+            s.applied = globalTrackerData.stages.APPLIED.length;
+            s.interviewing = globalTrackerData.stages.INTERVIEWING.length;
+            s.offer = globalTrackerData.stages.OFFER.length;
+            s.archived = (globalTrackerData.stages.ARCHIVED || []).length;
+
+            // Re-render UI immediately!
+            renderTrackerView();
+            showToast(\`Stage updated to \${newStage}\`);
+          }
+        }
+
+        // 2. Background server synchronization
+        fetch('/api/tracker/update', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ jobId, stage: newStage })
-        });
-        const data = await res.json();
-        if (data.success) {
-          showToast(\`Stage updated to \${newStage}\`);
-          await loadData();
-        }
+        }).catch(e => console.warn('Background server sync warning:', e));
       } catch (err) {
         console.error('Failed to update stage:', err);
       }

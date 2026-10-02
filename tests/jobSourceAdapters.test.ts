@@ -13,12 +13,12 @@ test('RemoteJobAdapter searches and normalizes jobs with dedupe keys', async () 
   });
 
   assert.ok(jobs.length >= 3);
-  const n26Job = jobs.find((j) => j.company === 'N26');
-  assert.ok(n26Job);
-  assert.equal(n26Job.title, 'Senior Product Manager - Payments & Wallets');
-  assert.equal(n26Job.remote_type, 'REMOTE');
-  assert.ok(n26Job.dedupe_key.includes('n26'));
-  assert.ok(n26Job.job_id.startsWith('JOB_'));
+  const deelJob = jobs.find((j) => j.company === 'Deel');
+  assert.ok(deelJob);
+  assert.equal(deelJob.title, 'Senior Product Manager - Payments & Global Payouts');
+  assert.equal(deelJob.remote_type, 'REMOTE');
+  assert.ok(deelJob.dedupe_key.includes('deel'));
+  assert.ok(deelJob.job_id.startsWith('JOB_'));
 });
 
 test('GreenhouseAdapter normalizes ATS jobs', async () => {

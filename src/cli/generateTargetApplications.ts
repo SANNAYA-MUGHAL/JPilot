@@ -29,23 +29,23 @@ Requirements:
 - Excellent stakeholder communication and track record of working with banking partners.`,
   },
   {
-    company: 'N26',
-    title: 'Senior Product Manager — Payment Core & Cards',
-    location: 'Berlin, Germany / Remote EU',
-    jdText: `Senior Product Manager — Payment Core & Cards at N26.
-Location: Berlin, Germany (Hybrid or Remote EU). Relocation & Visa Sponsorship provided.
+    company: 'Deel',
+    title: 'Senior Product Manager — Global Payments & Contractor Payouts',
+    location: 'Remote Worldwide',
+    jdText: `Senior Product Manager — Global Payments & Contractor Payouts at Deel.
+Location: 100% Remote Worldwide (Pakistan / Global B2B Contract). No Visa Sponsorship Required.
 About the Role:
-As Senior Product Manager in Payment Core, you will drive the expansion of N26 digital banking payment rails, Open Banking APIs, card transaction routing, and customer dispute resolution.
+As Senior Product Manager for Global Payments at Deel, you will lead the infrastructure powering automated multi-currency contractor payouts, escrow mechanics, and local payment rails across 150+ countries.
 Responsibilities:
-- Drive the roadmap for SEPA instant, Open Banking (PSD2), Apple Pay/Google Pay, and digital wallet integrations.
-- Optimize transaction authorization rates and cut checkout latency across EMEA.
-- Lead root-cause investigations on payment failures, chargebacks, and webhook delivery errors.
-- Collaborate with Banking Operations, Risk, and Engineering teams.
+- Drive the roadmap for global payout rails, local bank transfers, digital wallets, and automated FX conversion.
+- Partner with payment gateways and banking partners (Adyen, Stripe, local clearing houses) to optimize transaction authorization rates.
+- Manage FinTech integrations including KYC verification (Onfido), digital contract signatures, and payout reconciliation.
+- Utilize Mixpanel, New Relic, and SQL data pipelines to identify payment failures and reduce withdrawal latency.
 Requirements:
-- 6+ years in digital banking, FinTech, or eCommerce payment systems.
-- Proven experience with Open Banking APIs, Plaid, Adyen, or core payment gateways.
-- Expertise in SLA management, incident triage, and production observability (New Relic, Mezmo, Datadog).
-- Fluent English communication; Bachelor's degree in Software Engineering, CS, or related field.`,
+- 6+ years in digital payments, FinTech, or SaaS billing operations.
+- Deep hands-on experience with payment gateways, escrow/split payments, webhooks, and REST APIs.
+- Strong analytical skills: event instrumentation, funnel conversion, and SLA observability.
+- 100% remote asynchronous collaboration across global timezones.`,
   },
   {
     company: 'GitLab',

@@ -31,17 +31,20 @@ export class JobDiscoveryEngine {
   private dedupeAgent: DeduplicationAgent;
   private eligibilityFilter: EligibilityFilter;
   private pipeline: Phase1Pipeline;
+  private applicationsDir?: string;
 
   constructor(
     adapters?: JobSourceAdapter[],
     dedupeAgent?: DeduplicationAgent,
     eligibilityFilter?: EligibilityFilter,
-    pipeline?: Phase1Pipeline
+    pipeline?: Phase1Pipeline,
+    applicationsDir?: string
   ) {
     this.adapters = adapters || [];
     this.dedupeAgent = dedupeAgent || new DeduplicationAgent();
     this.eligibilityFilter = eligibilityFilter || new EligibilityFilter();
     this.pipeline = pipeline || new Phase1Pipeline();
+    this.applicationsDir = applicationsDir;
   }
 
   public registerAdapter(adapter: JobSourceAdapter): void {
@@ -120,6 +123,7 @@ export class JobDiscoveryEngine {
           company_hint: job.company,
           location_hint: job.location,
           enable_trello: true,
+          applications_dir: this.applicationsDir,
         });
 
         report.packages_generated++;

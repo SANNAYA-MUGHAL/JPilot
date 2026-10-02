@@ -10,15 +10,15 @@ export class RemoteJobAdapter implements JobSourceAdapter {
     const sampleJobs = [
       {
         id: 'REMOTE_01',
-        title: 'Senior Product Manager - Payments & Wallets',
-        company: 'N26',
-        location: 'Berlin, Germany / Remote Europe',
-        country: 'Germany',
+        title: 'Senior Product Manager - Payments & Global Payouts',
+        company: 'Deel',
+        location: 'Remote Worldwide',
+        country: 'Global',
         remote: true,
         posted_at: new Date(Date.now() - 2 * 3600 * 1000).toISOString(), // 2 hours ago
-        description: 'Lead payment rails, Adyen integrations, and wallet infrastructure for European banking operations. Requirements: 5+ years PM experience, payment gateway integrations, Mixpanel, and agile squad leadership.',
-        url: 'https://n26.com/careers/senior-pm-payments',
-        salary: '€95,000 - €115,000',
+        description: 'Lead global contractor payout rails, Adyen integrations, and multi-currency payment infrastructure. Requirements: 5+ years PM experience, payment gateway integrations, Mixpanel, and agile squad leadership.',
+        url: 'https://deel.com/careers/senior-pm-payments',
+        salary: '$110,000 - $135,000',
       },
       {
         id: 'REMOTE_02',

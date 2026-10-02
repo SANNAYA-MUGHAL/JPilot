@@ -20,7 +20,7 @@ test('JobDiscoveryEngine processes batch with deduplication and error isolation'
   const filter = new EligibilityFilter();
   const pipeline = new Phase1Pipeline();
 
-  const engine = new JobDiscoveryEngine([], dedupe, filter, pipeline);
+  const engine = new JobDiscoveryEngine([], dedupe, filter, pipeline, testAppsDir);
   engine.registerAdapter(new RemoteJobAdapter());
   engine.registerAdapter(new GreenhouseAdapter());
 

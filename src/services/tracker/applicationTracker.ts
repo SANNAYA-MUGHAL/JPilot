@@ -53,6 +53,7 @@ export interface TrackerData {
 }
 
 export class ApplicationTracker {
+  private static inMemoryStages: Record<string, { stage: TrackerStage; applied_date?: string; interview_date?: string; notes?: string }> = {};
   private trackerFilePath: string;
   private dashboardService: DashboardService;
 
@@ -62,21 +63,61 @@ export class ApplicationTracker {
     this.dashboardService = dashboardService || new DashboardService();
   }
 
+  private getTmpFilePath(): string {
+    return path.resolve('/tmp', 'jpilot_tracker.json');
+  }
+
   private loadSavedStages(): Record<string, { stage: TrackerStage; applied_date?: string; interview_date?: string; notes?: string }> {
-    if (!fs.existsSync(this.trackerFilePath)) {
-      return {};
-    }
+    const result: Record<string, { stage: TrackerStage; applied_date?: string; interview_date?: string; notes?: string }> = {};
+
+    // 1. Try reading from repo applications/tracker.json
     try {
-      return JSON.parse(fs.readFileSync(this.trackerFilePath, 'utf8'));
+      if (fs.existsSync(this.trackerFilePath)) {
+        const fileContent = fs.readFileSync(this.trackerFilePath, 'utf8');
+        Object.assign(result, JSON.parse(fileContent));
+      }
     } catch {
-      return {};
+      // ignore
     }
+
+    // 2. Try reading from /tmp/jpilot_tracker.json (Vercel runtime writable directory)
+    try {
+      const tmpPath = this.getTmpFilePath();
+      if (fs.existsSync(tmpPath)) {
+        const tmpContent = fs.readFileSync(tmpPath, 'utf8');
+        Object.assign(result, JSON.parse(tmpContent));
+      }
+    } catch {
+      // ignore
+    }
+
+    // 3. Merge in-memory updates
+    Object.assign(result, ApplicationTracker.inMemoryStages);
+
+    return result;
   }
 
   private saveStages(data: Record<string, { stage: TrackerStage; applied_date?: string; interview_date?: string; notes?: string }>): void {
-    const dir = path.dirname(this.trackerFilePath);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(this.trackerFilePath, JSON.stringify(data, null, 2), 'utf8');
+    // 1. Always update static memory store
+    ApplicationTracker.inMemoryStages = { ...ApplicationTracker.inMemoryStages, ...data };
+
+    // 2. Try persisting to repo trackerFilePath
+    try {
+      const dir = path.dirname(this.trackerFilePath);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(this.trackerFilePath, JSON.stringify(data, null, 2), 'utf8');
+      return;
+    } catch {
+      // Read-only filesystem on serverless lambda (EROFS) - safely fallback
+    }
+
+    // 3. Fallback: Persist to /tmp/jpilot_tracker.json
+    try {
+      const tmpPath = this.getTmpFilePath();
+      fs.writeFileSync(tmpPath, JSON.stringify(ApplicationTracker.inMemoryStages, null, 2), 'utf8');
+    } catch {
+      // If even /tmp fails, in-memory state is preserved
+    }
   }
 
   public getTrackerData(): TrackerData {
