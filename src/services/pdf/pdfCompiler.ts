@@ -113,21 +113,23 @@ export class PDFCompiler {
 
   /**
    * High-Fidelity Executive Headless PDF Engine
-   * Generates a clean, uncluttered, ATS-compliant executive resume.
+   * Generates a beautifully formatted, ATS-compliant 2-page executive resume
+   * with precise padding, clean alignment, and zero overflow.
    */
   public compileWithHeadlessEngine(ast: TailoredResumeAST, outputPdfPath: string): Promise<void> {
     return new Promise((resolve, reject) => {
-      const leftMargin = 40;
-      const rightMargin = 612 - 40;
-      const contentWidth = rightMargin - leftMargin; // 532pt
-      const colRightW = 150;
-      const colLeftW = contentWidth - colRightW; // 382pt
+      const leftMargin = 38;
+      const rightMargin = 612 - 38;
+      const contentWidth = rightMargin - leftMargin; // 536pt
+      const colRightW = 145;
+      const colLeftW = contentWidth - colRightW;
       const colRightX = leftMargin + colLeftW;
 
       const doc = new PDFDocument({
         size: 'LETTER',
         bufferPages: true,
-        margins: { top: 34, bottom: 42, left: leftMargin, right: 40 },
+        autoFirstPage: false,
+        margins: { top: 34, bottom: 42, left: leftMargin, right: 38 },
       });
 
       const writeStream = fs.createWriteStream(outputPdfPath);
@@ -136,206 +138,208 @@ export class PDFCompiler {
       const profile = this.kb.getCandidateProfile();
       const contact = profile.personal_information;
 
-      // 1. Header: Candidate Name
-      doc.font('Helvetica-Bold').fontSize(22).fillColor('#0f172a').text(contact.full_name, {
+      const drawSectionHeader = (title: string) => {
+        doc.moveDown(0.42);
+        const headerY = doc.y;
+        doc.font('Helvetica-Bold').fontSize(9.5).fillColor('#0f172a').text(title.toUpperCase(), leftMargin, headerY, {
+          characterSpacing: 0.7,
+        });
+        const lineY = doc.y + 2;
+        doc.strokeColor('#cbd5e1').lineWidth(0.75).moveTo(leftMargin, lineY).lineTo(rightMargin, lineY).stroke();
+        doc.y = lineY + 6;
+      };
+
+      const renderRoleBlock = (exp: any) => {
+        const roleY = doc.y;
+        doc.font('Helvetica-Bold').fontSize(9.5).fillColor('#0f172a').text(exp.role, leftMargin, roleY, { width: colLeftW });
+        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#475569').text(exp.dates, colRightX, roleY, { width: colRightW, align: 'right' });
+        doc.moveDown(0.12);
+
+        const compY = doc.y;
+        doc.font('Helvetica-Bold').fontSize(9).fillColor('#1d4ed8').text(exp.company, leftMargin, compY, { width: colLeftW });
+        doc.font('Helvetica-Oblique').fontSize(8).fillColor('#64748b').text(exp.location, colRightX, compY, { width: colRightW, align: 'right' });
+        doc.moveDown(0.28);
+
+        for (const bullet of exp.bullets) {
+          const bY = doc.y;
+          doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#1d4ed8').text('•', leftMargin + 4, bY);
+          doc.font('Helvetica').fontSize(8.5).fillColor('#1e293b').text(bullet.generated_text, leftMargin + 14, bY, {
+            width: contentWidth - 14,
+            lineGap: 2.1,
+          });
+          doc.moveDown(0.16);
+        }
+        doc.moveDown(0.3);
+      };
+
+      // ===================== PAGE 1 =====================
+      doc.addPage();
+
+      // 1. Candidate Name
+      doc.font('Helvetica-Bold').fontSize(21).fillColor('#0f172a').text(contact.full_name, {
         align: 'center',
-        characterSpacing: 0.6,
+        characterSpacing: 0.5,
       });
       doc.moveDown(0.12);
 
-      // 2. Headline / Target Focus
-      doc.font('Helvetica-Bold').fontSize(10.5).fillColor('#1e40af').text(ast.headline, {
+      // 2. Target Role Headline
+      doc.font('Helvetica-Bold').fontSize(10).fillColor('#1d4ed8').text(ast.headline, {
         align: 'center',
-        characterSpacing: 0.3,
+        characterSpacing: 0.2,
       });
-      doc.moveDown(0.2);
+      doc.moveDown(0.18);
 
-      // 3. Contact Line: Location, Phone, Email (Strictly verified only)
+      // 3. Contact Line
       const locationText = contact.location || 'Pakistan (Open to Relocation & Remote)';
       const contactLine = `${locationText}   •   ${contact.phone}   •   ${contact.email}`;
       doc.font('Helvetica').fontSize(8.5).fillColor('#475569').text(contactLine, { align: 'center' });
 
-      // Only render links if candidate explicitly provided them
+      // 4. Links
       if (contact.linkedin || contact.portfolio || contact.website) {
-        doc.moveDown(0.15);
+        doc.moveDown(0.12);
         const cleanLinkedIn = contact.linkedin ? contact.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
         const portfolioUrl = contact.portfolio || contact.website;
         const cleanPortfolio = portfolioUrl ? portfolioUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
-
         const linksText = [cleanLinkedIn, cleanPortfolio].filter(Boolean).join('   •   ');
-        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#1e40af').text(linksText, {
-          align: 'center',
-        });
+        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#1d4ed8').text(linksText, { align: 'center' });
       }
       doc.moveDown(0.35);
 
-      // Helper: Draw Section Header with sleek hairline divider
-      const drawSectionHeader = (title: string) => {
-        doc.moveDown(0.45);
-        const headerY = doc.y;
-        doc.font('Helvetica-Bold').fontSize(9.5).fillColor('#0f172a').text(title.toUpperCase(), leftMargin, headerY, {
-          characterSpacing: 0.6,
-        });
-        const y = doc.y + 2.5;
-        doc.strokeColor('#cbd5e1').lineWidth(0.75).moveTo(leftMargin, y).lineTo(rightMargin, y).stroke();
-        doc.y = y + 5;
-      };
-
-      // 4. Professional Summary (Clean, left-aligned, generous line-height)
+      // 5. Professional Summary
       drawSectionHeader('Professional Summary');
       doc.font('Helvetica').fontSize(8.5).fillColor('#334155').text(ast.summary, leftMargin, doc.y, {
         width: contentWidth,
         align: 'left',
-        lineGap: 2.6,
+        lineGap: 2.4,
       });
 
-      // 5. Core Competencies & Expertise (Clean structured 4 rows)
-      drawSectionHeader('Core Competencies & Expertise');
+      // 6. Core Competencies
+      drawSectionHeader('Core Competencies & Technical Expertise');
       const renderComp = (label: string, value: string) => {
-        const lineY = doc.y;
-        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#0f172a').text(`${label}: `, leftMargin, lineY, { continued: true });
-        doc.font('Helvetica').fontSize(8.5).fillColor('#334155').text(value, { lineGap: 2.0 });
-        doc.moveDown(0.1);
+        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#0f172a').text(`${label}: `, leftMargin, doc.y, { continued: true });
+        doc.font('Helvetica').fontSize(8.5).fillColor('#334155').text(value, { lineGap: 1.8 });
+        doc.moveDown(0.12);
       };
       renderComp('Product Strategy & Delivery', ast.competencies.product_strategy);
-      renderComp('FinTech & Payment Systems', ast.competencies.fintech_payments);
+      renderComp('FinTech & Payment Rails', ast.competencies.fintech_payments);
       renderComp('Technical & Platform APIs', ast.competencies.technical_integrations);
-      renderComp('Observability & Analytics Tools', ast.competencies.analytics_tools);
+      renderComp('Analytics & Experimentation Tools', ast.competencies.analytics_tools);
 
-      // 6. Professional Experience
+      // 7. Professional Experience
       drawSectionHeader('Professional Experience');
-      for (const exp of ast.experiences) {
-        // Line 1: Role (Left) + Dates (Right)
-        const roleY = doc.y;
-        const roleH = doc.heightOfString(exp.role, { width: colLeftW });
-        doc.font('Helvetica-Bold').fontSize(9.5).fillColor('#0f172a').text(exp.role, leftMargin, roleY, {
-          width: colLeftW,
-        });
-        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#334155').text(exp.dates, colRightX, roleY, {
-          width: colRightW,
-          align: 'right',
-        });
-        doc.y = roleY + Math.max(roleH, 12) + 1;
 
-        // Line 2: Company (Left) + Location (Right)
-        const compY = doc.y;
-        const compH = doc.heightOfString(exp.company, { width: colLeftW });
-        doc.font('Helvetica-Bold').fontSize(9).fillColor('#1e40af').text(exp.company, leftMargin, compY, {
-          width: colLeftW,
-        });
-        doc.font('Helvetica-Oblique').fontSize(8).fillColor('#64748b').text(exp.location, colRightX, compY, {
-          width: colRightW,
-          align: 'right',
-        });
-        doc.y = compY + Math.max(compH, 11) + 4;
+      const totalExperiences = ast.experiences.length;
+      if (totalExperiences >= 3) {
+        // Page 1 gets top 2 roles (Bayuti & elGrocer)
+        renderRoleBlock(ast.experiences[0]);
+        renderRoleBlock(ast.experiences[1]);
 
-        // Bullets (Clean spacing, 2.2 lineGap, crisp marker)
-        for (const bullet of exp.bullets) {
-          const bulletY = doc.y;
-          doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#1e40af').text('•', leftMargin + 4, bulletY);
-          doc.font('Helvetica').fontSize(8.5).fillColor('#1e293b').text(bullet.generated_text, leftMargin + 14, bulletY, {
-            width: contentWidth - 14,
-            lineGap: 2.2,
-          });
-          doc.moveDown(0.2);
+        // ===================== PAGE 2 =====================
+        doc.addPage();
+        drawSectionHeader('Professional Experience (Continued)');
+        for (let i = 2; i < totalExperiences; i++) {
+          renderRoleBlock(ast.experiences[i]);
         }
-        doc.moveDown(0.35);
+      } else {
+        // Fewer than 3 roles: render all
+        for (const exp of ast.experiences) {
+          renderRoleBlock(exp);
+        }
+        if (doc.y > 480) {
+          doc.addPage();
+        }
       }
 
-      // 7. Key Projects & Strategic Impact
-      drawSectionHeader('Key Projects & Strategic Impact');
+      // 8. Key Strategic Projects
+      drawSectionHeader('Key Strategic Projects & Platform Impact');
       for (const prj of ast.projects) {
         const prjY = doc.y;
-        const prjH = doc.heightOfString(prj.project_name, { width: colLeftW });
-        doc.font('Helvetica-Bold').fontSize(9).fillColor('#0f172a').text(prj.project_name, leftMargin, prjY, {
-          width: colLeftW,
-        });
-        doc.font('Helvetica-Oblique').fontSize(8).fillColor('#64748b').text(prj.company, colRightX, prjY, {
-          width: colRightW,
-          align: 'right',
-        });
-        doc.y = prjY + Math.max(prjH, 11) + 2;
+        doc.font('Helvetica-Bold').fontSize(9).fillColor('#0f172a').text(prj.project_name, leftMargin, prjY, { width: colLeftW });
+        doc.font('Helvetica-Oblique').fontSize(8).fillColor('#64748b').text(prj.company, colRightX, prjY, { width: colRightW, align: 'right' });
+        doc.moveDown(0.12);
 
         if (prj.technologies_highlighted) {
-          doc.font('Helvetica-Bold').fontSize(8).fillColor('#1e40af').text(`Stack & Tools: ${prj.technologies_highlighted}`, leftMargin, doc.y, {
+          doc.font('Helvetica-Bold').fontSize(8).fillColor('#1d4ed8').text(`Stack & Tools: ${prj.technologies_highlighted}`, leftMargin, doc.y, {
             width: contentWidth,
           });
-          doc.moveDown(0.1);
+          doc.moveDown(0.12);
         }
 
         for (const bullet of prj.bullets) {
-          const bulletY = doc.y;
-          doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#1e40af').text('•', leftMargin + 4, bulletY);
-          doc.font('Helvetica').fontSize(8.5).fillColor('#1e293b').text(bullet.generated_text, leftMargin + 14, bulletY, {
+          const bY = doc.y;
+          doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#1d4ed8').text('•', leftMargin + 4, bY);
+          doc.font('Helvetica').fontSize(8.5).fillColor('#1e293b').text(bullet.generated_text, leftMargin + 14, bY, {
             width: contentWidth - 14,
-            lineGap: 2.2,
+            lineGap: 2.1,
           });
-          doc.moveDown(0.15);
+          doc.moveDown(0.14);
         }
-        doc.moveDown(0.25);
+        doc.moveDown(0.28);
       }
 
-      // 8. Education, Certifications & Honors
-      drawSectionHeader('Education, Certifications & Honors');
+      // 9. Education
+      drawSectionHeader('Education & Academic Credentials');
       for (const edu of profile.education) {
         const eduY = doc.y;
-        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#0f172a').text(edu.degree, leftMargin, eduY, {
-          width: colLeftW,
-        });
-        doc.font('Helvetica-Bold').fontSize(8).fillColor('#334155').text(edu.graduation_year || '2018', colRightX, eduY, {
-          width: colRightW,
-          align: 'right',
-        });
-        doc.y = eduY + 11;
+        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#0f172a').text(edu.degree, leftMargin, eduY, { width: colLeftW });
+        doc.font('Helvetica-Bold').fontSize(8).fillColor('#475569').text(edu.graduation_year || '2018', colRightX, eduY, { width: colRightW, align: 'right' });
+        doc.moveDown(0.12);
         doc.font('Helvetica').fontSize(8).fillColor('#64748b').text(
           `${edu.institution}   •   ${edu.location || 'Pakistan'} (GPA: ${edu.gpa || '3.3/4.0'})`,
           leftMargin,
           doc.y
         );
-        doc.moveDown(0.2);
+        doc.moveDown(0.22);
       }
 
+      // 10. Certifications
       if (profile.certifications && profile.certifications.length > 0) {
-        doc.moveDown(0.1);
-        doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#0f172a').text('Professional Certifications:');
-        doc.moveDown(0.06);
+        drawSectionHeader('Professional Certifications & Continuous Learning');
         for (const cert of profile.certifications) {
-          const certY = doc.y;
-          doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#1e40af').text('•', leftMargin + 4, certY);
-          doc.font('Helvetica').fontSize(8).fillColor('#334155').text(`${cert.name} (${cert.issuer}, ${cert.year})`, leftMargin + 14, certY);
-          doc.moveDown(0.08);
+          const cY = doc.y;
+          doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#1d4ed8').text('•', leftMargin + 4, cY);
+          doc.font('Helvetica-Bold').fontSize(8).fillColor('#0f172a').text(cert.name, leftMargin + 14, cY, { continued: true });
+          doc.font('Helvetica').fontSize(8).fillColor('#475569').text(` — ${cert.issuer} (${cert.year})`);
+          doc.moveDown(0.1);
         }
       }
 
+      // 11. Honors & Recognitions
       if (profile.awards && profile.awards.length > 0) {
-        doc.moveDown(0.1);
+        doc.moveDown(0.18);
         doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#0f172a').text('Key Honors & Recognitions:');
-        doc.moveDown(0.06);
+        doc.moveDown(0.08);
         for (const award of profile.awards) {
-          const awardY = doc.y;
-          doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#1e40af').text('•', leftMargin + 4, awardY);
-          doc.font('Helvetica').fontSize(8).fillColor('#334155').text(`${award.title} — ${award.organization} (${award.year})`, leftMargin + 14, awardY);
+          const aY = doc.y;
+          doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#1d4ed8').text('•', leftMargin + 4, aY);
+          doc.font('Helvetica-Bold').fontSize(8).fillColor('#0f172a').text(award.title, leftMargin + 14, aY, { continued: true });
+          doc.font('Helvetica').fontSize(8).fillColor('#475569').text(` — ${award.organization} (${award.year})`);
           doc.moveDown(0.08);
         }
       }
 
-      // 9. Page Numbers & Running Footer across all pages
+      // 12. Running Header/Footer on each page with zero-margin safety
       const range = doc.bufferedPageRange();
       for (let i = range.start; i < range.start + range.count; i++) {
         doc.switchToPage(i);
-        doc.strokeColor('#e2e8f0').lineWidth(0.5).moveTo(leftMargin, 746).lineTo(rightMargin, 746).stroke();
+        const origBottom = doc.page.margins.bottom;
+        doc.page.margins.bottom = 0;
+
+        doc.strokeColor('#e2e8f0').lineWidth(0.5).moveTo(leftMargin, 748).lineTo(rightMargin, 748).stroke();
         doc.font('Helvetica').fontSize(7.5).fillColor('#94a3b8').text(
-          'Sana Liaqat — Senior Product Manager   •   sannayamughal9@gmail.com',
+          `${contact.full_name} — Senior Product Manager   •   ${contact.email}`,
           leftMargin,
-          752,
-          { width: contentWidth - 100, align: 'left' }
+          754,
+          { width: contentWidth - 100, align: 'left', lineBreak: false }
         );
         doc.font('Helvetica-Bold').fontSize(7.5).fillColor('#94a3b8').text(
           `Page ${i + 1} of ${range.count}`,
           rightMargin - 100,
-          752,
-          { width: 100, align: 'right' }
+          754,
+          { width: 100, align: 'right', lineBreak: false }
         );
+
+        doc.page.margins.bottom = origBottom;
       }
 
       doc.end();
