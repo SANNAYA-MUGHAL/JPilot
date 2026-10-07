@@ -1,0 +1,47 @@
+[
+  {
+    "dedupe_key": "deel_seniorproductmanagerpaymentsglobalpayouts_REMOTE_01",
+    "job_id": "JOB_ac28701062",
+    "company": "Deel",
+    "title": "Senior Product Manager - Payments & Global Payouts",
+    "application_url": "https://deel.com/careers/senior-pm-payments",
+    "processed": true,
+    "discovered_at": "2026-10-07T02:10:23.444Z"
+  },
+  {
+    "dedupe_key": "personio_platformproductmanagerintegrationsapis_REMOTE_02",
+    "job_id": "JOB_bed51ba6e0",
+    "company": "Personio",
+    "title": "Platform Product Manager - Integrations & APIs",
+    "application_url": "https://personio.com/careers/platform-pm",
+    "processed": true,
+    "discovered_at": "2026-10-07T02:10:23.444Z"
+  },
+  {
+    "dedupe_key": "socialco_juniormarketingintern_REMOTE_03",
+    "job_id": "JOB_791a336fe5",
+    "company": "SocialCo",
+    "title": "Junior Marketing Intern",
+    "application_url": "https://socialco.com/internship",
+    "processed": false,
+    "discovered_at": "2026-10-07T02:10:23.444Z"
+  },
+  {
+    "dedupe_key": "deliveroo_seniorproductoperationsmanager_REMOTE_04",
+    "job_id": "JOB_1a5cf92647",
+    "company": "Deliveroo",
+    "title": "Senior Product Operations Manager",
+    "application_url": "https://deliveroo.com/careers/prod-ops-manager",
+    "processed": true,
+    "discovered_at": "2026-10-07T02:10:23.444Z"
+  },
+  {
+    "dedupe_key": "gitlab_leadproductmanagerbillingsubscriptions_GH_101",
+    "job_id": "JOB_61c182f34e",
+    "company": "GitLab",
+    "title": "Lead Product Manager - Billing & Subscriptions",
+    "application_url": "https://boards.greenhouse.io/gitlab/jobs/101",
+    "processed": true,
+    "discovered_at": "2026-10-07T02:10:23.444Z"
+  }
+]

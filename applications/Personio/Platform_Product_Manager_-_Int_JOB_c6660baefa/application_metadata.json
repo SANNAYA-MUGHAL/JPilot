@@ -6,17 +6,17 @@
   "tier": "HIGH_ALIGNMENT",
   "visa_status": "REMOTE_CONTRACT_OPEN",
   "remote_policy": "REMOTE_WORLDWIDE",
-  "created_at": "2026-10-02T20:33:09.822Z",
-  "timing_ms": 37,
+  "created_at": "2026-10-07T02:10:23.557Z",
+  "timing_ms": 38,
   "truth_validation": {
     "verified_claims": 10,
     "supported_rewrites": 2,
     "unverified_claims": 0
   },
   "trello": {
-    "card_id": "card_osb3ullz",
+    "card_id": "card_b6l88foa",
     "card_title": "[93%] Personio | Platform Product Manager - Integrations & APIs | Munich, Germany / Remote EU",
-    "card_url": "https://trello.com/c/card_osb3ullz/%5B93%25%5D%20Personio%20%7C%20Pla",
+    "card_url": "https://trello.com/c/card_b6l88foa/%5B93%25%5D%20Personio%20%7C%20Pla",
     "list_name": "🔥 High Match",
     "attachments_count": 4
   },

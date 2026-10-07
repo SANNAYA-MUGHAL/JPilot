@@ -1,7 +1,7 @@
 {
-  "job_id": "JOB_d2b7edd8a8",
-  "title": "Lead Product Manager - Billing & Subscriptions",
-  "company": "GitLab",
+  "job_id": "JOB_28cf425d80",
+  "title": "Senior Product Manager - Payments & Global Payouts",
+  "company": "Deel",
   "location": "Remote Worldwide",
   "country": "Global / Remote",
   "remote_policy": "REMOTE_WORLDWIDE",
@@ -11,7 +11,7 @@
   "experience_years_required": 5,
   "seniority_level": "Mid level",
   "must_have_skills": [
-    "Checkout"
+    "Agile"
   ],
   "nice_to_have_skills": [
     "SQL",
@@ -20,21 +20,21 @@
   ],
   "responsibilities": [],
   "domains": [
-    "SaaS"
+    "Payments"
   ],
   "tools": [
     "Mixpanel"
   ],
   "technologies_and_apis": [
-    "REST APIs",
-    "Webhooks"
+    "Adyen"
   ],
   "ats_keywords": [
+    "Agile",
     "Mixpanel",
-    "Checkout",
-    "SaaS"
+    "Payments",
+    "Adyen"
   ],
-  "raw_text": "Lead Product Manager - Billing & Subscriptions at GitLab\nLocation: Remote Worldwide\nOwn subscription billing workflows, retention funnels, and enterprise checkout. Experience with SaaS billing, Mixpanel cohort analysis, and cross-functional engineering execution.",
-  "source_url": "https://boards.greenhouse.io/gitlab/jobs/101",
-  "discovered_at": "2026-10-07T02:10:23.594Z"
+  "raw_text": "Senior Product Manager - Payments & Global Payouts at Deel\nLocation: Remote Worldwide\nLead global contractor payout rails, Adyen integrations, and multi-currency payment infrastructure. Requirements: 5+ years PM experience, payment gateway integrations, Mixpanel, and agile squad leadership.",
+  "source_url": "https://deel.com/careers/senior-pm-payments",
+  "discovered_at": "2026-10-07T02:10:23.445Z"
 }

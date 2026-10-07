@@ -1,22 +1,22 @@
 {
-  "job_id": "JOB_ccc91ac377",
-  "company": "Deliveroo",
-  "role": "Senior Product Operations Manager",
-  "overall_match": 96,
+  "job_id": "JOB_28cf425d80",
+  "company": "Deel",
+  "role": "Senior Product Manager - Payments & Global Payouts",
+  "overall_match": 100,
   "tier": "HIGH_ALIGNMENT",
   "visa_status": "REMOTE_CONTRACT_OPEN",
   "remote_policy": "REMOTE_WORLDWIDE",
-  "created_at": "2026-10-07T02:10:23.594Z",
-  "timing_ms": 37,
+  "created_at": "2026-10-07T02:10:23.518Z",
+  "timing_ms": 74,
   "truth_validation": {
     "verified_claims": 10,
     "supported_rewrites": 2,
     "unverified_claims": 0
   },
   "trello": {
-    "card_id": "card_78cfs75x",
-    "card_title": "[96%] Deliveroo | Senior Product Operations Manager | London, UK / Remote",
-    "card_url": "https://trello.com/c/card_78cfs75x/%5B96%25%5D%20Deliveroo%20%7C%20Se",
+    "card_id": "card_ipr5m03c",
+    "card_title": "[100%] Deel | Senior Product Manager - Payments & Global Payouts | Remote Worldwide",
+    "card_url": "https://trello.com/c/card_ipr5m03c/%5B100%25%5D%20Deel%20%7C%20Senior",
     "list_name": "🔥 High Match",
     "attachments_count": 4
   },

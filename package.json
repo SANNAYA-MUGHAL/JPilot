@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "demo": "tsx src/cli/runPhase1Demo.ts",
     "dashboard": "tsx src/cli/runDashboardDemo.ts",
+    "discover": "tsx src/cli/runDailyDiscovery.ts",
     "web": "tsx src/server/webServer.ts"
   },
   "dependencies": {
