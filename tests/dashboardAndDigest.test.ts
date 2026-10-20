@@ -93,3 +93,30 @@ test('SettingsManager reads defaults and updates preferences', () => {
 
   if (fs.existsSync(tmpSettingsPath)) fs.unlinkSync(tmpSettingsPath);
 });
+
+test('ApplicationTracker tracks jobs across stages including DECLINED', async () => {
+  const { ApplicationTracker } = await import('../src/services/tracker/applicationTracker.js');
+  const tmpTrackerPath = path.resolve(process.cwd(), 'tests/tmp_tracker.json');
+  if (fs.existsSync(tmpTrackerPath)) fs.unlinkSync(tmpTrackerPath);
+
+  const tracker = new ApplicationTracker(tmpTrackerPath);
+  const data = tracker.getTrackerData();
+
+  assert.ok(Array.isArray(data.stages.DECLINED));
+  assert.equal(typeof data.summary.declined, 'number');
+
+  if (data.all_jobs.length > 0) {
+    const testJob = data.all_jobs[0];
+    const originalStage = testJob.stage;
+    tracker.updateJobStage(testJob.id, 'DECLINED', 'Rejected after initial review');
+    const updated = tracker.getTrackerData();
+    assert.ok(updated.stages.DECLINED.some((j: any) => j.id === testJob.id));
+    assert.ok(updated.summary.declined >= 1);
+
+    // Restore original stage
+    tracker.updateJobStage(testJob.id, originalStage);
+  }
+
+  if (fs.existsSync(tmpTrackerPath)) fs.unlinkSync(tmpTrackerPath);
+});
+

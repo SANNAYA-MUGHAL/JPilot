@@ -9,6 +9,7 @@ export type TrackerStage =
   | 'APPLIED'
   | 'INTERVIEWING'
   | 'OFFER'
+  | 'DECLINED'
   | 'ARCHIVED';
 
 export interface TrackedApplication {
@@ -45,6 +46,7 @@ export interface TrackerData {
     applied: number;
     interviewing: number;
     offer: number;
+    declined: number;
     archived: number;
     avg_match: number;
   };
@@ -131,6 +133,7 @@ export class ApplicationTracker {
       APPLIED: [],
       INTERVIEWING: [],
       OFFER: [],
+      DECLINED: [],
       ARCHIVED: [],
     };
 
@@ -186,6 +189,7 @@ export class ApplicationTracker {
         applied: stages.APPLIED.length,
         interviewing: stages.INTERVIEWING.length,
         offer: stages.OFFER.length,
+        declined: stages.DECLINED.length,
         archived: stages.ARCHIVED.length,
         avg_match: all_jobs.length > 0 ? Math.round(totalScore / all_jobs.length) : 0,
       },

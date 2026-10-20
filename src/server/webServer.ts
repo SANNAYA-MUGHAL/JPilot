@@ -104,11 +104,11 @@ function getHTML(): string {
     <!-- VIEW 1: APPLICATION TRACKER & KANBAN PIPELINE -->
     <div id="view-tracker" class="space-y-5">
       <!-- Tracker Summary Stats Bar -->
-      <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
         <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-xs">
           <span class="text-slate-500 text-[11px] block font-medium">Total Opportunities</span>
-          <span id="tracker-stat-total" class="text-xl font-bold text-slate-900">12</span>
-          <span class="text-[10px] text-slate-400 block mt-0.5">Across UK, EU, UAE</span>
+          <span id="tracker-stat-total" class="text-xl font-bold text-slate-900">0</span>
+          <span class="text-[10px] text-slate-400 block mt-0.5">Pipeline Leads</span>
         </div>
         <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-xs">
           <span class="text-slate-500 text-[11px] block font-medium">Review Queue</span>
@@ -131,9 +131,14 @@ function getHTML(): string {
           <span class="text-[10px] text-purple-600/80 block mt-0.5">In conversation</span>
         </div>
         <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-xs">
+          <span class="text-slate-500 text-[11px] block font-medium">Declined</span>
+          <span id="tracker-stat-declined" class="text-xl font-bold text-rose-600">0</span>
+          <span class="text-[10px] text-rose-600/80 block mt-0.5">Closed / Rejected</span>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-xs">
           <span class="text-slate-500 text-[11px] block font-medium">Average Match</span>
           <span id="tracker-stat-avg" class="text-xl font-bold text-emerald-600">92%</span>
-          <span class="text-[10px] text-emerald-600/80 block mt-0.5">High semantic fit</span>
+          <span class="text-[10px] text-emerald-600/80 block mt-0.5">Semantic fit</span>
         </div>
       </div>
 
@@ -166,7 +171,7 @@ function getHTML(): string {
       </div>
 
       <!-- KANBAN BOARD CONTAINER -->
-      <div id="tracker-kanban-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3.5 items-start overflow-x-auto pb-4">
+      <div id="tracker-kanban-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-3.5 items-start overflow-x-auto pb-4">
         <!-- Columns rendered dynamically -->
       </div>
 
@@ -445,6 +450,7 @@ function getHTML(): string {
             s.applied = globalTrackerData.stages.APPLIED.length;
             s.interviewing = globalTrackerData.stages.INTERVIEWING.length;
             s.offer = globalTrackerData.stages.OFFER.length;
+            s.declined = (globalTrackerData.stages.DECLINED || []).length;
             s.archived = (globalTrackerData.stages.ARCHIVED || []).length;
           }
         } catch (e) {
@@ -561,7 +567,8 @@ function getHTML(): string {
       { id: 'READY_TO_APPLY', title: 'Ready to Apply', color: 'border-indigo-300', bg: 'bg-indigo-50', text: 'text-indigo-800' },
       { id: 'APPLIED', title: 'Applied', color: 'border-blue-300', bg: 'bg-blue-50', text: 'text-blue-800' },
       { id: 'INTERVIEWING', title: 'Interviewing', color: 'border-purple-300', bg: 'bg-purple-50', text: 'text-purple-800' },
-      { id: 'OFFER', title: 'Offer Extended', color: 'border-emerald-300', bg: 'bg-emerald-50', text: 'text-emerald-800' }
+      { id: 'OFFER', title: 'Offer Extended', color: 'border-emerald-300', bg: 'bg-emerald-50', text: 'text-emerald-800' },
+      { id: 'DECLINED', title: 'Declined / Rejected', color: 'border-rose-300', bg: 'bg-rose-50', text: 'text-rose-800' }
     ];
 
     function renderTrackerView() {
@@ -573,6 +580,9 @@ function getHTML(): string {
       document.getElementById('tracker-stat-ready').innerText = s.ready_to_apply;
       document.getElementById('tracker-stat-applied').innerText = s.applied;
       document.getElementById('tracker-stat-interviewing').innerText = s.interviewing;
+      if (document.getElementById('tracker-stat-declined')) {
+        document.getElementById('tracker-stat-declined').innerText = s.declined || 0;
+      }
       document.getElementById('tracker-stat-avg').innerText = s.avg_match + '%';
 
       renderKanbanBoard();
@@ -787,6 +797,7 @@ function getHTML(): string {
             s.applied = globalTrackerData.stages.APPLIED.length;
             s.interviewing = globalTrackerData.stages.INTERVIEWING.length;
             s.offer = globalTrackerData.stages.OFFER.length;
+            s.declined = (globalTrackerData.stages.DECLINED || []).length;
             s.archived = (globalTrackerData.stages.ARCHIVED || []).length;
 
             // Re-render UI immediately!
