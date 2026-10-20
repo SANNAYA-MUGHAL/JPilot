@@ -62,8 +62,9 @@ function getHTML(): string {
         <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
         <span>Tailor New Job</span>
       </button>
-      <button onclick="refreshData()" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition" title="Refresh Pipeline">
-        <i class="fa-solid fa-arrows-rotate text-sm"></i>
+      <button id="btn-refresh" onclick="refreshData()" class="px-3 py-1.5 text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 border border-slate-200 hover:border-indigo-200 rounded-lg transition flex items-center space-x-1.5 shadow-2xs" title="Refresh Pipeline & Fetch New Details">
+        <i id="icon-refresh" class="fa-solid fa-arrows-rotate text-xs"></i>
+        <span class="text-xs font-semibold">Refresh</span>
       </button>
     </div>
   </header>
@@ -405,11 +406,17 @@ function getHTML(): string {
     let selectedJob = null;
     let selectedJobDetails = null;
 
-    async function loadData() {
+    async function loadData(forceRefresh = false) {
       try {
+        const cacheBust = forceRefresh ? ('?t=' + Date.now()) : '';
+        const fetchOpts = forceRefresh ? {
+          cache: 'no-store',
+          headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' }
+        } : {};
+
         const [dashRes, trackerRes] = await Promise.all([
-          fetch('/api/dashboard'),
-          fetch('/api/tracker')
+          fetch('/api/dashboard' + cacheBust, fetchOpts),
+          fetch('/api/tracker' + cacheBust, fetchOpts)
         ]);
         globalData = await dashRes.json();
         globalTrackerData = await trackerRes.json();
@@ -451,10 +458,18 @@ function getHTML(): string {
         renderSidebarJobs();
         renderMetricsView();
         renderSkillGapsView();
-        renderDigestView();
+        renderDigestView(forceRefresh);
 
-        if (globalTrackerData.all_jobs.length > 0 && !selectedJob) {
-          selectJob(globalTrackerData.all_jobs[0]);
+        if (globalTrackerData.all_jobs.length > 0) {
+          if (!selectedJob) {
+            selectJob(globalTrackerData.all_jobs[0], forceRefresh);
+          } else {
+            const currentMatch = globalTrackerData.all_jobs.find(j => j.id === selectedJob.id);
+            if (currentMatch) {
+              selectedJob = currentMatch;
+              selectJob(currentMatch, forceRefresh);
+            }
+          }
         }
       } catch (err) {
         console.error('Failed to load JPilot data:', err);
@@ -462,8 +477,48 @@ function getHTML(): string {
     }
 
     async function refreshData() {
-      showToast('Refreshing pipeline data...');
-      await loadData();
+      const btn = document.getElementById('btn-refresh');
+      const icon = document.getElementById('icon-refresh');
+      if (btn) btn.disabled = true;
+      if (icon) icon.classList.add('fa-spin');
+      showToast('Fetching latest jobs & synchronizing pipeline...');
+
+      try {
+        const refreshRes = await fetch('/api/refresh', {
+          method: 'POST',
+          headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' }
+        });
+        const refreshJson = await refreshRes.json();
+
+        // 2. Force fresh reload of all dashboard, tracker, digest, and candidate data
+        await loadData(true);
+
+        // 3. If a job was already selected in inspector, re-fetch its details immediately
+        if (selectedJob) {
+          try {
+            const detailRes = await fetch('/api/jobs/' + encodeURIComponent(selectedJob.companyDir) + '/' + encodeURIComponent(selectedJob.roleDir) + '?t=' + Date.now(), {
+              cache: 'no-store',
+              headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' }
+            });
+            if (detailRes.ok) {
+              selectedJobDetails = await detailRes.json();
+              renderActiveInspTab();
+            }
+          } catch (e) {
+            console.warn('Could not re-fetch selected job details:', e);
+          }
+        }
+
+        const msg = refreshJson.message || ('✓ Synchronized ' + (globalTrackerData && globalTrackerData.summary ? globalTrackerData.summary.total : 0) + ' applications with latest details!');
+        showToast(msg);
+      } catch (err) {
+        console.error('Refresh failed:', err);
+        showToast('Refreshed local pipeline data.');
+        await loadData(true);
+      } finally {
+        if (btn) btn.disabled = false;
+        if (icon) icon.classList.remove('fa-spin');
+      }
     }
 
     function showToast(msg) {
@@ -802,7 +857,7 @@ function getHTML(): string {
       if (job) selectJob(job);
     }
 
-    async function selectJob(job) {
+    async function selectJob(job, forceRefresh = false) {
       selectedJob = job;
       renderSidebarJobs();
 
@@ -838,7 +893,11 @@ function getHTML(): string {
       \`;
 
       try {
-        const res = await fetch(\`/api/jobs/\${encodeURIComponent(job.companyDir)}/\${encodeURIComponent(job.roleDir)}\`);
+        const cacheBust = forceRefresh ? ('?t=' + Date.now()) : '';
+        const res = await fetch('/api/jobs/' + encodeURIComponent(job.companyDir) + '/' + encodeURIComponent(job.roleDir) + cacheBust, forceRefresh ? {
+          cache: 'no-store',
+          headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' }
+        } : {});
         selectedJobDetails = await res.json();
         renderActiveInspTab();
       } catch (err) {
@@ -1174,9 +1233,13 @@ function getHTML(): string {
       }
     }
 
-    async function renderDigestView() {
+    async function renderDigestView(forceRefresh = false) {
       try {
-        const res = await fetch('/api/digest');
+        const cacheBust = forceRefresh ? ('?t=' + Date.now()) : '';
+        const res = await fetch('/api/digest' + cacheBust, forceRefresh ? {
+          cache: 'no-store',
+          headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' }
+        } : {});
         const data = await res.json();
         document.getElementById('digest-text').innerText = data.digest;
       } catch (err) {
@@ -1329,6 +1392,9 @@ export async function handleRequest(req: http.IncomingMessage, res: http.ServerR
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
 
   if (req.method === 'OPTIONS') {
     res.writeHead(204);
@@ -1374,6 +1440,68 @@ export async function handleRequest(req: http.IncomingMessage, res: http.ServerR
     return;
   }
 
+  // 3.5 POST/GET /api/refresh (Trigger pipeline re-scan, live discovery, and state sync)
+  if (pathname === '/api/refresh') {
+    try {
+      let newlyDiscovered = 0;
+      let duplicatesSkipped = 0;
+
+      try {
+        const { DeduplicationAgent } = await import('../services/discovery/deduplicationAgent.js');
+        const { EligibilityFilter } = await import('../services/discovery/eligibilityFilter.js');
+        const { JobDiscoveryEngine } = await import('../services/discovery/jobDiscoveryEngine.js');
+        const { RemoteJobAdapter } = await import('../services/discovery/adapters/remoteJobAdapter.js');
+
+        const dedupeAgent = new DeduplicationAgent();
+        const eligFilter = new EligibilityFilter();
+        const discoveryEngine = new JobDiscoveryEngine(
+          [new RemoteJobAdapter()],
+          dedupeAgent,
+          eligFilter,
+          pipeline
+        );
+
+        const report = await discoveryEngine.runDiscovery({
+          role_keywords: ['Product Manager', 'FinTech', 'Payments'],
+          locations: ['Remote', 'Worldwide', 'Global'],
+          remote_only: true,
+          max_age_days: 7,
+        });
+
+        newlyDiscovered = report.packages_generated || 0;
+        duplicatesSkipped = report.duplicates_skipped || 0;
+      } catch (discErr: any) {
+        console.warn('Discovery check during refresh:', discErr.message);
+      }
+
+      // Re-read all applications and tracker status
+      const updatedJobs = dashboardService.listAllJobs();
+      const updatedTracker = applicationTracker.getTrackerData();
+      const activeCount = updatedJobs.filter((j) => !j.is_expired).length;
+
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-store, no-cache, must-revalidate',
+      });
+      res.end(
+        JSON.stringify({
+          success: true,
+          timestamp: new Date().toISOString(),
+          total_jobs: updatedJobs.length,
+          active_jobs: activeCount,
+          new_processed: newlyDiscovered,
+          duplicates_skipped: duplicatesSkipped,
+          message: `✓ Pipeline refreshed: ${updatedJobs.length} applications indexed (${activeCount} active)`,
+          summary: updatedTracker.summary,
+        })
+      );
+    } catch (err: any) {
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: err.message }));
+    }
+    return;
+  }
+
   // 4. GET /api/dashboard
   if (pathname === '/api/dashboard') {
     try {
@@ -1405,6 +1533,19 @@ export async function handleRequest(req: http.IncomingMessage, res: http.ServerR
   if (pathname === '/api/digest') {
     try {
       const { metrics } = analyticsService.getDashboardMetrics();
+      const allJobs = dashboardService.listAllJobs();
+      const topJobs = allJobs
+        .filter((j) => !j.is_expired)
+        .slice(0, 6)
+        .map((j) => ({
+          job_id: j.id,
+          company: j.company,
+          title: j.role,
+          status: 'PROCESSED' as const,
+          match_score: j.matchScore,
+          trello_card_url: j.trello_url || `https://trello.com/c/${j.id}`,
+        }));
+
       const mockReport: DiscoveryBatchReport = {
         run_id: 'RUN_' + Date.now(),
         started_at: new Date().toISOString(),
@@ -1415,16 +1556,7 @@ export async function handleRequest(req: http.IncomingMessage, res: http.ServerR
         jobs_processed: metrics.jobs_processed,
         packages_generated: metrics.jobs_processed,
         errors_count: 0,
-        results: [
-          {
-            job_id: 'JOB_4abc9f323a',
-            company: 'Wise',
-            title: 'Senior Product Manager — Checkout & Payment Systems',
-            status: 'PROCESSED',
-            match_score: 96,
-            trello_card_url: 'https://trello.com/c/card_wise',
-          },
-        ],
+        results: topJobs,
       };
       const digest = DailyDigestGenerator.generateDigest(mockReport, metrics);
       res.writeHead(200, { 'Content-Type': 'application/json' });

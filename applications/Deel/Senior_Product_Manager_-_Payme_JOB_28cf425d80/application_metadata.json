@@ -6,17 +6,17 @@
   "tier": "HIGH_ALIGNMENT",
   "visa_status": "REMOTE_CONTRACT_OPEN",
   "remote_policy": "REMOTE_WORLDWIDE",
-  "created_at": "2026-10-07T02:10:23.518Z",
-  "timing_ms": 74,
+  "created_at": "2026-10-20T20:23:10.183Z",
+  "timing_ms": 110,
   "truth_validation": {
     "verified_claims": 10,
     "supported_rewrites": 2,
     "unverified_claims": 0
   },
   "trello": {
-    "card_id": "card_ipr5m03c",
+    "card_id": "card_08ll2lsk",
     "card_title": "[100%] Deel | Senior Product Manager - Payments & Global Payouts | Remote Worldwide",
-    "card_url": "https://trello.com/c/card_ipr5m03c/%5B100%25%5D%20Deel%20%7C%20Senior",
+    "card_url": "https://trello.com/c/card_08ll2lsk/%5B100%25%5D%20Deel%20%7C%20Senior",
     "list_name": "🔥 High Match",
     "attachments_count": 4
   },
