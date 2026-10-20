@@ -1,0 +1,15 @@
+Payment Product Manager at GROWE
+Location: Fully Remote / Worldwide (Anywhere, no country restrictions)
+About GROWE:
+GROWE is a global technology and business advisory group managing entertainment, transactional, and high-frequency payment systems worldwide.
+Key Responsibilities:
+- Define and standardize payment hub system behaviors: gateway configurations, withdrawal hold/release logic, callback timeouts, and customer error messaging.
+- Own and optimize seven core back-office operational screens: projects, gateways, payment groups, methods, orders, transactions, and logs.
+- Lead internal discovery across payment rails: wallets, KYC verification, anti-fraud checks, reconciliation, and ledger accuracy.
+- Manage rollout stages, sequencing traffic percentage migrations, transaction replays, and rollback mechanisms.
+- Monitor integration health, incident management, and maintain deep observability into payment success rates and gateway approval percentages.
+Requirements:
+- 4+ years of product management experience, with at least 2 years explicitly owning payments, fintech, or complex transactional systems.
+- Deep technical competence: ability to read REST API contracts, inspect webhooks, and trace individual transactions across distributed microservices.
+- Data fluency: strong command of conversion funnels, authorization rates, gateway drop-off analysis, and SQL.
+- Strong stakeholder management across compliance, engineering, and customer support.

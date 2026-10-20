@@ -1,0 +1,53 @@
+{
+  "job_id": "JOB_80bc4bc11d",
+  "title": "Payment Product Manager (Fiat)",
+  "company": "Binance",
+  "location": "Remote Worldwide",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Product Strategy",
+    "SQL",
+    "Analytics"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Design and execute product strategy for the global fiat payment platform, covering payment middle platforms, order clearing, and bank integrations.",
+    "Architect full lifecycle order management: order creation, state transitions, timeout handling, and automated retry mechanisms.",
+    "Manage clearing and settlement modules: multi-currency ledger reconciliation, T+0/T+1 settlement rules, fee calculations, and exception handling.",
+    "Collaborate with payment partners, PSPs, and local banking rails (SEPA, Faster Payments, local wallets) to expand global fiat acquiring.",
+    "Partner with risk, compliance, and legal teams to enforce AML, KYC, and transaction monitoring standards.",
+    "+ years of product management experience focused on payments, transactional platforms, or financial infrastructure.",
+    "Deep technical mastery of backend payment routing, API integrations, webhooks, and transaction state machines.",
+    "Strong data analytics capability with telemetry, New Relic/Datadog logging, SQL, and root-cause failure analysis."
+  ],
+  "domains": [
+    "Payments"
+  ],
+  "tools": [
+    "New Relic"
+  ],
+  "technologies_and_apis": [
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Product Strategy",
+    "New Relic",
+    "Webhooks",
+    "SQL",
+    "Payments",
+    "Analytics"
+  ],
+  "raw_text": "Payment Product Manager (Fiat Infrastructure) at Binance\nLocation: Remote Worldwide (Anywhere, Global Contractor)\nAbout Binance:\nBinance is the world's leading blockchain ecosystem and cryptocurrency infrastructure provider, serving over 150 million users worldwide.\nKey Responsibilities:\n- Design and execute product strategy for the global fiat payment platform, covering payment middle platforms, order clearing, and bank integrations.\n- Architect full lifecycle order management: order creation, state transitions, timeout handling, and automated retry mechanisms.\n- Manage clearing and settlement modules: multi-currency ledger reconciliation, T+0/T+1 settlement rules, fee calculations, and exception handling.\n- Collaborate with payment partners, PSPs, and local banking rails (SEPA, Faster Payments, local wallets) to expand global fiat acquiring.\n- Partner with risk, compliance, and legal teams to enforce AML, KYC, and transaction monitoring standards.\nRequirements:\n- 5+ years of product management experience focused on payments, transactional platforms, or financial infrastructure.\n- Deep technical mastery of backend payment routing, API integrations, webhooks, and transaction state machines.\n- Strong data analytics capability with telemetry, New Relic/Datadog logging, SQL, and root-cause failure analysis.\n- Experience operating effectively in a fast-paced, 100% remote global environment.",
+  "source_url": "https://job-boards.greenhouse.io/binance/jobs/4512998002",
+  "discovered_at": "2026-10-20T19:58:34.358Z"
+}

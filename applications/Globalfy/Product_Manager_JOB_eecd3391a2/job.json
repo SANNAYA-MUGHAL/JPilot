@@ -1,0 +1,59 @@
+{
+  "job_id": "JOB_eecd3391a2",
+  "title": "Product Manager",
+  "company": "Globalfy",
+  "location": "Remote Worldwide",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "Agile",
+    "PRD",
+    "User Stories",
+    "Analytics"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Own end-to-end product delivery across B2B SaaS, customer onboarding, compliance filings, and financial payment integrations.",
+    "Drive product discovery by analyzing customer feedback, support tickets, and quantitative funnel data in Mixpanel.",
+    "Formulate PRDs, technical user stories, and acceptance criteria in Notion and Jira, guiding engineering squads through Agile sprints.",
+    "Oversee operational release management, coordinating QA staging sign-offs, production rollouts, changelog publishing, and internal training.",
+    "Partner with compliance and finance to ensure workflows comply with banking regulations, KYC/KYB standards, and tax filings.",
+    "+ years of total software product management experience, with at least 2 years owning product initiatives in B2B SaaS or FinTech.",
+    "Proven experience shipping customer-facing features with measurable business impact (retention uplift, churn reduction, conversion gains).",
+    "Strong technical fluency: understanding APIs, webhooks, database queries, and release cycles."
+  ],
+  "domains": [
+    "FinTech",
+    "SaaS"
+  ],
+  "tools": [
+    "Mixpanel",
+    "Jira"
+  ],
+  "technologies_and_apis": [
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Agile",
+    "PRD",
+    "User Stories",
+    "Mixpanel",
+    "Jira",
+    "Webhooks",
+    "FinTech",
+    "SaaS",
+    "Analytics"
+  ],
+  "raw_text": "Product Manager at Globalfy\nLocation: 100% Remote Worldwide (Global Remote)\nAbout Globalfy:\nGlobalfy is an all-in-one platform helping global entrepreneurs incorporate businesses, open business bank accounts, and manage international financial compliance.\nKey Responsibilities:\n- Own end-to-end product delivery across B2B SaaS, customer onboarding, compliance filings, and financial payment integrations.\n- Drive product discovery by analyzing customer feedback, support tickets, and quantitative funnel data in Mixpanel.\n- Formulate PRDs, technical user stories, and acceptance criteria in Notion and Jira, guiding engineering squads through Agile sprints.\n- Oversee operational release management, coordinating QA staging sign-offs, production rollouts, changelog publishing, and internal training.\n- Partner with compliance and finance to ensure workflows comply with banking regulations, KYC/KYB standards, and tax filings.\nRequirements:\n- 3+ years of total software product management experience, with at least 2 years owning product initiatives in B2B SaaS or FinTech.\n- Proven experience shipping customer-facing features with measurable business impact (retention uplift, churn reduction, conversion gains).\n- Strong technical fluency: understanding APIs, webhooks, database queries, and release cycles.\n- Experience with product analytics (Mixpanel) and agile project management tools (Jira).",
+  "source_url": "https://remotive.com/remote-jobs/product/product-manager-1945821",
+  "discovered_at": "2026-10-20T19:58:34.331Z"
+}

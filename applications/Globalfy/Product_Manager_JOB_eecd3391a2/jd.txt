@@ -1,0 +1,15 @@
+Product Manager at Globalfy
+Location: 100% Remote Worldwide (Global Remote)
+About Globalfy:
+Globalfy is an all-in-one platform helping global entrepreneurs incorporate businesses, open business bank accounts, and manage international financial compliance.
+Key Responsibilities:
+- Own end-to-end product delivery across B2B SaaS, customer onboarding, compliance filings, and financial payment integrations.
+- Drive product discovery by analyzing customer feedback, support tickets, and quantitative funnel data in Mixpanel.
+- Formulate PRDs, technical user stories, and acceptance criteria in Notion and Jira, guiding engineering squads through Agile sprints.
+- Oversee operational release management, coordinating QA staging sign-offs, production rollouts, changelog publishing, and internal training.
+- Partner with compliance and finance to ensure workflows comply with banking regulations, KYC/KYB standards, and tax filings.
+Requirements:
+- 3+ years of total software product management experience, with at least 2 years owning product initiatives in B2B SaaS or FinTech.
+- Proven experience shipping customer-facing features with measurable business impact (retention uplift, churn reduction, conversion gains).
+- Strong technical fluency: understanding APIs, webhooks, database queries, and release cycles.
+- Experience with product analytics (Mixpanel) and agile project management tools (Jira).

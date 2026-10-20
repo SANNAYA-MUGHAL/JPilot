@@ -1,0 +1,56 @@
+{
+  "job_id": "JOB_fe642f1c12",
+  "title": "Payment Product Manager",
+  "company": "GROWE",
+  "location": "Remote Worldwide / Anywhere",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "SQL",
+    "Stakeholder Management"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Define and standardize payment hub system behaviors: gateway configurations, withdrawal hold/release logic, callback timeouts, and customer error messaging.",
+    "Own and optimize seven core back-office operational screens: projects, gateways, payment groups, methods, orders, transactions, and logs.",
+    "Lead internal discovery across payment rails: wallets, KYC verification, anti-fraud checks, reconciliation, and ledger accuracy.",
+    "Manage rollout stages, sequencing traffic percentage migrations, transaction replays, and rollback mechanisms.",
+    "Monitor integration health, incident management, and maintain deep observability into payment success rates and gateway approval percentages.",
+    "+ years of product management experience, with at least 2 years explicitly owning payments, fintech, or complex transactional systems.",
+    "Deep technical competence: ability to read REST API contracts, inspect webhooks, and trace individual transactions across distributed microservices.",
+    "Data fluency: strong command of conversion funnels, authorization rates, gateway drop-off analysis, and SQL."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments"
+  ],
+  "tools": [
+    "Jira",
+    "Mixpanel",
+    "Figma"
+  ],
+  "technologies_and_apis": [
+    "REST API",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "REST API",
+    "Webhooks",
+    "SQL",
+    "FinTech",
+    "Payments",
+    "Stakeholder Management"
+  ],
+  "raw_text": "Payment Product Manager at GROWE\nLocation: Fully Remote / Worldwide (Anywhere, no country restrictions)\nAbout GROWE:\nGROWE is a global technology and business advisory group managing entertainment, transactional, and high-frequency payment systems worldwide.\nKey Responsibilities:\n- Define and standardize payment hub system behaviors: gateway configurations, withdrawal hold/release logic, callback timeouts, and customer error messaging.\n- Own and optimize seven core back-office operational screens: projects, gateways, payment groups, methods, orders, transactions, and logs.\n- Lead internal discovery across payment rails: wallets, KYC verification, anti-fraud checks, reconciliation, and ledger accuracy.\n- Manage rollout stages, sequencing traffic percentage migrations, transaction replays, and rollback mechanisms.\n- Monitor integration health, incident management, and maintain deep observability into payment success rates and gateway approval percentages.\nRequirements:\n- 4+ years of product management experience, with at least 2 years explicitly owning payments, fintech, or complex transactional systems.\n- Deep technical competence: ability to read REST API contracts, inspect webhooks, and trace individual transactions across distributed microservices.\n- Data fluency: strong command of conversion funnels, authorization rates, gateway drop-off analysis, and SQL.\n- Strong stakeholder management across compliance, engineering, and customer support.",
+  "source_url": "https://job-boards.greenhouse.io/growe/jobs/4512338004",
+  "discovered_at": "2026-10-20T19:58:34.216Z"
+}

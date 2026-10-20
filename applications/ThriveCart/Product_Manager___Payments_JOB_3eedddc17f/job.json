@@ -1,0 +1,59 @@
+{
+  "job_id": "JOB_3eedddc17f",
+  "title": "Product Manager – Payments",
+  "company": "ThriveCart",
+  "location": "Remote Worldwide",
+  "country": "Global / Remote",
+  "remote_policy": "REMOTE_WORLDWIDE",
+  "visa_status": "REMOTE_CONTRACT_OPEN",
+  "visa_reasoning": "Role allows remote worldwide contracting (B2B / EOR) without local residency requirement.",
+  "employment_type": "Full-time",
+  "experience_years_required": 5,
+  "seniority_level": "Mid level",
+  "must_have_skills": [
+    "SQL",
+    "Checkout",
+    "Analytics"
+  ],
+  "nice_to_have_skills": [
+    "SQL",
+    "Microservices",
+    "Growth Experimentation"
+  ],
+  "responsibilities": [
+    "Own and drive the end-to-end product roadmap for ThriveCart's global payment infrastructure, checkouts, and recurring billing systems.",
+    "Integrate, scale, and optimize third-party payment gateways (Stripe, PayPal, Authorize.net) and alternative payment methods (APMs, digital wallets).",
+    "Optimize checkout conversion rates, minimize cart abandonment, and streamline split payment and refund workflows.",
+    "Champion regulatory and security compliance, ensuring payment flows meet PCI-DSS, PSD2, and Strong Customer Authentication (SCA) requirements.",
+    "Use product analytics and funnel telemetry to monitor transaction authorization, decrease payment failures, and identify merchant drop-offs.",
+    "+ years of product management experience building, scaling, or managing payment systems in SaaS, fintech, or eCommerce environments.",
+    "Deep domain knowledge of payment gateways, checkout optimization, recurring billing, subscription life cycles, and fraud management.",
+    "Strong analytical approach using analytics tools (Mixpanel, BI dashboards, SQL) to evaluate feature impact and checkout performance."
+  ],
+  "domains": [
+    "FinTech",
+    "Payments",
+    "SaaS",
+    "eCommerce"
+  ],
+  "tools": [
+    "Mixpanel"
+  ],
+  "technologies_and_apis": [
+    "REST APIs",
+    "Webhooks"
+  ],
+  "ats_keywords": [
+    "Mixpanel",
+    "SQL",
+    "FinTech",
+    "Payments",
+    "Checkout",
+    "SaaS",
+    "eCommerce",
+    "Analytics"
+  ],
+  "raw_text": "Product Manager – Payments at ThriveCart\nLocation: Remote (Worldwide distributed / Work from anywhere)\nAbout ThriveCart:\nThriveCart powers high-converting checkout experiences, subscription billing, and multi-currency payments for over 40,000 online businesses worldwide.\nKey Responsibilities:\n- Own and drive the end-to-end product roadmap for ThriveCart's global payment infrastructure, checkouts, and recurring billing systems.\n- Integrate, scale, and optimize third-party payment gateways (Stripe, PayPal, Authorize.net) and alternative payment methods (APMs, digital wallets).\n- Optimize checkout conversion rates, minimize cart abandonment, and streamline split payment and refund workflows.\n- Champion regulatory and security compliance, ensuring payment flows meet PCI-DSS, PSD2, and Strong Customer Authentication (SCA) requirements.\n- Use product analytics and funnel telemetry to monitor transaction authorization, decrease payment failures, and identify merchant drop-offs.\nRequirements:\n- 4+ years of product management experience building, scaling, or managing payment systems in SaaS, fintech, or eCommerce environments.\n- Deep domain knowledge of payment gateways, checkout optimization, recurring billing, subscription life cycles, and fraud management.\n- Strong analytical approach using analytics tools (Mixpanel, BI dashboards, SQL) to evaluate feature impact and checkout performance.\n- Excellent communication skills for cross-functional collaboration in a fully remote, asynchronous culture.",
+  "source_url": "https://job-boards.greenhouse.io/thrivecart/jobs/4125732007",
+  "discovered_at": "2026-10-20T19:58:34.299Z"
+}

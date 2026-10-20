@@ -1,0 +1,15 @@
+Payment Product Manager (Fiat Infrastructure) at Binance
+Location: Remote Worldwide (Anywhere, Global Contractor)
+About Binance:
+Binance is the world's leading blockchain ecosystem and cryptocurrency infrastructure provider, serving over 150 million users worldwide.
+Key Responsibilities:
+- Design and execute product strategy for the global fiat payment platform, covering payment middle platforms, order clearing, and bank integrations.
+- Architect full lifecycle order management: order creation, state transitions, timeout handling, and automated retry mechanisms.
+- Manage clearing and settlement modules: multi-currency ledger reconciliation, T+0/T+1 settlement rules, fee calculations, and exception handling.
+- Collaborate with payment partners, PSPs, and local banking rails (SEPA, Faster Payments, local wallets) to expand global fiat acquiring.
+- Partner with risk, compliance, and legal teams to enforce AML, KYC, and transaction monitoring standards.
+Requirements:
+- 5+ years of product management experience focused on payments, transactional platforms, or financial infrastructure.
+- Deep technical mastery of backend payment routing, API integrations, webhooks, and transaction state machines.
+- Strong data analytics capability with telemetry, New Relic/Datadog logging, SQL, and root-cause failure analysis.
+- Experience operating effectively in a fast-paced, 100% remote global environment.
